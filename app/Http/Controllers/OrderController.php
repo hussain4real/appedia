@@ -94,7 +94,7 @@ class OrderController extends Controller
 
        //take user to thank you page or just return a string
 
-       return "order completed, thank you for shopping with us!";
+       return \redirect()->route('home')->withMessage('Order has been placed, expect a call soon');
     }
 
     /**
