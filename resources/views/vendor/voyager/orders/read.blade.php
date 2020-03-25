@@ -39,7 +39,7 @@
 @section('content')
 <div class="page-content read container-fluid">
    <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
 
          <div class="panel panel-bordered" style="padding-bottom:5px;">
             <!-- form start -->
@@ -145,7 +145,7 @@
          </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
 
          <div class="panel panel-bordered ">
             <div class="panel-heading">
@@ -165,7 +165,7 @@
                      <tr>
                         <td>{{$item->name}}</td>
                         <td>{{$item->pivot->quantity}}</td>
-                        <td>{{$item->price}}</td>
+                        <td>{{$item->pivot->price}}</td>
                      </tr>
                      @endforeach
                   </tbody>

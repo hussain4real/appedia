@@ -43,7 +43,8 @@ Route::get('/cart/checkout', 'CartController@checkout')->name('cart.checkout')->
 Route::resource('orders', 'OrderController')->middleware('auth');
 
 
-
+//route for creating a shop
+Route::resource('shops', 'ShopController')->middleware('auth');
 
 
 Route::group(['prefix' => 'admin'], function () {
