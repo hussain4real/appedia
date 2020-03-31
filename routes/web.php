@@ -17,12 +17,21 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::redirect('/', '/home');
+Route::redirect('/', '/main');
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/main', 'HomeController@index')->name('main');
+
+//product details page
+// Route::get('/products/{id}', 'ProductController@detail')->name('product.detail');
+
+//routes for all search queries
+Route::get('/products/search', 'ProductController@search')->name('products.search');
+
+//routes for all products
+Route::resource('products', 'ProductController');
 
 // add item to cart route
 Route::get('/add-to-cart/{product}', 'CartController@add')->name('cart.add')->middleware('auth');

@@ -1,0 +1,247 @@
+div.with-background {
+    height: 700px;
+    width: 100%;
+    background-color: rgba(66, 75, 90, 1);
+    border: 1px solid rgba(112, 112, 112, 1);
+    border-radius: 0px;
+    background-size: cover;
+    text-align: center;
+
+    color: $white;
+
+    .hero-container {
+        margin-top: 20px;
+
+        .hero-big-heading {
+            margin: 0 100px;
+            font-family: "Roboto", sans-serif;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 1);
+            // letter-spacing: -0.15em;
+            line-height: 74px;
+            text-align: start;
+        }
+        .hero-small-heading {
+            margin: 0 100px;
+            font-family: "Roboto-light", sans-serif;
+            font-size: 35px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 1);
+            // letter-spacing: -0.15em;
+            line-height: 74px;
+            text-align: start;
+        }
+    }
+
+    .hero-copy {
+        display: grid;
+        grid-template-columns: 1fr 1fr; //repeat(2, 1fr)
+        grid-gap: $gutter;
+        padding-top: 20px;
+        padding-bottom: 84px;
+
+        .hero-newsletter {
+            max-width: 864px;
+            margin: 0 80px;
+            text-align: center;
+        }
+
+        .hero-image {
+            height: 387px;
+            width: 400px;
+            margin-top: 50px;
+            background-color: rgba(110, 111, 114, 1);
+            border-radius: 76px 76px 0px 0px;
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+            padding-left: 60px;
+
+            p {
+                height: 14px;
+                width: 84px;
+                font-family: "Roboto-Medium";
+                font-size: 12px;
+                color: rgba(255, 255, 255, 1);
+
+                margin-left: 65%;
+                justify-content: center;
+                line-height: 35px;
+                &:hover {
+                    background-color: rgba(209, 145, 48, 1);
+                    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.16);
+                }
+            }
+        }
+
+        h4 {
+            font-size: 52px;
+            margin-top: 50px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        p {
+            margin: 20px 0 0 20px;
+            text-align: left;
+        }
+
+        .button {
+            margin-right: 14px;
+        }
+    }
+}
+
+header {
+    background: $white;
+
+    .top-header-container {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        .logo {
+            margin-left: 12rem;
+            width: 129px;
+            font-family: "Roboto";
+            font-size: 50px;
+            color: rgba(134, 147, 158, 1);
+            line-height: 0px;
+        }
+
+        .other-container {
+            display: flex;
+            justify-content: flex-start;
+
+            .search {
+                height: 39px;
+                width: 575px;
+
+                display: flex;
+            }
+
+            .searchTerm {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0);
+                border: 2px solid rgba(25, 25, 25, 1);
+                border-radius: 6px 0 0 6px;
+                border-right: none;
+                padding: 5px;
+                height: 36px;
+
+                outline: none;
+            }
+
+            .searchTerm:focus {
+                color: #00b4cc;
+            }
+
+            .searchButton {
+                width: 40px;
+                height: 36px;
+                border: 1px solid rgba(25, 25, 25, 1);
+                background: rgba(25, 25, 25, 1);
+                text-align: center;
+                color: #fff;
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            ul {
+                display: flex;
+                justify-content: space-around;
+
+                li {
+                    margin-left: 1rem;
+
+                    a {
+                        height: 22px;
+                        width: 70px;
+                        padding: 5px;
+
+                        font-size: 15px;
+                        color: rgba(110, 111, 114, 1);
+                        text-align: center;
+                        letter-spacing: -0.07em;
+                        line-height: 22px;
+                        background-color: rgba(255, 255, 255, 1);
+                        border: 2px solid rgba(209, 145, 48, 1);
+                        border-radius: 6px;
+                        &:hover {
+                            color: darken($white, 10%);
+                            background-color: rgba(209, 145, 48, 1);
+                        }
+                    }
+
+                    .cart-count {
+                        display: inline-block;
+                        // position: absolute;
+                        // right: 0;
+                        // top: -22px;
+                        // right: -24px;
+                        background-color: rgba(209, 145, 48, 1);
+                        border-radius: 6px;
+                        color: $text-color;
+                        line-height: 0;
+                        margin-bottom: 1rem;
+
+                        font-size: 14px;
+
+                        span {
+                            display: inline-block;
+                            padding-top: 50%;
+                            padding-bottom: 50%;
+                            margin-left: 6px;
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+
+            /*Resize the wrap to see the search bar change!*/
+        }
+    }
+
+    .top-nav {
+        display: flex;
+        justify-content: center;
+        font-family: "Roboto-Medium";
+
+        letter-spacing: 1.5px;
+
+        ul {
+            display: flex;
+            text-transform: uppercase;
+            justify-content: space-around;
+            height: 24px;
+
+            font-family: "Roboto-medium", sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            color: rgba(25, 25, 25, 1);
+            line-height: 35px;
+            margin-top: 34px;
+            margin-bottom: 6px;
+
+            li {
+                margin: 0 1rem;
+            }
+
+            a {
+                color: $nav-text-color;
+
+                &:hover {
+                    color: darken($white, 10%);
+                }
+            }
+
+            span {
+                display: inline-block;
+                padding-top: 50%;
+                padding-bottom: 50%;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+        }
+    }
+}
