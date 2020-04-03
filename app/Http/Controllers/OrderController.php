@@ -37,11 +37,10 @@ class OrderController extends Controller
     {
         $request->validate([
             'shipping_fullname' => 'required',
-            'shipping_state' => 'required',
             'shipping_city' => 'required',
             'shipping_address' => 'required',
             'shipping_phone' => 'required',
-            'shipping_zipcode' => 'required'
+
         ]);
 
         $order = new Order();
@@ -94,7 +93,8 @@ class OrderController extends Controller
 
        //take user to thank you page or just return a string
 
-       return \redirect()->route('home')->withMessage('Order has been placed, expect a call soon');
+       return redirect()->route('confirmation.index')->with('success_message','Order has been placed successfully');
+
     }
 
     /**

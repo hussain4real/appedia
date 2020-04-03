@@ -1,24 +1,76 @@
 footer {
-    background: $gray-background;
-    color: $white;
+    background: $dark-black;
+    box-shadow: 0px 3px 6px 0px #000000;
+
     padding: 40px 0;
-  }
 
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-content: center;
+        justify-items: center;
 
-    .heart {
-      color: $heart;
+        h1 {
+            font-family: "Roboto";
+            font-size: 50px;
+            color: #86939e;
+            background-color: #c2d1d9;
+            border: 1px solid #707070;
+            border-radius: 0px;
+        }
+
+        h2 {
+            font-family: "Roboto-Medium";
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 35px;
+        }
+
+        li {
+            font-family: "Roboto-Regular";
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 24px;
+        }
+
+        a {
+            cursor: pointer;
+            color: #ffffff;
+
+            &:hover {
+                color: $text-color-light;
+            }
+        }
     }
 
-    ul {
-      display: flex;
-      width: 30%;
-      justify-content: space-between;
-    }
+    .footer-credit {
+        display: flex;
+        align-items: center;
 
-    a {
-      color: $white;
+        .reserved-rights {
+            font-family: "Roboto-Regular";
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 21px;
+            margin-top: 25px;
+            margin-left: 40px;
+
+            span {
+                font-family: "Roboto";
+            }
+        }
+
+        .payment {
+            font-family: "Roboto";
+            font-size: 18px;
+            color: #43484d;
+            line-height: 35px;
+            margin-top: 25px;
+            margin-left: 40px;
+
+            span {
+                color: #c2d1d9;
+            }
+        }
     }
-  }
+}

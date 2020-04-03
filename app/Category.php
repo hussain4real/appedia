@@ -2,8 +2,11 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Product;
+
+use App\Category;
 use Illuminate\Support\Arr;
+use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Models\Category as ModelsCategory;
 
 class Category extends ModelsCategory

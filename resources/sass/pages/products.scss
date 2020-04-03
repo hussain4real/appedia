@@ -9,9 +9,12 @@
         grid-gap: 60px $gutter;
 
         .product-price {
-          color: $text-color-light;
+            color: $text-color-light;
         }
     }
 }
 
-
+.products-header {
+    display: flex;
+    justify-content: space-between;
+}

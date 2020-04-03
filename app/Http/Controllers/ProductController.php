@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Category as voyagerCat;
 
 class ProductController extends Controller
 {
@@ -15,19 +16,51 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $categoryId = request('category_id');
-        $categoryName = null;
+        // $categoryId = request('category_id');
+        // $categoryName = null;
 
-        if($categoryId) {
-            $category = Category::find($categoryId);
-            $categoryName = ucfirst($category->name);
+        // if($categoryId) {
+        //     $category = Category::find($categoryId);
+        //     $categoryName = ucfirst($category->name);
 
-            $products = $category->allProducts();
-        }else{
-            $products = Product::take(10)->get();
+        //     $products = $category->allProducts();
+        // }else{
+        //     $products = Product::take(10)->get();
+        // }
+
+        // return view('product.index', compact('products', 'categoryName'));
+        $pagination = 8;
+        $categories = Category::all();
+        if (request()->category) {
+            $products = Product::with('categories')->whereHas('categories', function ($query)
+            {
+                $query->where('slug', request()->category);
+            });
+
+            $categoryName = optional($categories->where('slug', request()->category)->first())->name;
+        } else {
+
+        $products = Product::take(10);
+
+
+        $categoryName = 'Featured';
         }
 
-        return view('product.index', compact('products', 'categoryName'));
+        if (request()->sort == 'low_high') {
+            $products = $products->orderBy('price')->paginate($pagination);
+        } elseif (request()->sort == 'high_low') {
+            $products = $products->orderBy('price', 'desc')->paginate($pagination);
+        }else {
+            $products = $products->paginate($pagination);
+        }
+
+
+        return view('products')->with([
+            'products' => $products,
+            'categories' => $categories,
+            'categoryName' => $categoryName,
+            ]);
+
     }
 
     public function search(Request $request)
@@ -67,9 +100,16 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        $product = Product::where('id', $id)->firstOrFail();
+
+        $mightAlsoLike = Product::where('id', '!=', $id)->mightAlsoLike()->get();
+
+        return view('product')->with([
+            'product' => $product,
+            'mightAlsoLike' => $mightAlsoLike,
+            ]);
     }
 
     /**

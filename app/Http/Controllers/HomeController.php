@@ -27,11 +27,17 @@ class HomeController extends Controller
     {
         $products = Product::inRandomOrder()->take(7)->get();
 
+        $productCat = Product::inRandomOrder()->take(4)->get();
+
         $categories = Category::whereNull('parent_id')->get();
 
         // $children = Category::where('parend_id', $category->id)->get();
 
 
-        return view('main',['products' => $products, 'categories' => $categories]);
+        return view('landing-page')->with([
+            'products' => $products,
+            'categories' => $categories,
+            'productCat' => $productCat,
+            ]);
     }
 }

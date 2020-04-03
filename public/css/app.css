@@ -315,33 +315,115 @@ h2 {
 }
 
 .might-like-section {
-  padding: 40px 0 70px;
-  background: #f5f5f5;
+  padding: 50px 0;
 }
 
-.might-like-section h2 {
-  padding-bottom: 30px;
+.might-like-section .container {
+  padding: 20px;
 }
 
-.might-like-section .might-like-grid {
+.might-like-section .container h2 {
+  font-size: 30px;
+}
+
+.might-like-section .container .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 60px 30px;
+  align-content: center;
+  margin-top: 65px;
+  padding: 20px;
 }
 
-.might-like-section .might-like-product {
-  border: 1px solid #979797;
-  background: white;
-  padding: 30px 0 20px;
+.might-like-section .container .products .rating-comment {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.might-like-section .container .products .rating-comment .fa-rating {
+  font-size: 10px;
+}
+
+.might-like-section .container .products .rating-comment .comment-count {
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.might-like-section .container .products .rating-comment .new {
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #d19130;
+  border: 2px solid #d19130;
+  border-radius: 12px;
+  margin-left: 2px;
+  padding: 2px;
+}
+
+.might-like-section .container .products .product-name {
+  font-family: "Roboto-Regular";
+  font-size: 18px;
+  color: #191919;
+}
+
+.might-like-section .container .products .product-details {
+  width: 232px;
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  color: #3b3b3b;
   text-align: center;
+  line-height: 21px;
 }
 
-.might-like-section .might-like-product img {
-  width: 70%;
+.might-like-section .container .products .price-shop {
+  display: flex;
+  width: 200px;
+  background-color: rgba(34, 34, 34, 0);
+  border: 2px solid #d19130;
+  border-radius: 6px;
+  align-items: center;
 }
 
-.might-like-section .might-like-product-price {
-  color: #919191;
+.might-like-section .container .products .price-shop .shop-now {
+  font-family: "Roboto-Medium";
+  font-size: 16px;
+  border-left: 2px solid #d19130;
+  padding: 4px 6px;
+  margin-left: 6px;
+}
+
+.might-like-section .container .products .price-shop .product-price {
+  color: #919191 !important;
+  font-family: "Roboto-Regular";
+  font-size: 16px;
+  padding: 4px 6px;
+}
+
+.might-like-section .container .products .price-shop #time-3-icon {
+  fill: #d19130;
+}
+
+.might-like-section .container .categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+  justify-items: center;
+  margin-top: 100px;
+  height: 144px;
+  width: 1100px;
+  background-color: #f5f5f5;
+  border: 1px solid #707070;
+  border-radius: 0px;
+}
+
+.might-like-section .container .categories a {
+  display: flex;
+  align-items: flex-end;
+}
+
+.might-like-section .container .categories a #bag {
+  fill: #d19130;
 }
 
 form .half-form {
@@ -369,6 +451,79 @@ form button[type=submit] {
   width: 100%;
   padding: 12px;
   font-size: 16px;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.pagination > li {
+  display: inline;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #f4f4f4;
+  border-color: #dddddd;
+  color: inherit;
+  cursor: default;
+  z-index: 2;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: inherit;
+  float: left;
+  line-height: 1.42857;
+  margin-left: -1px;
+  padding: 16px 22px;
+  position: relative;
+  text-decoration: none;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  z-index: 2;
+  color: #dff5fd;
+  background-color: #26718f;
+  border-color: #ddd;
 }
 
 div.with-background {
@@ -609,28 +764,79 @@ header .top-nav ul span {
 }
 
 footer {
-  background: #535353;
-  color: white;
+  background: #191919;
+  box-shadow: 0px 3px 6px 0px #000000;
   padding: 40px 0;
 }
 
-.footer-content {
+footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: center;
+  justify-items: center;
+}
+
+footer .footer-content h1 {
+  font-family: "Roboto";
+  font-size: 50px;
+  color: #86939e;
+  background-color: #c2d1d9;
+  border: 1px solid #707070;
+  border-radius: 0px;
+}
+
+footer .footer-content h2 {
+  font-family: "Roboto-Medium";
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 35px;
+}
+
+footer .footer-content li {
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 24px;
+}
+
+footer .footer-content a {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+footer .footer-content a:hover {
+  color: #919191;
+}
+
+footer .footer-credit {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
-.footer-content .heart {
-  color: #ffbaba;
+footer .footer-credit .reserved-rights {
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 21px;
+  margin-top: 25px;
+  margin-left: 40px;
 }
 
-.footer-content ul {
-  display: flex;
-  width: 30%;
-  justify-content: space-between;
+footer .footer-credit .reserved-rights span {
+  font-family: "Roboto";
 }
 
-.footer-content a {
-  color: white;
+footer .footer-credit .payment {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: #43484d;
+  line-height: 35px;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+
+footer .footer-credit .payment span {
+  color: #c2d1d9;
 }
 
 .featured-section {
@@ -782,6 +988,11 @@ footer {
 
 .products-section .products .product-price {
   color: #919191;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-section {
