@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CartController extends Controller
 {
@@ -11,15 +12,29 @@ class CartController extends Controller
 
 
         // add the product to cart
-        $userId = auth()->user()->id;
-        \Cart::session($userId)->add(array(
-            'id' => $product->id,
-            'name' => $product->name,
-            'price' => $product->price,
-            'quantity' => 1,
-            'attributes' => array(),
-            'associatedModel' => $product
-        ));
+        // $userId = auth()->user()->id;
+        // session($userId)->
+        if (\session()) {
+            \Cart::add(array(
+                'id' => $product->id,
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => 1,
+                'attributes' => array(),
+                'associatedModel' => $product
+            ));
+        } else {
+            \Cart::add(array(
+                'id' => $product->id,
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => 1,
+                'attributes' => array(),
+                'associatedModel' => $product
+            ));
+        }
+
+
         return redirect()->route('cart.index');
 
 
@@ -39,17 +54,40 @@ class CartController extends Controller
         //     )
         //     ));
 
-        $userId = auth()->user()->id;
+        // $userId = auth()->user()->id;
 
-        $subTotal = \Cart::session($userId)->getSubTotal();
-        // $condition = \Cart::session($userId)->getCondition('VAT 1.5%');
-        // $conditionCalculatedValue = $condition->getCalculatedValue($subTotal);
+        if (session()) {
+            $subTotal = \Cart::getSubTotal();
+            // session($userId)->
+
+            // $condition = \Cart::session($userId)->getCondition('VAT 1.5%');
+            // $conditionCalculatedValue = $condition->getCalculatedValue($subTotal);
 
 
-        $total = \Cart::session($userId)->getTotal(); // for a speicifc user's cart
+            $total = \Cart::getTotal(); // for a speicifc user's cart
+            // session($userId)->
 
 
-        $cartItems = \Cart::session(auth()->id())->getContent();
+            $cartItems = \Cart::getContent();
+            // session(auth()->id())->
+        } else {
+            $subTotal = \Cart::getSubTotal();
+            // session($userId)->
+
+            // $condition = \Cart::session($userId)->getCondition('VAT 1.5%');
+            // $conditionCalculatedValue = $condition->getCalculatedValue($subTotal);
+
+
+            $total = \Cart::getTotal(); // for a speicifc user's cart
+            // session($userId)->
+
+
+            $cartItems = \Cart::getContent();
+            // session(auth()->id())->
+        }
+
+
+
 
         $mightAlsoLike = Product::mightAlsoLike()->get();
 
@@ -69,6 +107,7 @@ class CartController extends Controller
     public function destroy($itemId){
 
         \Cart::session(auth()->id())->remove($itemId);
+        // session(auth()->id())->
 
         return back()->with('success_message', 'Item has been removed');
     }
@@ -101,12 +140,31 @@ class CartController extends Controller
     // }
 
     //update item in the cart logic
-    public function update($itemId){
+    public function update(Request $request, $itemId ){
 
+
+        $validator = Validator::make($request->all(),[
+            'quantity' => 'required|numeric|min:1',
+
+        ]);
+
+        if ($validator->fails()) {
+            session()->flash('error', collect(['Quantity cannot be less than 1']));
+            return back()->with('error_message', 'Quantity cannot be less than 1 and greater than the number in stock');
+        }
+
+        // $stockLevel = getStockLevel($product->quantity);
+        // if ($request->quanttity > $stockLevel) {
+        //     session()->flash('error', collect(['We currently do not have enough item in stock.']));
+        //     return response()->json(['success' => false], 400);
+        // }
+        // session(auth()->id())->
         \Cart::session(auth()->id())->update($itemId, [
             'quantity' => array(
                 'relative' => false,
-                'value' => request('quantity')
+                'value' => request('quantity'),
+                'attributes' => array(),
+                'associatedModel' => 'Product'
             )
         ]);
 
@@ -118,11 +176,19 @@ class CartController extends Controller
     public function checkout()
     {
 
-        $userId = auth()->user()->id;
+        // $userId = auth()->user()->id;
+        if (session()) {
+            $subTotal = \Cart::getSubTotal();
+            $total = \Cart::getTotal();
+            $cartItems = \Cart::getContent();
+        } else {
+            $subTotal = \Cart::getSubTotal();
+            $total = \Cart::getTotal();
+            $cartItems = \Cart::getContent();
+        }
 
-        $subTotal = \Cart::session($userId)->getSubTotal();
-        $total = \Cart::session($userId)->getTotal();
-        $cartItems = \Cart::session(auth()->id())->getContent();
+
+
         return view('checkout')->with([
             'cartItems' => $cartItems,
             'subTotal' => $subTotal,

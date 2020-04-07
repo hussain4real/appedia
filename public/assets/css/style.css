@@ -819,6 +819,108 @@
 .product-img {
     position: relative;
 }
+/* start of edit */
+
+.logout-now {
+    height: 22px;
+    width: 70px;
+    padding: 5px;
+
+    font-size: 15px;
+    color: rgba(110, 111, 114, 1);
+    text-align: center;
+    letter-spacing: -0.07em;
+    line-height: 22px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(209, 145, 48, 1);
+    border-radius: 6px;
+}
+
+.logout-now:hover {
+    color: darken(white, 10%);
+    background-color: rgba(209, 145, 48, 1);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px 20px;
+    align-content: center;
+    /* margin-top: 65px; */
+    padding: 20px;
+}
+
+.rating-comment {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.fa-rating {
+    font-size: 10px;
+}
+
+.comment-count {
+    margin-left: 4px;
+    font-size: 13px;
+}
+
+.new {
+    font-family: "Roboto-Medium";
+    font-size: 12px;
+    color: #ffffff;
+    background-color: rgba(209, 145, 48, 1);
+    border: 2px solid rgba(209, 145, 48, 1);
+    border-radius: 12px;
+    margin-left: 2px;
+    padding: 2px;
+}
+
+.product-name {
+    font-family: "Roboto-Regular";
+    font-size: 18px;
+    color: rgba(25, 25, 25, 1);
+}
+
+.price-shop {
+    display: flex;
+    width: 200px !important;
+    max-height: 36px !important;
+    background-color: rgba(34, 34, 34, 0);
+    border: 2px solid rgba(209, 145, 48, 1);
+    border-radius: 6px;
+    align-items: center;
+}
+
+.shop-now {
+    font-family: "Roboto-Medium";
+    font-size: 16px !important;
+    border-left: 2px solid rgba(209, 145, 48, 1);
+    padding: 4px 6px !important;
+    margin-left: 6px !important;
+}
+
+.product-price {
+    font-family: "Roboto-Regular";
+    font-size: 16px !important;
+    padding: 0 6px !important;
+}
+
+#time-3-icon {
+    fill: #d19130;
+}
+
+.product-details {
+    width: 232px;
+    font-family: "Roboto-Regular";
+    font-size: 14px;
+    color: rgba(59, 59, 59, 1);
+    text-align: center;
+    line-height: 21px;
+}
+
+/* end of edit */
+
 .product-action {
     bottom: 30px;
     display: inline-block;

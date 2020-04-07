@@ -25,11 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::inRandomOrder()->take(7)->get();
+        $products = Product::where('featured', true)->inRandomOrder()->take(8)->get();
 
         $productCat = Product::inRandomOrder()->take(4)->get();
 
-        $categories = Category::whereNull('parent_id')->get();
+        // $categories = Category::whereNull('parent_id')->get();
+        $categories = Category::all();
 
         // $children = Category::where('parend_id', $category->id)->get();
 
@@ -38,6 +39,7 @@ class HomeController extends Controller
             'products' => $products,
             'categories' => $categories,
             'productCat' => $productCat,
+
             ]);
     }
 }

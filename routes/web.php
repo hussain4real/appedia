@@ -29,14 +29,14 @@ Route::get('/landing-page', 'HomeController@index')->name('landing-page');
 Route::get('/products/{product}', 'ProductController@show')->name('product.show');
 
 //routes for all search queries
-Route::get('/products/search', 'ProductController@search')->name('products.search');
+Route::get('/search', 'ProductController@search')->name('search');
 
 //routes for all products
 // Route::resource('products', 'ProductController');
 Route::get('/products', 'ProductController@index')->name('products.index');
 
 // add item to cart route
-Route::get('/add-to-cart/{product}', 'CartController@add')->name('cart.add')->middleware('auth');
+Route::get('/add-to-cart/{product}', 'CartController@add')->name('cart.add');
 
 // add item to saveForLater
 Route::get('/cart/switchToSaveForLater/{product}', 'CartController@store')->name('cart.store')->middleware('auth');
@@ -55,6 +55,10 @@ Route::get('/cart/update/{itemId}', 'CartController@update')->name('cart.update'
 
 //checkout route
 Route::get('/cart/checkout', 'CartController@checkout')->name('cart.checkout')->middleware('auth');
+
+// guest checkout route
+Route::get('/cart/guestCheckout', 'CartController@checkout')->name('guestCheckout.checkout');
+
 
 //thank you page route
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');

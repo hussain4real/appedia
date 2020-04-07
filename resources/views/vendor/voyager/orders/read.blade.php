@@ -165,13 +165,13 @@
                      <tr>
                         <td>{{$item->name}}</td>
                         <td>{{$item->pivot->quantity}}</td>
-                        <td>{{$item->pivot->price}}</td>
+                        <td>QAR {{$item->pivot->price}}</td>
                      </tr>
                      @endforeach
                   </tbody>
                </table>
 
-               <p>Total: $ {{$dataTypeContent->grand_total}}</p>
+               <p>Total: QAR {{$dataTypeContent->grand_total}}</p>
 
             </div>
          </div>

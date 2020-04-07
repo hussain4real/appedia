@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Product;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -35,7 +36,16 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+
+        //check if products has already been purchased 'as in fastest finger first'
+        if ($this->productsAreNoLongerAvailable()) {
+            return back()->withErrors('Sorry! One of the items in your cart is no longer available.');
+        }
+
+        $emailValidation = auth()->user() ? 'required|email' : 'required|email|unique:users';
+
         $request->validate([
+            'email'=> $emailValidation,
             'shipping_fullname' => 'required',
             'shipping_city' => 'required',
             'shipping_address' => 'required',
@@ -85,6 +95,9 @@ class OrderController extends Controller
         foreach ($cartItems as  $item) {
             $order->items()->attach($item->id, ['price' => $item->price, 'quantity' =>$item->quantity]);
         }
+
+        // decrease the quantity of all the products ordered
+        $this->decreaseQuantities();
 
        //empty the cart after completion of order
        \Cart::session(auth()->id())->clear();
@@ -140,6 +153,29 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+
+    protected function decreaseQuantities()
+    {
+        foreach (\Cart::getcontent() as $item ) {
+            $product = Product::find($item->model->id);
+
+            $product->update(['quantity' => $product->quantity - $item->quantity]);
+        }
+    }
+
+    protected function productsAreNoLongerAvailable()
+    {
+        foreach (\Cart::getcontent() as $item ) {
+            $product = Product::find($item->model->id);
+
+            if ($product->quantity < $item->quantity) {
+                return true;
+            }
+
+        }
+
+        return false;
     }
 }
 

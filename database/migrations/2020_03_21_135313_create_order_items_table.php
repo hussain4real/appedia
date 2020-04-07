@@ -22,7 +22,7 @@ class CreateOrderItemsTable extends Migration
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
 
             $table->float('price');
-            $table->integer('quantity');
+            $table->integer('quantity')->unsigned();
 
             $table->timestamps();
         });

@@ -34,7 +34,14 @@
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" value="">
+
+                    @if (auth()->user())
+                    <input type="email" class="form-control" id="email" name="email" value="{{auth()->user()->email}}"
+                        readonly>
+                    @else
+                    <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" required>
+                    @endif
+
                 </div>
                 <div class="form-group">
                     <label for="name">Full Name</label>
@@ -117,17 +124,17 @@
 
                 <div class="checkout-table-row">
                     <div class="checkout-table-row-left">
-                        <img src="/img/macbook-pro.png" alt="item" class="checkout-table-img">
-                        <div class="checkout-item-details">
-                            <div class="checkout-table-item">{{$item->name}}</div>
-                            <div class="checkout-table-description">{{$item->detail}}</div>
+                        <img src="{{ productImage($item->model->cover_img)}}" alt="item" class="checkout-table-img">
+                        <div class="checkout-item-details text-center">
+                            <div class="checkout-table-item">{{$item->model->name}}</div>
+                            <div class="checkout-table-description">{{$item->model->detail}}</div>
                             <div class="checkout-table-price">
-                                ${{Cart::session(auth()->id())->get($item->id)->getPriceSum()}}</div>
+                                ${{Cart::session(auth()->id())->get($item->model->id)->getPriceSum()}}</div>
                         </div>
                     </div> <!-- end checkout-table -->
 
                     <div class="checkout-table-row-right">
-                        <div class="checkout-table-quantity">{{Cart::getTotalQuantity()}}</div>
+                        <div class="checkout-table-quantity">{{Cart::session(auth()->id())->getTotalQuantity()}}</div>
                     </div>
                 </div> <!-- end checkout-table-row -->
                 @endforeach

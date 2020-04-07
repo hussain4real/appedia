@@ -7,9 +7,85 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 60px $gutter;
+        align-content: center;
+        margin-top: 65px;
+        padding: 20px;
 
-        .product-price {
-            color: $text-color-light;
+        .rating-comment {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+
+            .fa-rating {
+                font-size: 10px;
+            }
+
+            .comment-count {
+                margin-left: 4px;
+                font-size: 13px;
+            }
+
+            .new {
+                font-family: "Roboto-Medium";
+                font-size: 12px;
+                color: #ffffff;
+                background-color: rgba(209, 145, 48, 1);
+                border: 2px solid rgba(209, 145, 48, 1);
+                border-radius: 12px;
+                margin-left: 2px;
+                padding: 2px;
+            }
+        }
+
+        .product-name {
+            // height: 22px;
+            // width: 115px;
+            font-family: "Roboto-Regular";
+            font-size: 18px;
+            color: rgba(25, 25, 25, 1);
+            // line-height: 26px;
+        }
+
+        .product-details {
+            width: 232px;
+            font-family: "Roboto-Regular";
+            font-size: 14px;
+            color: rgba(59, 59, 59, 1);
+            text-align: center;
+            line-height: 21px;
+        }
+
+        .price-shop {
+            display: flex;
+            // height: 42px;
+            width: 200px !important;
+            background-color: rgba(34, 34, 34, 0);
+            border: 2px solid rgba(209, 145, 48, 1);
+            border-radius: 6px;
+            align-items: center;
+
+            .shop-now {
+                font-family: "Roboto-Medium";
+                font-size: 16px !important;
+                border-left: 2px solid rgba(209, 145, 48, 1);
+                padding: 4px 6px !important;
+                margin-left: 6px !important;
+            }
+
+            .product-price {
+                color: $text-color-light !important;
+                font-family: "Roboto-Regular";
+                font-size: 16px !important;
+                padding: 4px 6px !important;
+            }
+
+            #time-3-icon {
+                fill: #d19130;
+            }
+
+            // .cart {
+            //     display: flex;
+            // }
         }
     }
 }

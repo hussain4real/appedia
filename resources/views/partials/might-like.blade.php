@@ -16,7 +16,8 @@
                     <p class="comment-count">105 reviews</p>
                     <p class="new">New</p>
                 </div>
-                <a href="{{route('product.show', $product->id)}}"><img src="/img/macbook-pro.png" alt="product"></a>
+                <a href="{{route('product.show', $product->id)}}"><img src="{{ productImage($product->cover_img)}}"
+                        alt="product"></a>
 
                 <div class="product-name"><a href="{{route('product.show', $product->id)}}">{{$product->name}}</a>
                 </div>

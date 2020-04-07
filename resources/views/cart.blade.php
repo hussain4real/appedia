@@ -40,6 +40,11 @@
                 {{ session()->get('success_message') }}
             </div>
             @endif
+            @if (session()->has('error_message'))
+            <div class="alert alert-danger">
+                {{ session()->get('error_message') }}
+            </div>
+            @endif
 
             @if(count($errors) > 0)
             <div class="alert alert-danger">
@@ -52,10 +57,10 @@
             @endif
 
 
-            @if (Cart::getContent()->count() > 0)
+            @if (Cart::session(auth()->id())->getContent()->count() > 0)
 
 
-            <h2>{{Cart::getContent()->count()}} item(s) in Shopping Cart</h2>
+            <h2>{{Cart::session(auth()->id())->getContent()->count()}} item(s) in Shopping Cart</h2>
 
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -78,22 +83,25 @@
                                     <td class="product-remove"><a href="{{ route('cart.destroy', $item->id) }}"><i
                                                 class="pe-7s-close"></i></a></td>
                                     <td class="product-thumbnail">
-                                        <a href="#"><img src="assets/img/cart/1.jpg" alt=""></a>
+                                        <a href="#"><img src="{{ productImage($item->model->cover_img)}}" alt=""></a>
                                     </td>
-                                    <td class="product-name"><a href="#">{{ $item->name }} </a></td>
+                                    <td class="product-name"><a href="#">{{ $item->model->name }} </a></td>
                                     <td class="product-price-cart"><span
-                                            class="amount">${{Cart::session(auth()->id())->get($item->id)->getPriceSum()}}</span>
+                                            class="amount">${{Cart::session(auth()->id())->get($item->model->id)->getPriceSum()}}</span>
                                     </td>
                                     <td class="product-quantity">
                                         <form action="{{route('cart.update', $item->id)}}" method="get">
+
+
                                             <input name="quantity" type="number" value="{{ $item->quantity }}">
 
                                             <input class="button btn-primary" type="submit" value="save">
 
+
                                         </form>
                                     </td>
                                     <td class="product-subtotal">
-                                        ${{Cart::session(auth()->id())->get($item->id)->getPriceSum()}}
+                                        ${{Cart::session(auth()->id())->get($item->model->id)->getPriceSum()}}
                                     </td>
                                 </tr>
                                 @endforeach
@@ -120,7 +128,15 @@
                                     <li>Subtotal<span>{{$subTotal}}</span></li>
                                     <li>Total<span>{{$total}}</span></li>
                                 </ul>
-                                <a href="{{route('cart.checkout')}}">Proceed to checkout</a>
+                                @if ($item->quantity <= $item->model->quantity)
+                                    <a href="{{route('cart.checkout')}}">Proceed to checkout</a>
+                                    @else
+                                    <div class="alert alert-danger">quantity has exceeded the available stock <br>
+                                        available item in stock is {{$item->model->quantity}}
+                                    </div>
+                                    @endif
+
+
                             </div>
                         </div>
                     </div>

@@ -39,7 +39,7 @@ class CreateOrdersTable extends Migration
             $table->string('billing_zipcode');
             $table->string('billing_phone');
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
 
             $table->timestamps();
         });

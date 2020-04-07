@@ -1,3 +1,7 @@
+@php
+use App\Category;
+@endphp
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 
@@ -6,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel Ecommerce Example</title>
+    <title>Al Mossem</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
@@ -31,20 +35,30 @@
         </div>
         <div class="other-container">
 
-            <div class="wrap">
-                <div class="search">
-                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                    <button type="submit" class="searchButton">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
+            @include('partials.search')
             <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
+                @guest
+
+                <li><a href="{{route('login')}}">Login</a></li>
+                <li><a href="{{route('register')}}">Sign Up</a></li>
+                @else
+                <li>
+                    {{-- remove the 'dropdown-item' from this 'a' tag --}}
+                    <a class="logout-now " href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                </li>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+
+                @endguest
                 <li><i class="fas fa-user"></i></li>
                 <li><a href="{{route('cart.index')}}"><i class="fas fa-shopping-cart">
-                            @if (Cart::session(auth()->id())->getContent()->count() > 0)
+                            @if (Cart::getContent()->count() > 0)
+                            {{-- session(auth()->id())-> --}}
 
                             <span
                                 class="cart-count"><span>{{Cart::session(auth()->id())->getContent()->count()}}</span></span>
@@ -66,9 +80,32 @@
         <ul>
             <li><a href="{{route('products.index')}}">Shop</a></li>
             <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Men </a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Kids</a></li>
+
+            @php
+
+            $categories = Category::all();
+
+            @endphp
+            @foreach ($categories as $category)
+            @if ($category->slug == 'men')
+            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+            @endif
+            @endforeach
+
+            @foreach ($categories as $category)
+            @if ($category->slug == 'women')
+            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+            @endif
+            @endforeach
+
+
+            @foreach ($categories as $category)
+            @if ($category->slug == 'kids')
+            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+            @endif
+            @endforeach
+
+
             <li><a href="#">Furniture</a></li>
             <li><a href="/">Home</a></li>
         </ul>

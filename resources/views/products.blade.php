@@ -18,6 +18,25 @@
     </div>
 </div> <!-- end breadcrumbs -->
 
+<div class="container">
+
+    @if (session()->has('success_message'))
+    <div class="alert alert-success">
+        {{ session()->get('success_message') }}
+    </div>
+    @endif
+
+    @if(count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+</div>
+
 <div class="products-section container">
     <div class="sidebar">
         <h3>By Category</h3>
@@ -60,7 +79,8 @@
                     <p class="comment-count">105 reviews</p>
                     <p class="new">New</p>
                 </div>
-                <a href="{{route('product.show', $product->id)}}"><img src="/img/macbook-pro.png" alt="product"></a>
+                <a href="{{route('product.show', $product->id)}}"><img src="{{ productImage($product->cover_img)}}"
+                        alt="product"></a>
 
                 <div class="product-name"><a href="{{route('product.show', $product->id)}}">{{$product->name}}</a></div>
 

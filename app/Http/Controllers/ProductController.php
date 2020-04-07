@@ -40,7 +40,7 @@ class ProductController extends Controller
             $categoryName = optional($categories->where('slug', request()->category)->first())->name;
         } else {
 
-        $products = Product::take(10);
+        $products = Product::where('featured', true)->inRandomOrder();
 
 
         $categoryName = 'Featured';
@@ -66,11 +66,25 @@ class ProductController extends Controller
     public function search(Request $request)
     {
 
+        $request->validate([
+            'query' => 'required|min:3',
+        ]);
+
         $query = $request->input('query');
 
-        $products = Product::where('name','LIKE',"%$query%")->paginate(1);
+        $products = Product::where('name','LIKE',"%$query%")
+                            ->orWhere('detail', 'LIKE',"%$query%")
+                            ->orWhere('description', 'LIKE',"%$query%")
+                            ->paginate(9);
 
-        return view('product.catalog', compact('products'));
+        // $products = Product::search($query, null)->paginate(9);
+        // return view('product.catalog', compact('products'));
+        $categories = Category::all();
+
+        return view('search-results')->with([
+            'products' => $products,
+            'categories' => $categories,
+            ]);
     }
 
     /**
@@ -106,8 +120,14 @@ class ProductController extends Controller
 
         $mightAlsoLike = Product::where('id', '!=', $id)->mightAlsoLike()->get();
 
+        $stockLevel = getStockLevel($product->quantity);
+
+
+
+
         return view('product')->with([
             'product' => $product,
+            'stockLevel' => $stockLevel,
             'mightAlsoLike' => $mightAlsoLike,
             ]);
     }
