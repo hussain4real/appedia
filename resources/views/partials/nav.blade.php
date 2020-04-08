@@ -43,11 +43,16 @@ use App\Category;
                 <li><a href="{{route('register')}}">Sign Up</a></li>
                 @else
                 <li>
-                    {{-- remove the 'dropdown-item' from this 'a' tag --}}
-                    <a class="logout-now " href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                <li>
+                    <a href="{{route('users.edit')}}">
+                        My Account
                     </a>
+                </li>
+                {{-- remove the 'dropdown-item' from this 'a' tag --}}
+                <a class="logout-now " href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
                 </li>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

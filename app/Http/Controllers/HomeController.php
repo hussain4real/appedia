@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\ProductCategory;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Category;
 
@@ -25,9 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::where('featured', true)->inRandomOrder()->take(8)->get();
+        $products = Product::where('featured', true)->with('shop')->inRandomOrder()->take(8)->get();
 
         $productCat = Product::inRandomOrder()->take(4)->get();
+
+
 
         // $categories = Category::whereNull('parent_id')->get();
         $categories = Category::all();
@@ -39,6 +42,7 @@ class HomeController extends Controller
             'products' => $products,
             'categories' => $categories,
             'productCat' => $productCat,
+
 
             ]);
     }

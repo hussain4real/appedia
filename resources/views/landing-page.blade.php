@@ -87,7 +87,10 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <p class="comment-count">105 reviews</p>
-                        <p class="new">New</p>
+
+
+                        <p class="new"><em> {{$product->status}} </em></p>
+
                     </div>
                     <a href="{{route('product.show', $product->id)}}"><img src="{{ productImage($product->cover_img)}}"
                             alt="product"></a>
@@ -118,6 +121,10 @@
                             {{-- <i class="fas fa-cart-arrow-down"> --}}
                         </div>
                     </div>
+                    @if ($product->shop)
+
+                    <div class="seller">sold by <em>{{$product->shop->name}}</em></div>
+                    @endif
                 </div>
                 @endforeach
 
@@ -187,7 +194,7 @@
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <p class="comment-count">105 reviews</p>
-                            <p class="new">Hot</p>
+                            <p class="new"><em> {{$product->status}} </em></p>
                         </div>
                         <a href="{{route('product.show', $product->id)}}"><img
                                 src="{{ productImage($product->cover_img)}}" alt="product"></a>

@@ -62,7 +62,7 @@ class ShopPolicy
      */
     public function delete(User $user, Shop $shop)
     {
-        // return $user->id == $shop->user_id;
+        return $user->id == $shop->user_id;
     }
 
 

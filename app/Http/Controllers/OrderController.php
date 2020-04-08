@@ -15,7 +15,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = auth()->user()->orders()->with('items','shop')->get(); // fix n + 1 issues
+
+        return view('my-orders')->with('orders', $orders);
     }
 
     /**
@@ -82,10 +84,13 @@ class OrderController extends Controller
         }
 
 
+
+
         $order->grand_total = \Cart::session(auth()->id())->getTotal();
         $order->item_count = \Cart::session(auth()->id())->getContent()->count();
 
         $order->user_id = auth()->id();
+
 
         $order->save();
 
@@ -118,7 +123,16 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        if (auth()->id() !== $order->user_id) {
+            return back()->withErrors('You do not have access to this!');
+        }
+
+        $products = $order->products;
+
+        return view('my-order')->with([
+            'order' => $order,
+            'products' => $products,
+        ]);
     }
 
     /**

@@ -12,7 +12,7 @@ function thumbnail($image , $type)
 //product image helper method
 function productImage($path)
 {
-    return $path && file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/macbook-pro.png');
+    return $path && file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/image-not-available.jpg');
 }
 
 

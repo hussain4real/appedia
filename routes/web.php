@@ -74,3 +74,14 @@ Route::resource('shops', 'ShopController')->middleware('auth');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::middleware('auth')->group(function () {
+
+    //user profile page routes
+    Route::get('/my-profile', 'UsersController@edit')->name('users.edit');
+
+    Route::patch('/my-profile', 'UsersController@update')->name('users.update');
+
+    Route::get('/my-orders', 'OrderController@index')->name('orders.index');
+    Route::get('/my-orders/{order}', 'OrderController@show')->name('orders.show');
+});
