@@ -24,6 +24,12 @@ footer {
             font-size: 18px;
             color: #ffffff;
             line-height: 35px;
+
+            @media only screen and (min-width: 781px) {
+                span {
+                    display: none;
+                }
+            }
         }
 
         li {
@@ -39,6 +45,21 @@ footer {
 
             &:hover {
                 color: $text-color-light;
+            }
+        }
+    }
+
+    .footer-social {
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                justify-content: space-around;
+                // margin-left: 1rem;
+                a {
+                    color: rgba(209, 145, 48, 1);
+                }
             }
         }
     }

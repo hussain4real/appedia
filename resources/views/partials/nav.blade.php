@@ -28,6 +28,11 @@ use App\Category;
 </head>
 
 <header>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
     <div class="top-header-container">
         <div class="logo">
 
@@ -36,6 +41,7 @@ use App\Category;
         <div class="other-container">
 
             @include('partials.search')
+
             <ul>
                 @guest
 
@@ -79,12 +85,12 @@ use App\Category;
 
         </div>
     </div>
-    <div class="top-nav container">
+    <nav class="top-nav container">
 
         @if (! request()->is('checkout'))
-        <ul>
+        <ul class="top-nav-links">
             <li><a href="{{route('products.index')}}">Shop</a></li>
-            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Arrivals</a></li>
 
             @php
 
@@ -115,7 +121,7 @@ use App\Category;
             <li><a href="/">Home</a></li>
         </ul>
         @endif
-    </div> <!-- end top-nav -->
+    </nav> <!-- end top-nav -->
 </header>
 
 </html>

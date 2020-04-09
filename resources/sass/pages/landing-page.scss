@@ -1,3 +1,95 @@
+div.with-background {
+    height: 700px;
+    width: 100%;
+    background-color: rgba(66, 75, 90, 1);
+    border: 1px solid rgba(112, 112, 112, 1);
+    border-radius: 0px;
+    background-size: cover;
+    text-align: center;
+
+    color: $white;
+
+    .hero-container {
+        margin-top: 20px;
+
+        .hero-big-heading {
+            margin: 0 100px;
+            font-family: "Roboto", sans-serif;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 1);
+            // letter-spacing: -0.15em;
+            line-height: 74px;
+            text-align: start;
+        }
+        .hero-small-heading {
+            margin: 0 100px;
+            font-family: "Roboto-light", sans-serif;
+            font-size: 35px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 1);
+            // letter-spacing: -0.15em;
+            line-height: 74px;
+            text-align: start;
+        }
+    }
+
+    .hero-copy {
+        display: grid;
+        grid-template-columns: 1fr 1fr; //repeat(2, 1fr)
+        grid-gap: $gutter;
+        padding-top: 20px;
+        padding-bottom: 84px;
+
+        .hero-newsletter {
+            max-width: 864px;
+            margin: 0 80px;
+            text-align: center;
+        }
+
+        .hero-image {
+            height: 387px;
+            width: 400px;
+            margin-top: 50px;
+            background-color: rgba(110, 111, 114, 1);
+            border-radius: 76px 76px 0px 0px;
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+            padding-left: 60px;
+
+            p {
+                height: 14px;
+                width: 84px;
+                font-family: "Roboto-Medium";
+                font-size: 12px;
+                color: rgba(255, 255, 255, 1);
+
+                margin-left: 65%;
+                justify-content: center;
+                line-height: 35px;
+                &:hover {
+                    background-color: rgba(209, 145, 48, 1);
+                    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.16);
+                }
+            }
+        }
+
+        h4 {
+            font-size: 52px;
+            margin-top: 50px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        p {
+            margin: 20px 0 0 20px;
+            text-align: left;
+        }
+
+        .button {
+            margin-right: 14px;
+        }
+    }
+}
+
 .featured-section {
     padding: 50px 0;
 
@@ -6,11 +98,29 @@
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            // auto-fit, minmax(250px, 1fr)
+            grid-template-columns: repeat(4, 1fr);
             grid-gap: 60px $gutter;
             align-content: center;
             margin-top: 65px;
             padding: 20px;
+
+            @media only screen and (max-width: 780px) {
+                // display: block;
+                // width: 920px;
+                // height: 1190px;
+                // overflow-y: auto;
+                // overflow-x: hidden;
+                // transform: rotate(-90deg);
+                // transform-origin: right top;
+
+                display: flex;
+                overflow-x: auto;
+                // overflow-x: scroll;
+                // overflow-y: hidden;
+                // white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
 
             .product {
                 text-align: center;
@@ -19,6 +129,18 @@
                 align-items: center;
                 justify-content: center;
                 transition: box-shadow 0.4s ease-in-out;
+
+                @media only screen and (max-width: 780px) {
+                    // width: 375px;
+                    // height: 362px;
+                    // margin: 25px 0;
+                    // transform: rotate(90deg);
+                    // transform-origin: right top;
+
+                    flex: 0 0 auto;
+                    margin: 0 10px;
+                    // display: inline-block;
+                }
 
                 .rating-comment {
                     display: flex;
@@ -82,23 +204,39 @@
                     align-items: center;
                     align-self: center;
 
+                    &:hover {
+                        background-color: rgba(209, 145, 48, 1);
+                    }
+
                     .shop-now {
                         font-family: "Roboto-Medium";
                         font-size: 16px;
                         border-left: 2px solid rgba(209, 145, 48, 1);
                         padding: 4px 6px;
                         margin-left: 6px;
+
+                        &:hover {
+                            color: white !important;
+                        }
                     }
 
                     .product-price {
-                        color: $text-color-light !important;
+                        color: $text-color-light;
                         font-family: "Roboto-Regular";
-                        font-size: 16px !important;
-                        padding: 4px 6px !important;
+                        font-size: 16px;
+                        padding: 4px 6px;
+
+                        &:hover {
+                            color: white;
+                        }
                     }
 
                     #time-3-icon {
                         fill: #d19130;
+
+                        &:hover {
+                            fill: white;
+                        }
                     }
 
                     // .cart {
@@ -121,6 +259,23 @@
             }
         }
 
+        .best-of-2020-wrapper {
+            display: none;
+            margin-bottom: -20px;
+            margin-top: 10px;
+
+            font-family: "Roboto-Light";
+            font-size: 25px;
+            color: rgba(25, 25, 25, 1);
+
+            @media only screen and (max-width: 780px) {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                margin-bottom: -20px;
+            }
+        }
+
         .categories {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -132,6 +287,10 @@
             background-color: #f5f5f5;
             border: 1px solid #707070;
             border-radius: 0px;
+
+            @media only screen and (max-width: 780px) {
+                display: none;
+            }
 
             a {
                 display: flex;

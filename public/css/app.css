@@ -578,96 +578,6 @@ form button[type=submit] {
   background-color: #343a40;
 }
 
-div.with-background {
-  height: 700px;
-  width: 100%;
-  background-color: #424b5a;
-  border: 1px solid #707070;
-  border-radius: 0px;
-  background-size: cover;
-  text-align: center;
-  color: white;
-}
-
-div.with-background .hero-container {
-  margin-top: 20px;
-}
-
-div.with-background .hero-container .hero-big-heading {
-  margin: 0 100px;
-  font-family: "Roboto", sans-serif;
-  font-size: 60px;
-  color: white;
-  line-height: 74px;
-  text-align: start;
-}
-
-div.with-background .hero-container .hero-small-heading {
-  margin: 0 100px;
-  font-family: "Roboto-light", sans-serif;
-  font-size: 35px;
-  font-weight: 300;
-  color: white;
-  line-height: 74px;
-  text-align: start;
-}
-
-div.with-background .hero-copy {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-  padding-top: 20px;
-  padding-bottom: 84px;
-}
-
-div.with-background .hero-copy .hero-newsletter {
-  max-width: 864px;
-  margin: 0 80px;
-  text-align: center;
-}
-
-div.with-background .hero-copy .hero-image {
-  height: 387px;
-  width: 400px;
-  margin-top: 50px;
-  background-color: #6e6f72;
-  border-radius: 76px 76px 0px 0px;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
-  padding-left: 60px;
-}
-
-div.with-background .hero-copy .hero-image p {
-  height: 14px;
-  width: 84px;
-  font-family: "Roboto-Medium";
-  font-size: 12px;
-  color: white;
-  margin-left: 65%;
-  justify-content: center;
-  line-height: 35px;
-}
-
-div.with-background .hero-copy .hero-image p:hover {
-  background-color: #d19130;
-  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.16);
-}
-
-div.with-background .hero-copy h4 {
-  font-size: 52px;
-  margin-top: 50px;
-  margin-left: 20px;
-  text-align: left;
-}
-
-div.with-background .hero-copy p {
-  margin: 20px 0 0 20px;
-  text-align: left;
-}
-
-div.with-background .hero-copy .button {
-  margin-right: 14px;
-}
-
 header {
   background: white;
 }
@@ -680,6 +590,12 @@ header .top-header-container {
   margin-top: 50px;
 }
 
+@media only screen and (max-width: 780px) {
+  header .top-header-container {
+    display: none;
+  }
+}
+
 header .top-header-container .logo {
   margin-left: 12rem;
   width: 129px;
@@ -689,16 +605,37 @@ header .top-header-container .logo {
   line-height: 0px;
 }
 
+@media only screen and (max-width: 992px) {
+  header .top-header-container .logo {
+    font-size: 35px;
+  }
+}
+
 header .top-header-container .other-container {
   display: flex;
   justify-content: flex-start;
   /*Resize the wrap to see the search bar change!*/
 }
 
+@media screen and (max-width: 992px) {
+  header .top-header-container .other-container {
+    justify-content: end;
+  }
+}
+
 header .top-header-container .other-container .search {
   height: 39px;
   width: 575px;
   display: flex;
+}
+
+@media screen and (max-width: 992px) {
+  header .top-header-container .other-container .search {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+  }
 }
 
 header .top-header-container .other-container .searchTerm {
@@ -844,6 +781,12 @@ footer .footer-content h2 {
   line-height: 35px;
 }
 
+@media only screen and (min-width: 781px) {
+  footer .footer-content h2 span {
+    display: none;
+  }
+}
+
 footer .footer-content li {
   font-family: "Roboto-Regular";
   font-size: 14px;
@@ -858,6 +801,17 @@ footer .footer-content a {
 
 footer .footer-content a:hover {
   color: #919191;
+}
+
+footer .footer-social ul li {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+footer .footer-social ul li a {
+  color: #d19130;
 }
 
 footer .footer-credit {
@@ -891,6 +845,96 @@ footer .footer-credit .payment span {
   color: #c2d1d9;
 }
 
+div.with-background {
+  height: 700px;
+  width: 100%;
+  background-color: #424b5a;
+  border: 1px solid #707070;
+  border-radius: 0px;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+div.with-background .hero-container {
+  margin-top: 20px;
+}
+
+div.with-background .hero-container .hero-big-heading {
+  margin: 0 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  color: white;
+  line-height: 74px;
+  text-align: start;
+}
+
+div.with-background .hero-container .hero-small-heading {
+  margin: 0 100px;
+  font-family: "Roboto-light", sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  color: white;
+  line-height: 74px;
+  text-align: start;
+}
+
+div.with-background .hero-copy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 84px;
+}
+
+div.with-background .hero-copy .hero-newsletter {
+  max-width: 864px;
+  margin: 0 80px;
+  text-align: center;
+}
+
+div.with-background .hero-copy .hero-image {
+  height: 387px;
+  width: 400px;
+  margin-top: 50px;
+  background-color: #6e6f72;
+  border-radius: 76px 76px 0px 0px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  padding-left: 60px;
+}
+
+div.with-background .hero-copy .hero-image p {
+  height: 14px;
+  width: 84px;
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  color: white;
+  margin-left: 65%;
+  justify-content: center;
+  line-height: 35px;
+}
+
+div.with-background .hero-copy .hero-image p:hover {
+  background-color: #d19130;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.16);
+}
+
+div.with-background .hero-copy h4 {
+  font-size: 52px;
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+div.with-background .hero-copy p {
+  margin: 20px 0 0 20px;
+  text-align: left;
+}
+
+div.with-background .hero-copy .button {
+  margin-right: 14px;
+}
+
 .featured-section {
   padding: 50px 0;
 }
@@ -901,11 +945,19 @@ footer .footer-credit .payment span {
 
 .featured-section .container .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 60px 30px;
   align-content: center;
   margin-top: 65px;
   padding: 20px;
+}
+
+@media only screen and (max-width: 780px) {
+  .featured-section .container .products {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .featured-section .container .products .product {
@@ -915,6 +967,13 @@ footer .footer-credit .payment span {
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 780px) {
+  .featured-section .container .products .product {
+    flex: 0 0 auto;
+    margin: 0 10px;
+  }
 }
 
 .featured-section .container .products .product .rating-comment {
@@ -976,6 +1035,10 @@ footer .footer-credit .payment span {
   align-self: center;
 }
 
+.featured-section .container .products .product .price-shop:hover {
+  background-color: #d19130;
+}
+
 .featured-section .container .products .product .price-shop .shop-now {
   font-family: "Roboto-Medium";
   font-size: 16px;
@@ -984,15 +1047,27 @@ footer .footer-credit .payment span {
   margin-left: 6px;
 }
 
+.featured-section .container .products .product .price-shop .shop-now:hover {
+  color: white !important;
+}
+
 .featured-section .container .products .product .price-shop .product-price {
-  color: #919191 !important;
+  color: #919191;
   font-family: "Roboto-Regular";
-  font-size: 16px !important;
-  padding: 4px 6px !important;
+  font-size: 16px;
+  padding: 4px 6px;
+}
+
+.featured-section .container .products .product .price-shop .product-price:hover {
+  color: white;
 }
 
 .featured-section .container .products .product .price-shop #time-3-icon {
   fill: #d19130;
+}
+
+.featured-section .container .products .product .price-shop #time-3-icon:hover {
+  fill: white;
 }
 
 .featured-section .container .products .product .seller {
@@ -1009,6 +1084,24 @@ footer .footer-credit .payment span {
   border-radius: 6px;
 }
 
+.featured-section .container .best-of-2020-wrapper {
+  display: none;
+  margin-bottom: -20px;
+  margin-top: 10px;
+  font-family: "Roboto-Light";
+  font-size: 25px;
+  color: #191919;
+}
+
+@media only screen and (max-width: 780px) {
+  .featured-section .container .best-of-2020-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: -20px;
+  }
+}
+
 .featured-section .container .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1020,6 +1113,12 @@ footer .footer-credit .payment span {
   background-color: #f5f5f5;
   border: 1px solid #707070;
   border-radius: 0px;
+}
+
+@media only screen and (max-width: 780px) {
+  .featured-section .container .categories {
+    display: none;
+  }
 }
 
 .featured-section .container .categories a {

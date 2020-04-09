@@ -85,8 +85,8 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <p class="comment-count">105 reviews</p>
+                        <i class="fas fa-star-half-alt"></i>
+                        <p class="comment-count">68 reviews</p>
 
 
                         <p class="new"><em> {{$product->status}} </em></p>
@@ -101,7 +101,7 @@
                     <div class="product-details">Brief introduction or product description goes here</div>
                     <div class="price-shop">
 
-                        <div class="product-price">${{$product->price}}</div>
+                        <div class="product-price">QR {{$product->price}}</div>
 
                         <div class="shop-now"><a href="{{route('cart.add', $product->id)}}">Shop now</a></div>
                         <div class="cart">
@@ -132,6 +132,10 @@
             </div> <!-- end products -->
 
             <div class="category-container">
+                <div class="best-of-2020-wrapper">
+
+                    <div class="best-of-2020">Best of 2020</div>
+                </div>
                 <div class="categories">
 
 
@@ -205,7 +209,7 @@
                         <div class="product-details">Brief introduction or product description goes here</div>
                         <div class="price-shop">
 
-                            <div class="product-price">${{$cat->price}}</div>
+                            <div class="product-price">QR {{$cat->price}}</div>
 
                             <div class="shop-now"><a href="#">Shop now</a></div>
                             <div class="cart">
