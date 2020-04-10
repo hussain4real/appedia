@@ -590,15 +590,8 @@ header .top-header-container {
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 780px) {
-  header .top-header-container {
-    display: none;
-  }
-}
-
 header .top-header-container .logo {
-  margin-left: 12rem;
-  width: 129px;
+  margin-left: 5rem;
   font-family: "Roboto";
   font-size: 50px;
   color: #86939e;
@@ -650,7 +643,7 @@ header .top-header-container .other-container .searchTerm {
 }
 
 header .top-header-container .other-container .searchTerm:focus {
-  color: #00b4cc;
+  color: #d19130;
 }
 
 header .top-header-container .other-container .searchButton {
@@ -767,7 +760,7 @@ footer .footer-content {
 
 footer .footer-content h1 {
   font-family: "Roboto";
-  font-size: 50px;
+  font-size: 40px;
   color: #86939e;
   background-color: #c2d1d9;
   border: 1px solid #707070;
@@ -1099,6 +1092,7 @@ div.with-background .hero-copy .button {
     align-content: center;
     justify-content: center;
     margin-bottom: -20px;
+    font-size: 30px;
   }
 }
 

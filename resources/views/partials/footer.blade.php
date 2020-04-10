@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-content container">
         <ul class="logo-contact-wrapper">
-            <h1>LOGO</h1>
+            <h1>HOUSEMALL</h1>
             <h2>Contact Us</h2>
             <li>info@storename.com</li>
             <li>City,Physical Address, <br> postal code ####</li>

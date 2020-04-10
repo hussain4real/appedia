@@ -9,12 +9,11 @@ header {
         margin-top: 50px;
 
         @media only screen and (max-width: 780px) {
-            display: none;
         }
 
         .logo {
-            margin-left: 12rem;
-            width: 129px;
+            margin-left: 5rem;
+            // width: 129px;
             font-family: "Roboto";
             font-size: 50px;
             color: rgba(134, 147, 158, 1);
@@ -59,7 +58,7 @@ header {
             }
 
             .searchTerm:focus {
-                color: #00b4cc;
+                color: rgba(209, 145, 48, 1);
             }
 
             .searchButton {

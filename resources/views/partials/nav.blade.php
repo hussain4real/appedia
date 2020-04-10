@@ -27,6 +27,7 @@ use App\Category;
 
 </head>
 
+
 <header>
     <div class="hamburger">
         <div class="line"></div>
@@ -36,7 +37,7 @@ use App\Category;
     <div class="top-header-container">
         <div class="logo">
 
-            LOGO
+            HOUSEMALL
         </div>
         <div class="other-container">
 
@@ -123,5 +124,24 @@ use App\Category;
         @endif
     </nav> <!-- end top-nav -->
 </header>
+
+
+
+
+<Script>
+    (function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.top-nav-links');
+            const links =document.querySelectorAll('.top-nav-links li');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                links.forEach(link =>{
+                    link.classList.toggle('fade');
+                });
+            });
+        })();
+</Script>
+
 
 </html>
