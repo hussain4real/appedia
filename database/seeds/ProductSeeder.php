@@ -11,7 +11,17 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Product::class, 50)->create();
+        // factory(App\Product::class, 50)->create();
+        Product::create([
+            'name' => 'Laptop ',
+            'slug' => 'laptop-',
+            'detail' => [13,14,15][array_rand([13,14,15])] . ' inch, ' . [1, 2, 3][array_rand([1, 2, 3])] .' TB SSD, 32GB RAM',
+
+            'description' =>'Lorem  ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
+            'price' => rand(149999, 249999),
+            'cover-img' => '',
+            'images' => '',
+        ])->categories()->attach(1);
     }
 
     // public function run()
