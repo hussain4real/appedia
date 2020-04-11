@@ -44,6 +44,11 @@
 
                     </div>
                 </div>
+
+                @if ($product->shop)
+
+                <div class="seller">sold by <em>{{$product->shop->name}}</em></div>
+                @endif
             </div>
 
             @endforeach

@@ -12,6 +12,12 @@ div.with-background {
     .hero-container {
         margin-top: 20px;
 
+        @media screen and (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
         .hero-big-heading {
             margin: 0 100px;
             font-family: "Roboto", sans-serif;
@@ -44,6 +50,48 @@ div.with-background {
             max-width: 864px;
             margin: 0 80px;
             text-align: center;
+
+            .search {
+                height: 2.7rem;
+                width: 23.5rem;
+                margin-left: 1rem;
+                margin-top: 1rem;
+
+                display: flex;
+
+                @media screen and (max-width: 992px) {
+                    width: fit-content;
+                    margin-left: auto;
+                }
+            }
+
+            .searchTerm {
+                width: 100%;
+                background-color: #424b5a;
+                border: 2px solid #d19130;
+                border-radius: 6px 0 0 6px;
+                border-right: none;
+                padding: 5px;
+                height: 36px;
+
+                outline: none;
+            }
+
+            .searchTerm:focus {
+                color: #ffffff;
+            }
+
+            .searchButton {
+                width: 40px;
+                height: 36px;
+                border: 1px solid #d19130;
+                background: #d19130;
+                text-align: center;
+                color: #fff;
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+                font-size: 20px;
+            }
         }
 
         .hero-image {
@@ -54,6 +102,10 @@ div.with-background {
             border-radius: 76px 76px 0px 0px;
             box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
             padding-left: 60px;
+
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
 
             p {
                 height: 14px;

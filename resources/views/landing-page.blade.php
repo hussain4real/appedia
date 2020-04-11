@@ -46,6 +46,13 @@
                     <div class="hero-newsletter">
                         <h4>Coming Soon</h4>
                         <p>Subscribe to our newsletter to know when the product becomes available locally</p>
+                        <div class="search">
+                            <input type="text" name="query" id="query" class="searchTerm"
+                                value="{{request()->input('query')}}" placeholder="Your Email Address Here">
+                            <button type="submit" class="searchButton">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="hero-image">

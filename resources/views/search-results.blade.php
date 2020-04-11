@@ -174,7 +174,7 @@
 
                                     <div class="product-details">Brief introduction or product description goes here
                                     </div>
-                                    <div class="price-shop">
+                                    <div class="price-shop mr-40">
 
                                        <div class="product-price">${{$product->price}}</div>
 
