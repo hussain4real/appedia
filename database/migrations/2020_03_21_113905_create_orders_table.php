@@ -13,6 +13,7 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
+        if(!Schema::hasTable('orders')){
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
 
@@ -44,6 +45,7 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
         });
     }
+}
 
     /**
      * Reverse the migrations.
