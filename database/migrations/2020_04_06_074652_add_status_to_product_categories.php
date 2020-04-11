@@ -13,10 +13,12 @@ class AddStatusToProductCategories extends Migration
      */
     public function up()
     {
+        if(!Schema::hasTable('product_categories')){
         Schema::table('product_categories', function (Blueprint $table) {
             $table->enum('status', ['', 'new', 'hot', 'trending', 'popular'])->default('');
         });
     }
+}
 
     /**
      * Reverse the migrations.
