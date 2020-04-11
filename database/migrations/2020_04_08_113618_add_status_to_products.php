@@ -13,7 +13,7 @@ class AddStatusToProducts extends Migration
      */
     public function up()
     {
-        if(!Schema::hasTable('orders')){
+        if(!Schema::hasTable('products')){
         Schema::table('products', function (Blueprint $table) {
             $table->enum('status', ['rare', 'new', 'hot', 'trending', 'popular'])->default('new');
         });
