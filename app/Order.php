@@ -11,7 +11,7 @@ class Order extends Model
 {
 
     protected $fillable = [
-        'user_id', 'shop_id', 'shipping_fullname', 'shipping_address', 'shipping_city', 'shipping_state', 'shipping_zipcode', 'shipping_phone', 'notes', 'error',
+        'user_id', 'shipping_fullname', 'shipping_address', 'shipping_city', 'shipping_state', 'shipping_zipcode', 'shipping_phone', 'notes', 'error',
     ];
 
     public function items()
