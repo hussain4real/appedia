@@ -6,13 +6,12 @@ use App\Shop;
 use App\Category;
 use NumberFormatter;
 use App\ProductCategory;
-use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 
 
 class Product extends Model
 {
-    use Searchable;
+
 
     protected $fillable = ['quantity'];
 
