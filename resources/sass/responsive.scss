@@ -167,6 +167,9 @@
                     display: flex;
                     flex-shrink: initial;
                     margin-left: 1rem;
+                    border: none;
+                    outline: auto;
+                    border-radius: 0.3rem;
                 }
 
                 .searchButton {
@@ -174,6 +177,7 @@
                     border: none;
                     color: rgba(25, 25, 25, 1);
                     // width: 4rem;
+                    margin-left: 8rem;
                 }
 
                 .searchButton.close {
@@ -269,6 +273,7 @@
     }
 
     footer {
+        width: 100%;
         .footer-content {
             display: flex;
             flex-direction: column;
@@ -328,6 +333,10 @@
             .footer-categories-wrapper {
                 li {
                     display: none;
+                }
+
+                li.open {
+                    display: block;
                 }
             }
 

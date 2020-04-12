@@ -47,7 +47,7 @@
                         <h4>Coming Soon</h4>
                         <p>Subscribe to our newsletter to know when the product becomes available locally</p>
                         <div class="search">
-                            <input type="text" name="query" id="query" class="searchTerm"
+                            <input type="text" name="query" id="emailQuery" class="searchTerm"
                                 value="{{request()->input('query')}}" placeholder="Your Email Address Here">
                             <button type="submit" class="searchButton">
                                 <i class="fas fa-paper-plane"></i>
@@ -205,7 +205,8 @@
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <p class="comment-count">105 reviews</p>
-                            <p class="new"><em> {{$product->status}} </em></p>
+                            {{-- <em class="new"><em> {{$product->status}} </em></em> --}}
+                            <p class="new"><em> New </em></p>
                         </div>
                         <a href="{{route('product.show', $product->id)}}"><img
                                 src="{{ productImage($product->cover_img)}}" alt="product"></a>
@@ -481,3 +482,19 @@
 </body>
 
 </html>
+
+<Script>
+    (function () {
+            const backgroundImg = document.querySelector('.hero-container');
+            // const navLinks = document.querySelector('.top-nav-links');
+            const links =document.querySelectorAll('li');
+
+            window.addEventListener('load', () => {
+                // navLinks.classList.toggle('open');
+                backgroundImg.classList.add('fadein');
+
+                console.log('clicked');
+            });
+
+        })();
+</Script>

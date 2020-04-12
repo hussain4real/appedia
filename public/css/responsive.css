@@ -152,12 +152,16 @@
     display: flex;
     flex-shrink: initial;
     margin-left: 1rem;
+    border: none;
+    outline: auto;
+    border-radius: 0.3rem;
   }
 
   div.top-header-container .other-container .search .searchButton {
     background: none;
     border: none;
     color: #191919;
+    margin-left: 8rem;
   }
 
   div.top-header-container .other-container .search .searchButton.close {
@@ -257,6 +261,10 @@
     display: none;
   }
 
+  footer {
+    width: 100%;
+  }
+
   footer .footer-content {
     display: flex;
     flex-direction: column;
@@ -310,6 +318,10 @@
 
   footer .footer-content .footer-categories-wrapper li {
     display: none;
+  }
+
+  footer .footer-content .footer-categories-wrapper li.open {
+    display: block;
   }
 
   footer .footer-content .footer-main li {

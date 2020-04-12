@@ -1,3 +1,7 @@
+@php
+use App\Category;
+@endphp
+
 <footer>
     <div class="footer-content container">
         <ul class="logo-contact-wrapper">
@@ -21,14 +25,32 @@
         </ul>
         <ul class="footer-categories-wrapper">
             <div class="h2-span-wrapper">
-                <h2>Categories <span class="arrow">></span></h2>
+                <h2>Categories <span class="arrow-cat">></span></h2>
             </div>
-            <li><a>Name </a></>
-            <li><a>Name</a></>
-            <li><a>Name</a></>
-            <li><a>Name</a></>
-            <li><a>Name</a></>
-            <li><a>Name</a></>
+
+            @php
+
+            $categories = Category::all();
+
+            @endphp
+            @foreach ($categories as $category)
+            @if ($category->slug == 'men')
+            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+            @endif
+            @endforeach
+
+            @foreach ($categories as $category)
+            @if ($category->slug == 'women')
+            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+            @endif
+            @endforeach
+
+
+            @foreach ($categories as $category)
+            @if ($category->slug == 'kids')
+            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+            @endif
+            @endforeach
         </ul>
         <ul class="footer-main">
             <div class="h2-span-wrapper">
@@ -71,3 +93,23 @@
         <div class="payment">Cash on <span>Delivery</span></div>
     </div>
 </footer>
+
+
+<Script>
+    (function () {
+            const arrowCat = document.querySelector('.arrow-cat');
+            // const navLinks = document.querySelector('.top-nav-links');
+            const links =document.querySelectorAll('li');
+
+            if (arrowCat) {
+
+            arrowCat.addEventListener('click', () => {
+                // navLinks.classList.toggle('open');
+                links.forEach(link =>{
+                    link.classList.toggle('open');
+                });
+                console.log('clicked');
+            });
+            }
+        })();
+</Script>
