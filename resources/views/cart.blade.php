@@ -57,10 +57,10 @@
             @endif
 
 
-            @if (Cart::session(auth()->id())->getContent()->count() > 0)
+            @if (Cart::getContent()->count() > 0)
 
 
-            <h2>{{Cart::session(auth()->id())->getContent()->count()}} item(s) in Shopping Cart</h2>
+            <h2>{{Cart::getContent()->count()}} item(s) in Shopping Cart</h2>
 
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -87,7 +87,7 @@
                                     </td>
                                     <td class="product-name"><a href="#">{{ $item->model->name }} </a></td>
                                     <td class="product-price-cart"><span
-                                            class="amount">${{Cart::session(auth()->id())->get($item->model->id)->getPriceSum()}}</span>
+                                            class="amount">${{Cart::get($item->model->id)->getPriceSum()}}</span>
                                     </td>
                                     <td class="product-quantity">
                                         <form action="{{route('cart.update', $item->id)}}" method="get">
@@ -101,7 +101,7 @@
                                         </form>
                                     </td>
                                     <td class="product-subtotal">
-                                        ${{Cart::session(auth()->id())->get($item->model->id)->getPriceSum()}}
+                                        ${{Cart::get($item->model->id)->getPriceSum()}}
                                     </td>
                                 </tr>
                                 @endforeach
