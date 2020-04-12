@@ -39,7 +39,7 @@ Route::get('/products', 'ProductController@index')->name('products.index');
 Route::get('/add-to-cart/{product}', 'CartController@add')->name('cart.add');
 
 // add item to saveForLater
-Route::get('/cart/switchToSaveForLater/{product}', 'CartController@store')->name('cart.store')->middleware('auth');
+Route::post('/cart/switchToSaveForLater/{product}', 'CartController@store')->name('cart.store');
 
 // cart view route
 Route::get('/cart', 'CartController@index')->name('cart.index');

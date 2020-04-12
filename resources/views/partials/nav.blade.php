@@ -10,7 +10,7 @@ use App\Category;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Al Mossem</title>
+    <title>Housemall</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
@@ -72,8 +72,7 @@ use App\Category;
                             @if (Cart::getContent()->count() > 0)
                             {{-- session(auth()->id())-> --}}
 
-                            <span
-                                class="cart-count"><span>{{Cart::session(auth()->id())->getContent()->count()}}</span></span>
+                            <span class="cart-count"><span>{{Cart::getContent()->count()}}</span></span>
                             @endif
                         </i>
                     </a>

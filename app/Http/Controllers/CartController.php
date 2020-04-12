@@ -112,32 +112,32 @@ class CartController extends Controller
         return back()->with('success_message', 'Item has been removed');
     }
 
-    // public function store($itemId){
+    public function store($itemId){
 
 
-    // //     // add the product to cart
-    //     $item = \Cart::session(auth()->id())->get($itemId);
+    //     // add the product to cart
+        $item = \Cart::session(auth()->id())->get($itemId);
 
-    //     \Cart::session(auth()->id())->remove($itemId);
-
-    //     $userId = auth()->user()->id;
-    //     $saveForLater = \Cart::session($userId)->add(array(
-    //         'id' => $item->id,
-    //         'name' => $item->name,
-    //         'price' => $item->price,
-    //         'quantity' => 1,
-    //         'attributes' => array(),
-
-    //     ))->associate('App\Product');
-    //     return redirect()->route('cart.index')->with([
-    //         'success_message' => 'Item has been saved for later',
-    //         'saveForLater' => $saveForLater,
-    //     ]);
+        \Cart::session(auth()->id())->remove($itemId);
 
 
+        $saveForLater = \Cart::session(auth()->id())->add(array(
+            'id' => $item->id,
+            'name' => $item->name,
+            'price' => $item->price,
+            'quantity' => 1,
+            'attributes' => array(),
+
+        ))->associate('App\Product');
+        return redirect()->route('cart.index')->with([
+            'success_message' => 'Item has been saved for later',
+            'saveForLater' => $saveForLater,
+        ]);
 
 
-    // }
+
+
+    }
 
     //update item in the cart logic
     public function update(Request $request, $itemId ){
