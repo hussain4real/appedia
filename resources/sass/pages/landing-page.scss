@@ -1,8 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 div.with-background {
     height: 700px;
     width: 100%;
     // position: relative;
-    // background-color: rgba(66, 75, 90, 1);
+    background-color: rgba(66, 75, 90, 1);
 
     // background-image: url("/img/hero2.jpg");
     // background-position: center center;
@@ -12,17 +18,13 @@ div.with-background {
 
     // border: 1px solid rgba(112, 112, 112, 1);
 
-    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
+    // box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
     // background-image: url("/img/hero2.jpg");
     // background-position: center center;
     // background-repeat: no-repeat;
     // background-attachment: scroll;
     // background-size: cover;
-    -webkit-animation-name: background;
-    -webkit-animation-duration: 7s;
-    -webkit-animation-direction: alternate;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+
     border-radius: 0px;
     overflow: hidden;
 
@@ -71,23 +73,6 @@ div.with-background {
             text-align: start;
         }
     }
-
-    // .hero-container:before {
-    //     content: "";
-    //     width: 100%;
-    //     height: 100%;
-    //     position: absolute;
-    //     background-image: url("/img/hero3.jpg"), url("/img/hero4.jpg");
-    //     background-position: center center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     opacity: 0;
-    //     transition: opacity 2s;
-    // }
-
-    // .hero-container.fadein:before {
-    //     opacity: 1;
-    // }
 
     .hero-copy {
         display: grid;
@@ -195,30 +180,6 @@ div.with-background {
         .button {
             margin-right: 14px;
         }
-    }
-}
-
-@-webkit-keyframes background {
-    0% {
-        background-image: url("/img/hero2.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-    }
-    33% {
-        background-image: url("/img/hero3.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-    }
-    100% {
-        background-image: url("/img/hero4.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
     }
 }
 

@@ -143,6 +143,7 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 780px) {
     div.top-header-container {
+        display: none;
         position: absolute;
         .logo {
             position: relative;
@@ -250,15 +251,17 @@
 
     div.with-background {
         height: auto;
-        width: fit-content;
+        width: auto;
         overflow: hidden;
     }
 
     .hero-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
         align-items: center;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        // flex-direction: column;
+        // align-items: center;
+        // flex-wrap: wrap;
         .hero-copy {
             grid-template-columns: 1fr;
 
@@ -273,7 +276,6 @@
     }
 
     footer {
-        width: 100%;
         .footer-content {
             display: flex;
             flex-direction: column;

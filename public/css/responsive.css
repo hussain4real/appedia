@@ -125,6 +125,7 @@
 
 @media only screen and (max-width: 780px) {
   div.top-header-container {
+    display: none;
     position: absolute;
   }
 
@@ -236,17 +237,14 @@
 
   div.with-background {
     height: auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: auto;
     overflow: hidden;
   }
 
   .hero-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
   .hero-container .hero-copy {
@@ -259,10 +257,6 @@
 
   .hero-container .hero-image {
     display: none;
-  }
-
-  footer {
-    width: 100%;
   }
 
   footer .footer-content {
