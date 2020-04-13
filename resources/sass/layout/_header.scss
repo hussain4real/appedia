@@ -27,6 +27,7 @@ header {
 
         .other-container {
             display: flex;
+            align-items: center;
             justify-content: flex-start;
 
             @media screen and (max-width: 992px) {
@@ -39,6 +40,7 @@ header {
                 width: 575px;
 
                 display: flex;
+                align-items: center;
 
                 @media screen and (max-width: 992px) {
                     width: fit-content;

@@ -666,6 +666,7 @@ header .top-header-container .logo {
 
 header .top-header-container .other-container {
   display: flex;
+  align-items: center;
   justify-content: flex-start;
   /*Resize the wrap to see the search bar change!*/
 }
@@ -680,6 +681,7 @@ header .top-header-container .other-container .search {
   height: 39px;
   width: 575px;
   display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 992px) {
