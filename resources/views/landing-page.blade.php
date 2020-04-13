@@ -208,10 +208,10 @@
                             {{-- <em class="new"><em> {{$product->status}} </em></em> --}}
                             <p class="new"><em> New </em></p>
                         </div>
-                        <a href="{{route('product.show', $product->id)}}"><img
-                                src="{{ productImage($product->cover_img)}}" alt="product"></a>
+                        <a href="{{route('product.show', $cat->id)}}"><img src="{{ productImage($cat->cover_img)}}"
+                                alt="product"></a>
 
-                        <div class="product-name"><a href="{{route('product.show', $product->id)}}">{{$cat->name}}</a>
+                        <div class="product-name"><a href="{{route('product.show', $cat->id)}}">{{$cat->name}}</a>
                         </div>
 
                         <div class="product-details">Brief introduction or product description goes here</div>
@@ -219,7 +219,7 @@
 
                             <div class="product-price">QR {{$cat->price}}</div>
 
-                            <div class="shop-now"><a href="#">Shop now</a></div>
+                            <div class="shop-now"><a href="{{route('cart.add', $cat->id)}}">Shop now</a></div>
                             <div class="cart">
                                 {{-- <img src="/img/shopping-cart.svg" alt="shopping-cart" class="filter-yellow"> --}}
                                 <svg height="16px" viewBox="0 -13 456.75885 456" width="16px"
