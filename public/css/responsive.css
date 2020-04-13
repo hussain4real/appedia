@@ -125,13 +125,14 @@
 
 @media only screen and (max-width: 780px) {
   div.top-header-container {
-    display: none;
     position: absolute;
+    margin-left: 6.5rem;
   }
 
   div.top-header-container .logo {
     position: relative;
     top: -7.2rem;
+    left: auto;
   }
 
   div.top-header-container .other-container ul {
@@ -162,7 +163,7 @@
     background: none;
     border: none;
     color: #191919;
-    margin-left: 8rem;
+    margin-left: 2rem;
   }
 
   div.top-header-container .other-container .search .searchButton.close {

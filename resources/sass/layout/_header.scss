@@ -2,17 +2,18 @@ header {
     background: $white;
 
     .top-header-container {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
-        justify-content: center;
+        display: flex;
+        // display: grid;
+        // grid-template-columns: 0.5fr 1fr;
         align-items: center;
+        justify-content: center;
         margin-top: 50px;
 
         @media only screen and (max-width: 780px) {
         }
 
         .logo {
-            margin-left: 5rem;
+            margin-right: 2rem;
             // width: 129px;
             font-family: "Roboto";
             font-size: 50px;
