@@ -51,9 +51,11 @@ div.with-background {
         @media screen and (max-width: 900px) {
             display: grid;
             align-items: center;
+            justify-content: center;
+            justify-items: center;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             margin-bottom: 2rem;
-            margin-left: 3rem;
+            margin-left: 2rem;
         }
 
         .hero-big-heading {

@@ -262,13 +262,12 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         align-items: center;
         justify-content: center;
-        overflow: hidden;
 
         // flex-direction: column;
         // align-items: center;
         // flex-wrap: wrap;
         .hero-copy {
-            grid-template-columns: 1fr;
+            // grid-template-columns: 1fr;
 
             .hero-newsletter {
                 display: none;

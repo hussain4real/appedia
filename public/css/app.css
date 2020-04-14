@@ -1041,9 +1041,11 @@ div.with-background .hero-container {
   div.with-background .hero-container {
     display: grid;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin-bottom: 2rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
 }
 
