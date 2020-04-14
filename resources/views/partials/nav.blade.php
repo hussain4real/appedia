@@ -8,7 +8,7 @@ use App\Category;
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Housemall</title>
 
@@ -29,10 +29,10 @@ use App\Category;
 
 
 <header>
-    <div class="hamburger">
+    <div class="hamburger">|||
+        {{-- <div class="line"></div>
         <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line"></div> --}}
     </div>
     <div class="top-header-container">
         <div class="logo">
@@ -116,7 +116,8 @@ use App\Category;
 
         </div>
     </div>
-    <nav class="top-nav container">
+    <nav class="top-nav container" id="lgMenu">
+        <span id="exit">&times;</span>
 
         @if (! request()->is('checkout'))
         <ul class="top-nav-links">
@@ -159,18 +160,52 @@ use App\Category;
 
 
 <Script>
+    // (function () {
+    //         const hamburger = document.querySelector('.hamburger');
+    //         const navLinks = document.querySelector('.top-nav-links');
+    //         const links =document.querySelectorAll('.top-nav-links li');
+
+    //         hamburger.addEventListener('click', () => {
+    //             navLinks.classList.toggle('open');
+    //             links.forEach(link =>{
+    //                 link.classList.toggle('fade');
+    //             });
+    //         });
+    //     })();
+
     (function () {
             const hamburger = document.querySelector('.hamburger');
+            const lgMenu = document.querySelector('#lgMenu')
+            const close = document.querySelector('#exit');
             const navLinks = document.querySelector('.top-nav-links');
             const links =document.querySelectorAll('.top-nav-links li');
 
             hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('open');
-                links.forEach(link =>{
-                    link.classList.toggle('fade');
-                });
+                // navLinks.classList.toggle('open');
+                hamburger.style.opacity= '0';
+                lgMenu.classList.add('enter');
+
+                close.addEventListener('click', () => {
+                    lgMenu.classList.remove('enter');
+                    hamburger.style.opacity = '1';
+                })
+                console.log('clicked alot');
+                // links.forEach(link =>{
+                //     link.classList.toggle('fade');
+                // });
             });
         })();
+
+//     $(document).ready(function(){
+// $("#menu").on("click", function(){
+//    $("#menu").css("opacity", "0");
+//     $("#lgMenu").addClass("enter");
+// });
+//     $("#exit").on("click", function(){
+//        $("#lgMenu").removeClass("enter");
+//         $("#menu").css("opacity", "1");
+//     });
+// });
 </Script>
 
 

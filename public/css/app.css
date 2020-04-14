@@ -1046,6 +1046,7 @@ div.with-background .hero-container {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin-bottom: 2rem;
     margin-left: 2rem;
+    margin-right: 1rem;
   }
 }
 

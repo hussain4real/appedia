@@ -171,69 +171,86 @@
   }
 
   .hamburger {
-    cursor: pointer;
-    margin: 35px;
-  }
-
-  .line {
-    width: 30px;
-    height: 3px;
-    margin: 5px;
-    background: black;
-  }
-
-  nav {
     position: relative;
+    left: -19rem;
+    margin: 1rem 0;
+    font-size: 2em;
+    font-weight: 800;
+    z-index: 111;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+    -webkit-transition: all 0.25s;
+  }
+
+  .hamburger:hover {
+    transform: rotate(90deg);
+    color: #ff9900;
   }
 
   nav.top-nav ul {
-    position: fixed;
-    background: #d19130;
-    height: 80%;
-    width: 100%;
-    margin-top: -5px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    clip-path: circle(10px at 20% -10%);
-    -webkit-clip-path: circle(10px at 20% -10%);
-    transition: all 1s ease-out;
+    list-style: none;
+    padding: 0;
+    margin-top: 15rem;
   }
 
   nav.top-nav ul li {
+    text-align: center;
+    text-transform: uppercase;
+    height: 70px;
+    line-height: 70px;
+    margin: 15px 0;
+    color: #191919;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    transition: all 0.25s;
+  }
+
+  nav.top-nav ul li:hover {
+    background-color: white;
+    color: black;
+    letter-spacing: 0.3em;
+    font-size: 1.5em;
+  }
+
+  #lgMenu {
+    width: 25rem;
+    height: 100%;
+    top: 0;
+    left: -25rem;
+    overflow: hidden;
+    background-color: #f8f1f1;
+    box-shadow: 5px 5px 10px grey;
+    position: absolute;
+    z-index: 11;
     opacity: 0;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
   }
 
-  nav.top-nav ul li:nth-child(1) {
-    transition: all 1.2s ease-in 0.2s;
-  }
-
-  nav.top-nav ul li:nth-child(2) {
-    transition: all 1.2s ease-in 0.4s;
-  }
-
-  nav.top-nav ul li:nth-child(3) {
-    transition: all 1.2s ease-in 0.6s;
-  }
-
-  nav.top-nav ul li:nth-child(4) {
-    transition: all 1.2s ease-in 0.8s;
-  }
-
-  nav.top-nav ul li:nth-child(5) {
-    transition: all 1.2s ease-in 1s;
-  }
-
-  nav.top-nav ul li:nth-child(6) {
-    transition: all 1.2s ease-in 1.2s;
-  }
-
-  nav.top-nav ul li.fade {
+  #lgMenu.enter {
     opacity: 1;
+    left: 0;
   }
 
-  .top-nav ul.open {
-    clip-path: circle(680px at 90% -10%);
-    -webkit-clip-path: circle(680px at 20% -10%);
+  #exit {
+    position: absolute;
+    right: 10px;
+    padding: 0px;
+    top: -10px;
+    font-size: 4em;
+    color: #867d7d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+  }
+
+  #exit:hover {
+    color: #ff9900;
   }
 
   div.with-background {
@@ -343,6 +360,27 @@
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
+  .hamburger {
+    position: relative;
+    left: -10rem;
+    margin: 1rem 0;
+  }
+
+  nav.top-nav ul {
+    align-items: flex-start;
+    margin-left: -3rem;
+    justify-content: center;
+    text-align: left;
+  }
+
+  #lgMenu {
+    width: 16rem;
+  }
+
+  #exit {
+    right: 1rem;
+  }
+
   .products {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
