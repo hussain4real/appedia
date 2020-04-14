@@ -68,8 +68,13 @@ use App\Category;
             <ul>
                 @guest
 
-                <li><a href="{{route('login')}}">Login</a></li>
-                <li><a href="{{route('register')}}">Sign Up</a></li>
+                <div class="login">
+                    <li><a href="{{route('login')}}">Login</a></li>
+
+                </div>
+                <div class="login">
+                    <li><a href="{{route('register')}}">Sign Up</a></li>
+                </div>
                 @else
                 <li>
                 <li>
@@ -89,8 +94,12 @@ use App\Category;
                 </form>
 
                 @endguest
-                <li><i class="fas fa-user"></i></li>
-                <li><a href="{{route('cart.index')}}"><i class="fas fa-shopping-cart">
+                <li class="user">
+                    <i class="fas fa-user"></i>
+
+                </li>
+                <li class="cart"><a href="{{route('cart.index')}}">
+                        <i class="fas fa-shopping-cart">
                             @if (Cart::getContent()->count() > 0)
                             {{-- session(auth()->id())-> --}}
 

@@ -239,13 +239,14 @@
   div.with-background {
     height: auto;
     width: auto;
-    overflow: hidden;
   }
 
   .hero-container {
     display: grid;
-    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .hero-container .hero-copy {
@@ -329,13 +330,18 @@
 
   footer .footer-social ul li {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
     justify-content: center;
   }
 
   footer .footer-social ul li a {
-    margin: 2px 10px;
+    margin: 0.3rem 0.7rem 0.3rem 0;
+  }
+
+  footer .footer-newsletter {
+    display: none;
   }
 }
 

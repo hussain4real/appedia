@@ -3,7 +3,7 @@ footer {
     box-shadow: 0px 3px 6px 0px #000000;
     width: 100%;
 
-    padding: 40px 0;
+    padding: 2.4rem 0 1rem 0;
 
     .footer-content {
         display: grid;
@@ -50,32 +50,70 @@ footer {
         }
     }
 
-    .footer-social {
-        ul {
-            li {
-                display: flex;
-                align-items: center;
-                justify-items: center;
-                justify-content: space-around;
-                // margin-left: 1rem;
-                a {
-                    color: rgba(209, 145, 48, 1);
-                }
+    .footer-newsletter {
+        margin: 1.4rem 0 0.2rem 4.3rem;
+
+        p {
+            font-family: "Montserrat";
+            font-size: 0.8rem;
+            color: #ffffff;
+        }
+        .search {
+            height: 2.7rem;
+            width: 16.4rem;
+            // margin-left: 2rem;
+            margin-top: 1rem;
+
+            display: flex;
+
+            @media screen and (max-width: 992px) {
+                width: fit-content;
+                margin-left: auto;
             }
+        }
+
+        .searchTerm {
+            width: 100%;
+            background-color: #424b5a;
+            border: 2px solid #d19130;
+            border-radius: 6px 0 0 6px;
+            border-right: none;
+            padding: 5px;
+            height: 36px;
+
+            outline: none;
+        }
+
+        .searchTerm:focus {
+            color: #ffffff;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #d19130;
+            background: #d19130;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
         }
     }
 
     .footer-credit {
         display: flex;
         align-items: center;
+        padding-top: 1.5rem;
+        border-top: 0.06rem solid #3c3c3c;
 
         .reserved-rights {
             font-family: "Roboto-Regular";
             font-size: 14px;
             color: #ffffff;
             line-height: 21px;
-            margin-top: 25px;
-            margin-left: 40px;
+
+            margin-left: 4rem;
 
             span {
                 font-family: "Roboto";
@@ -87,11 +125,27 @@ footer {
             font-size: 18px;
             color: #43484d;
             line-height: 35px;
-            margin-top: 25px;
+
             margin-left: 40px;
 
             span {
                 color: #c2d1d9;
+            }
+        }
+
+        .footer-social {
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-items: center;
+                    justify-content: space-around;
+                    margin-left: 1rem;
+                    a {
+                        color: rgba(209, 145, 48, 1);
+                        margin-left: 1.2rem;
+                    }
+                }
             }
         }
     }

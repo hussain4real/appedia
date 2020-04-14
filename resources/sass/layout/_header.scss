@@ -13,7 +13,7 @@ header {
         }
 
         .logo {
-            margin-right: 2rem;
+            margin-right: 2.5rem;
             // width: 129px;
             font-family: "Roboto";
             font-size: 50px;
@@ -77,28 +77,52 @@ header {
             }
             ul {
                 display: flex;
+                align-items: center;
+                text-align: center;
                 justify-content: space-around;
 
-                li {
+                .login {
+                    width: 90px !important;
+                    margin-left: 1rem;
+                    color: rgba(110, 111, 114, 1);
+                    align-items: center;
+                    justify-content: center;
+                    // letter-spacing: -0.07em;
+                    // line-height: 22px;
+                    background-color: rgba(255, 255, 255, 1);
+                    border: 2px solid rgba(209, 145, 48, 1);
+                    border-radius: 6px;
+
+                    &:hover {
+                        color: darken($white, 10%);
+                        background-color: rgba(209, 145, 48, 1);
+                    }
+                }
+
+                li.user {
+                    margin-left: 1rem;
+                }
+
+                li.cart {
                     margin-left: 1rem;
 
                     a {
-                        height: 22px;
-                        width: 70px;
-                        padding: 5px;
+                        // height: 22px;
+                        // width: 120px;
+                        // padding: 5px;
 
-                        font-size: 15px;
-                        color: rgba(110, 111, 114, 1);
-                        text-align: center;
-                        letter-spacing: -0.07em;
-                        line-height: 22px;
-                        background-color: rgba(255, 255, 255, 1);
-                        border: 2px solid rgba(209, 145, 48, 1);
-                        border-radius: 6px;
-                        &:hover {
-                            color: darken($white, 10%);
-                            background-color: rgba(209, 145, 48, 1);
-                        }
+                        // font-size: 15px;
+                        // color: rgba(110, 111, 114, 1);
+                        // text-align: center;
+                        // // letter-spacing: -0.07em;
+                        // // line-height: 22px;
+                        // background-color: rgba(255, 255, 255, 1);
+                        // border: 2px solid rgba(209, 145, 48, 1);
+                        // border-radius: 6px;
+
+                        // .login {
+                        //     width: 90px !important;
+                        // }
                     }
 
                     .cart-count {

@@ -78,22 +78,34 @@ use App\Category;
 
     </div> <!-- end footer-content -->
 
-    <div class="footer-social container">
-        <ul>
-            <li>
-                <a href=""><i class="fab fa-facebook-square"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-            </li>
-        </ul>
+
+    <div class="footer-newsletter">
+        <p>Subscribe to our Newsletter</p>
+        <div class="search">
+            <input type="text" name="query" id="emailQuery" class="searchTerm" value="{{request()->input('query')}}"
+                placeholder="Your Email Address Here">
+            <button type="submit" class="searchButton">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
     </div>
-    <div class="footer-credit container">
+    <div class="footer-credit ">
         <div class="reserved-rights">© 2020 Store Name <span> All Rights Reserved</span></div>
         <div class="payment">Cash on <span>Delivery</span></div>
+        <div class="footer-social container">
+            <ul>
+                <li>
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </footer>
 
+@include('partials.mobile-footer')
 
 <Script>
     (function () {

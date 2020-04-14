@@ -18,7 +18,7 @@ div.with-background {
 
     // border: 1px solid rgba(112, 112, 112, 1);
 
-    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.3);
     background-image: url("/img/Banner-Image-1.png");
     background-position: left;
     background-repeat: no-repeat;
@@ -46,26 +46,31 @@ div.with-background {
         // -webkit-animation-direction: alternate;
         // -webkit-animation-timing-function: linear;
         // -webkit-animation-iteration-count: infinite;
+        margin: 0 2rem 0 8rem;
 
         @media screen and (max-width: 900px) {
             display: grid;
             align-items: center;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             margin-bottom: 2rem;
+            margin-left: 3rem;
         }
 
         .hero-big-heading {
-            margin: 0 100px;
-            font-family: "Roboto", sans-serif;
+            // margin: 0 0 0 6rem;
+            font-family: "Roboto-Regular";
             font-size: 60px;
             color: rgba(255, 255, 255, 1);
             // letter-spacing: -0.15em;
             line-height: 74px;
             text-align: start;
+
+            @media only screen and (max-width: 480px) {
+            }
         }
         .hero-small-heading {
-            margin: 0 100px;
-            font-family: "Roboto-light", sans-serif;
+            // margin: 0 100px;
+            font-family: "Roboto-light";
             font-size: 35px;
             font-weight: 300;
             color: rgba(255, 255, 255, 1);
@@ -84,13 +89,13 @@ div.with-background {
 
         .hero-newsletter {
             max-width: 864px;
-            margin: 0 80px;
+            // margin: 0 80px;
             text-align: center;
 
             .search {
                 height: 2.7rem;
                 width: 23.5rem;
-                margin-left: 1rem;
+                // margin-left: 1rem;
                 margin-top: 1rem;
 
                 display: flex;
@@ -131,9 +136,10 @@ div.with-background {
         }
 
         .hero-image {
-            height: 387px;
-            width: 400px;
-            margin-top: 50px;
+            height: 24.2rem;
+            width: 25rem;
+            margin-top: 8.3rem;
+            margin-left: 6rem;
 
             // background-color: rgba(110, 111, 114, 1);
             background-image: url("/img/little-hero.png");
@@ -169,13 +175,14 @@ div.with-background {
         h4 {
             font-size: 52px;
             margin-top: 50px;
-            margin-left: 20px;
+            // margin-left: 20px;
             text-align: left;
         }
 
         p {
-            margin: 20px 0 0 20px;
-            text-align: left;
+            // margin: 20px 0 0 20px;
+            text-align: center;
+            max-width: 23rem;
         }
 
         .button {
@@ -222,6 +229,10 @@ div.with-background {
                 justify-content: center;
                 align-items: center;
                 justify-content: center;
+                background-color: #ffffff;
+                border: 1px solid #f5f5f5;
+                border-radius: 6px;
+                box-shadow: 0px 3px 3px 0px #000000;
                 transition: box-shadow 0.4s ease-in-out;
 
                 @media only screen and (max-width: 780px) {
@@ -239,26 +250,25 @@ div.with-background {
                 .rating-comment {
                     display: flex;
                     align-items: center;
-                    margin-right: 5px;
-
+                    padding: 1rem 0.5rem;
                     .fa-rating {
-                        font-size: 10px;
+                        font-size: 0.6rem;
                     }
 
                     .comment-count {
-                        margin-left: 4px;
-                        font-size: 13px;
+                        margin-left: 0.3rem;
+                        font-size: 0.8rem;
                     }
 
                     .new {
                         font-family: "Roboto-Medium";
-                        font-size: 12px;
+                        font-size: 0.8rem;
                         color: #ffffff;
                         background-color: rgba(209, 145, 48, 1);
                         border: 2px solid rgba(209, 145, 48, 1);
-                        border-radius: 12px;
-                        margin-left: 2px;
-                        padding: 2px;
+                        border-radius: 0.8rem;
+                        margin-left: 1rem;
+                        padding: 0.1rem;
                         text-transform: capitalize;
                         font-style: italic;
                     }
@@ -268,20 +278,22 @@ div.with-background {
                     // height: 22px;
                     // width: 115px;
                     font-family: "Roboto-Regular";
-                    font-size: 18px;
+                    font-size: 1.1rem;
                     color: rgba(25, 25, 25, 1);
+                    margin-top: 0.3rem;
                     // line-height: 26px;
                 }
 
                 img {
-                    height: 12.5rem;
-                    max-width: 14.5rem;
+                    height: 11.5rem;
+                    max-width: 11.5rem;
                 }
 
                 .product-details {
                     width: 232px;
                     font-family: "Roboto-Regular";
-                    font-size: 14px;
+                    font-size: 0.9rem;
+                    margin-right: 0.5rem;
                     color: rgba(59, 59, 59, 1);
                     text-align: center;
                     line-height: 21px;
@@ -290,47 +302,51 @@ div.with-background {
                 .price-shop {
                     display: flex;
                     // height: 42px;
-                    width: 200px;
-                    margin-left: 1rem;
+                    width: 12.5rem;
+                    margin: 0.3rem 0 0.3rem 1.5rem;
+                    margin-top: 0.3rem;
                     background-color: rgba(34, 34, 34, 0);
                     border: 2px solid rgba(209, 145, 48, 1);
                     border-radius: 6px;
                     align-items: center;
                     align-self: center;
+                    justify-self: center;
 
-                    &:hover {
-                        background-color: rgba(209, 145, 48, 1);
-                    }
+                    // &:hover {
+                    //     background-color: rgba(209, 145, 48, 1);
+                    // }
 
                     .shop-now {
                         font-family: "Roboto-Medium";
-                        font-size: 16px;
+                        font-size: 1rem;
+                        color: #424b5a;
                         border-left: 2px solid rgba(209, 145, 48, 1);
                         padding: 4px 6px;
                         margin-left: 6px;
 
-                        &:hover {
-                            color: white !important;
-                        }
+                        // &:hover {
+                        //     color: white !important;
+                        // }
                     }
 
                     .product-price {
                         color: $text-color-light;
                         font-family: "Roboto-Regular";
-                        font-size: 16px;
+                        font-size: 1rem;
+                        color: #424b5a;
                         padding: 4px 6px;
 
-                        &:hover {
-                            color: white;
-                        }
+                        // &:hover {
+                        //     color: white;
+                        // }
                     }
 
                     #time-3-icon {
                         fill: #d19130;
 
-                        &:hover {
-                            fill: white;
-                        }
+                        // &:hover {
+                        //     fill: white;
+                        // }
                     }
 
                     // .cart {
@@ -376,11 +392,11 @@ div.with-background {
             grid-template-columns: repeat(4, 1fr);
             align-content: center;
             justify-items: center;
-            margin-top: 100px;
-            height: 144px;
+            margin-top: 6.3rem;
+            height: 9rem;
             // width: 1100px;
             background-color: #f5f5f5;
-            border: 1px solid #707070;
+            border: 1px none;
             border-radius: 0px;
 
             @media only screen and (max-width: 780px) {
@@ -391,8 +407,13 @@ div.with-background {
                 display: flex;
                 align-items: flex-end;
 
+                h4 {
+                    margin-left: 0.4rem;
+                }
+
                 #bag {
                     fill: #d19130;
+                    background-color: #f5f5f5;
                 }
             }
         }

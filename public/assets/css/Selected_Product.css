@@ -1,0 +1,3180 @@
+.mediaViewInfo {
+	--web-view-name: Selected Product;
+	--web-view-id: Selected_Product;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Selected_Product;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+.Selected_Product_Class {
+	position: absolute;
+	width: 1920px;
+	height: 2251px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: Selected Product;
+	--web-view-id: Selected_Product;
+	--web-scale-on-resize: true;
+	--web-show-by-media-query: true;
+	--web-enable-deep-linking: true;
+}
+.Button_Class {
+	position: absolute;
+	width: 171px;
+	height: 42px;
+	left: 1064px;
+	top: 870px;
+	overflow: visible;
+}
+.Background {
+	position: absolute;
+	overflow: visible;
+	width: 171px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.Group_392_Class {
+	position: absolute;
+	width: 110.953px;
+	height: 19px;
+	left: 30px;
+	top: 12px;
+	overflow: visible;
+}
+.Add_to_cart_Class {
+	position: absolute;
+	left: 31.953px;
+	top: 0px;
+	overflow: visible;
+	width: 80px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(25,25,25,1);
+}
+.Icon {
+	overflow: visible;
+	position: absolute;
+	width: 15.985px;
+	height: 16px;
+	left: 0px;
+	top: 2px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_144_Class {
+	position: absolute;
+	width: 171px;
+	height: 42px;
+	left: 1262px;
+	top: 870px;
+	overflow: visible;
+}
+.Background_m {
+	position: absolute;
+	overflow: visible;
+	width: 171px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.Continue_Shopping_Class {
+	position: absolute;
+	left: 18px;
+	top: 12px;
+	overflow: visible;
+	width: 137px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(255,255,255,1);
+}
+.QR_100_00_Class {
+	position: absolute;
+	left: 1064px;
+	top: 788px;
+	overflow: visible;
+	width: 149px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 36px;
+	color: rgba(25,25,25,1);
+}
+.size_tooltip__Class {
+	position: absolute;
+	left: 1090.998px;
+	top: 733.722px;
+	overflow: visible;
+	width: 63px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -11.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(189,198,207,1);
+}
+.Icon_q_Class {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 1065px;
+	top: 733px;
+	overflow: visible;
+}
+.Oval_Class {
+	opacity: 0.502;
+}
+.Oval {
+	position: absolute;
+	overflow: visible;
+	width: 19px;
+	height: 18.94px;
+	left: 0px;
+	top: 0px;
+}
+.__Class {
+	position: absolute;
+	left: 5px;
+	top: 1px;
+	overflow: visible;
+	width: 7px;
+	white-space: nowrap;
+	line-height: 34.841888427734375px;
+	margin-top: -11.448049068450928px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11.94579029083252px;
+	color: rgba(189,198,207,1);
+}
+.Line {
+	position: absolute;
+	overflow: visible;
+	width: 360px;
+	height: 1px;
+	left: 1064px;
+	top: 515px;
+}
+.Detailed_Product_description_g_Class {
+	position: absolute;
+	left: 1064px;
+	top: 424.9px;
+	overflow: visible;
+	width: 343px;
+	height: 69px;
+	line-height: 24.979373931884766px;
+	margin-top: -4.489686965942383px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(84,84,84,1);
+}
+.Product_Name_Class {
+	position: absolute;
+	left: 1064px;
+	top: 342.759px;
+	overflow: visible;
+	width: 308px;
+	white-space: nowrap;
+	line-height: 57.9521484375px;
+	margin-top: -2.97607421875px;
+	text-align: left;
+	font-family: Roboto-Light;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 52px;
+	color: rgba(67,72,77,1);
+	letter-spacing: -0.4px;
+}
+.Brand_Class {
+	position: absolute;
+	left: 1064px;
+	top: 292.998px;
+	overflow: visible;
+	width: 37px;
+	white-space: nowrap;
+	line-height: 17.985149383544922px;
+	margin-top: -2.992574691772461px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(189,198,207,1);
+	letter-spacing: 0.9px;
+}
+.Channel_Class {
+	position: absolute;
+	width: 671px;
+	height: 619px;
+	left: 373px;
+	top: 293px;
+	overflow: visible;
+}
+.Channel_y_Class {
+	position: absolute;
+	width: 135px;
+	height: 129px;
+	left: 373px;
+	top: 949px;
+	overflow: visible;
+}
+.Channel_z_Class {
+	position: absolute;
+	width: 135px;
+	height: 129px;
+	left: 547px;
+	top: 949px;
+	overflow: visible;
+}
+.Channel__Class {
+	position: absolute;
+	width: 135px;
+	height: 129px;
+	left: 720px;
+	top: 949px;
+	overflow: visible;
+}
+.Rectangle_42 {
+	position: absolute;
+	overflow: visible;
+	width: 34px;
+	height: 34px;
+	left: 1064px;
+	top: 563px;
+}
+.Rectangle_43 {
+	position: absolute;
+	overflow: visible;
+	width: 34px;
+	height: 34px;
+	left: 1120px;
+	top: 563px;
+}
+.Rectangle_44_Class {
+	opacity: 0.48;
+}
+.Rectangle_44 {
+	position: absolute;
+	overflow: visible;
+	width: 34px;
+	height: 34px;
+	left: 1175px;
+	top: 563px;
+}
+.Size_Class {
+	position: absolute;
+	left: 1064px;
+	top: 630.5px;
+	overflow: visible;
+	width: 37px;
+	white-space: nowrap;
+	line-height: 26px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.1px;
+}
+.Group_395_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 1064px;
+	top: 674px;
+	overflow: visible;
+}
+.___Border_Radius_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_2_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_Class {
+	position: absolute;
+	left: 14px;
+	top: 10px;
+	overflow: visible;
+	width: 17px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_394_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 1117px;
+	top: 674px;
+	overflow: visible;
+}
+.Group_2_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_bd {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_2_be_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_bg_Class {
+	position: absolute;
+	left: 14px;
+	top: 10px;
+	overflow: visible;
+	width: 17px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_393_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 1171px;
+	top: 674px;
+	overflow: visible;
+}
+.___Border_Radius_bi_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_bj {
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_2_bk_Class {
+	position: absolute;
+	width: 44px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_bm_Class {
+	position: absolute;
+	left: 14px;
+	top: 10px;
+	overflow: visible;
+	width: 17px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(25,25,25,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_396_Class {
+	position: absolute;
+	width: 50px;
+	height: 38px;
+	left: 1224px;
+	top: 674px;
+	overflow: visible;
+}
+.Group_2_bo_Class {
+	position: absolute;
+	width: 50px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_bp {
+	position: absolute;
+	overflow: visible;
+	width: 50px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_2_bq_Class {
+	position: absolute;
+	width: 50px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_bs_Class {
+	position: absolute;
+	left: 11px;
+	top: 10px;
+	overflow: visible;
+	width: 29px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Size_bt_Class {
+	position: absolute;
+	left: 1064px;
+	top: 527.5px;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	line-height: 26px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.1px;
+}
+.Group_126_Class {
+	position: absolute;
+	width: 80px;
+	height: 15px;
+	left: 1064px;
+	top: 327px;
+	overflow: visible;
+}
+._5 {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	left: 64px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._4 {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	left: 48px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._3 {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	left: 32px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._2 {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	left: 16px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._1 {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_397_Class {
+	position: absolute;
+	width: 256.999px;
+	height: 29px;
+	left: 373px;
+	top: 197px;
+	overflow: visible;
+}
+.___Text_b_Class {
+	position: absolute;
+	left: 19px;
+	top: 0px;
+	overflow: visible;
+	width: 239px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(84,84,84,1);
+	letter-spacing: -0.13333333015441895px;
+}
+.Arrow {
+	overflow: visible;
+	position: absolute;
+	width: 8.275px;
+	height: 14.933px;
+	left: 0px;
+	top: 7px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Similar_Products_Class {
+	position: absolute;
+	left: 801px;
+	top: 1183px;
+	overflow: visible;
+	width: 319px;
+	white-space: nowrap;
+	line-height: 58px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto-Light;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	color: rgba(25,25,25,1);
+	letter-spacing: -0.4px;
+}
+.Group_143_Class {
+	position: absolute;
+	width: 112px;
+	height: 42.5px;
+	left: 1262px;
+	top: 788px;
+	overflow: visible;
+}
+.___Background_b {
+	position: absolute;
+	overflow: visible;
+	width: 38px;
+	height: 42.5px;
+	left: 37px;
+	top: 0px;
+}
+.Mask_Group_1_Class {
+	position: absolute;
+	width: 38px;
+	height: 42.5px;
+	left: 37px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_4_Class {
+	position: absolute;
+	width: 38px;
+	height: 42.5px;
+	left: 74px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_cb {
+	position: absolute;
+	overflow: visible;
+	width: 38px;
+	height: 42.5px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_4_Class {
+	position: absolute;
+	width: 38px;
+	height: 42.5px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Icon_Color {
+	overflow: visible;
+	position: absolute;
+	width: 10.5px;
+	height: 10.5px;
+	left: 87.75px;
+	top: 16px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_3_Class {
+	position: absolute;
+	width: 38px;
+	height: 42.5px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_ce {
+	position: absolute;
+	overflow: visible;
+	width: 38px;
+	height: 42.5px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_3_Class {
+	position: absolute;
+	width: 38px;
+	height: 42.5px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Icon_Color_ch {
+	overflow: visible;
+	position: absolute;
+	width: 10.5px;
+	height: 1.5px;
+	left: 13.75px;
+	top: 20.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID1_Class {
+	position: absolute;
+	left: 51px;
+	top: 11px;
+	overflow: visible;
+	width: 11px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(25,25,25,1);
+	letter-spacing: -0.13333333015441895px;
+}
+.Group_213_Class {
+	position: absolute;
+	width: 94px;
+	height: 38px;
+	left: 1235px;
+	top: 1747px;
+	overflow: visible;
+}
+.Group_3_ck_Class {
+	position: absolute;
+	width: 94px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_cl {
+	position: absolute;
+	overflow: visible;
+	width: 94px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_3_cm_Class {
+	position: absolute;
+	width: 94px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_co_Class {
+	position: absolute;
+	left: 18px;
+	top: 10px;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_211_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 1366px;
+	top: 1747px;
+	overflow: visible;
+}
+.Medium_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Border_Radius_cr_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_cs {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_1_ct_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_cv_Class {
+	position: absolute;
+	left: 16.5px;
+	top: 8px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_210_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 1406px;
+	top: 1747px;
+	overflow: visible;
+}
+.Group_1_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_cy {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_1_cz_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_c_Class {
+	position: absolute;
+	left: 16.5px;
+	top: 8px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_212_Class {
+	position: absolute;
+	width: 94px;
+	height: 38px;
+	left: 1446px;
+	top: 1747px;
+	overflow: visible;
+}
+.Group_4_c_Class {
+	position: absolute;
+	width: 94px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_da {
+	position: absolute;
+	overflow: visible;
+	width: 94px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_4_c_Class {
+	position: absolute;
+	width: 94px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_da_Class {
+	position: absolute;
+	left: 33px;
+	top: 10px;
+	overflow: visible;
+	width: 31px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(28,28,28,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_1_c_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 1328px;
+	top: 1747px;
+	overflow: visible;
+}
+.___Background_dc {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_1_da_Class {
+	position: absolute;
+	width: 41px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_dc_Class {
+	position: absolute;
+	left: 1342.5px;
+	top: 1755px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Component_9___4_Class {
+	position: absolute;
+	width: 1920px;
+	height: 392.467px;
+	left: 0px;
+	top: 1859px;
+	overflow: visible;
+}
+.Group_340_Class {
+	position: absolute;
+	width: 1920px;
+	height: 392.467px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Footer_Class {
+	position: absolute;
+	width: 1920px;
+	height: 392.467px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Background_dg {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	overflow: visible;
+	position: absolute;
+	width: 1938px;
+	height: 410.467px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.__2020_Store_Name__All_Rights__Class {
+	position: absolute;
+	left: 371px;
+	top: 335.467px;
+	overflow: visible;
+	width: 249px;
+	white-space: nowrap;
+	line-height: 21px;
+	margin-top: -3.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+.Line_di {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1px;
+	left: 0px;
+	top: 301.467px;
+}
+.Input_Class {
+	position: absolute;
+	width: 263px;
+	height: 42px;
+	left: 371px;
+	top: 246.467px;
+	overflow: visible;
+}
+.Input_dk {
+	position: absolute;
+	overflow: visible;
+	width: 263px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.Button_dl_Class {
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	left: 221px;
+	top: 0px;
+	overflow: visible;
+}
+.Button_dm {
+	position: absolute;
+	overflow: visible;
+	width: 42px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.Icon_dn {
+	overflow: visible;
+	position: absolute;
+	width: 15.848px;
+	height: 15.686px;
+	left: 10.943px;
+	top: 13.541px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Subscribe_to_our_Newsletter_Class {
+	opacity: 0.702;
+	position: absolute;
+	left: 20.273px;
+	top: 12px;
+	overflow: visible;
+	width: 173px;
+	white-space: nowrap;
+	line-height: 21px;
+	margin-top: -3.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+._974_0000_0000_Class {
+	position: absolute;
+	left: 371px;
+	top: 187.467px;
+	overflow: visible;
+	width: 102px;
+	white-space: nowrap;
+	line-height: 24px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+.City_Physical_Address__postal__Class {
+	position: absolute;
+	left: 371px;
+	top: 146.466px;
+	overflow: visible;
+	width: 191.09px;
+	height: 39.167px;
+	line-height: 16px;
+	margin-top: -1px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+.info_storename_com_Class {
+	position: absolute;
+	left: 371px;
+	top: 127.467px;
+	overflow: visible;
+	width: 135px;
+	white-space: nowrap;
+	line-height: 24px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+.Contact_Us_Class {
+	position: absolute;
+	left: 371px;
+	top: 103.467px;
+	overflow: visible;
+	width: 90px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Group_67_Class {
+	position: absolute;
+	width: 57px;
+	height: 183px;
+	left: 667px;
+	top: 46.467px;
+	overflow: visible;
+}
+.Name_Name_Name_Name_Name_Namet_Class {
+	position: absolute;
+	left: 0.837px;
+	top: 40px;
+	overflow: visible;
+	width: 46px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+}
+.Brands_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Group_68_Class {
+	position: absolute;
+	width: 87px;
+	height: 183px;
+	left: 829px;
+	top: 46.467px;
+	overflow: visible;
+}
+.Name_Name_Name_Name_Name_Name_Class {
+	position: absolute;
+	left: 0.837px;
+	top: 40px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+}
+.Categories_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 88px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Group_69_Class {
+	position: absolute;
+	width: 40.837px;
+	height: 183px;
+	left: 1021px;
+	top: 46.467px;
+	overflow: visible;
+}
+.Name_Name_Name_Name_Name_Name_d_Class {
+	position: absolute;
+	left: 0.837px;
+	top: 40px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+}
+.Main_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Group_70_Class {
+	position: absolute;
+	width: 42.837px;
+	height: 183px;
+	left: 1167px;
+	top: 46.467px;
+	overflow: visible;
+}
+.Define_Define_Define_Define_De_Class {
+	position: absolute;
+	left: 0.837px;
+	top: 40px;
+	overflow: visible;
+	width: 43px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+}
+.Help_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 38px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Group_66_Class {
+	position: absolute;
+	width: 179.626px;
+	height: 22px;
+	left: 1358.315px;
+	top: 46.467px;
+	overflow: visible;
+}
+.Almosem_Class {
+	position: absolute;
+	left: 96.626px;
+	top: 1px;
+	overflow: visible;
+	width: 84px;
+	white-space: nowrap;
+	line-height: 21px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Uni Sans CAPS;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Powered_by_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+}
+.Group_65_Class {
+	position: absolute;
+	width: 344.087px;
+	height: 28.982px;
+	left: 777px;
+	top: 330.467px;
+	overflow: visible;
+}
+.Group_64_Class {
+	position: absolute;
+	width: 122px;
+	height: 24px;
+	left: 65.999px;
+	top: 2px;
+	overflow: visible;
+}
+.Cash_on_fi_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(67,72,77,1);
+}
+.Delivery_fj_Class {
+	position: absolute;
+	left: 58px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(194,209,217,1);
+}
+.Paypal_Class {
+	position: absolute;
+	width: 70.087px;
+	height: 18.975px;
+	left: 274px;
+	top: 5px;
+	overflow: visible;
+}
+.Pay_fl {
+	overflow: visible;
+	position: absolute;
+	width: 37.021px;
+	height: 18.975px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Pal_fm_Class {
+	opacity: 0.6;
+}
+.Pal_fm {
+	overflow: visible;
+	position: absolute;
+	width: 31.01px;
+	height: 14.04px;
+	left: 39.078px;
+	top: 0.856px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mastercard_Class {
+	position: absolute;
+	width: 47.973px;
+	height: 28.982px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_fa_Class {
+	opacity: 0.702;
+}
+.Ellipse_fa {
+	overflow: visible;
+	position: absolute;
+	width: 28.973px;
+	height: 28.982px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Ellipse_fp_Class {
+	opacity: 0.702;
+}
+.Ellipse_fp {
+	overflow: visible;
+	position: absolute;
+	width: 28.973px;
+	height: 28.982px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mastercard_fq {
+	overflow: visible;
+	position: absolute;
+	width: 44.998px;
+	height: 7.91px;
+	left: 1.134px;
+	top: 10.425px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Visa_Class {
+	position: absolute;
+	width: 50.098px;
+	height: 15.975px;
+	left: 206px;
+	top: 6px;
+	overflow: visible;
+}
+.Visa_fs {
+	overflow: visible;
+	position: absolute;
+	width: 47.007px;
+	height: 15.975px;
+	left: 3.092px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_ft {
+	overflow: visible;
+	position: absolute;
+	width: 10.021px;
+	height: 8.035px;
+	left: 0px;
+	top: 0.675px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_Class {
+	position: absolute;
+	width: 122.684px;
+	height: 42px;
+	left: 1415.315px;
+	top: 84.467px;
+	overflow: visible;
+}
+.___Background_en {
+	position: absolute;
+	overflow: visible;
+	width: 122.685px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.Group_eo_Class {
+	position: absolute;
+	width: 122.684px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_er_Class {
+	position: absolute;
+	width: 122.684px;
+	height: 42px;
+	left: 1415.315px;
+	top: 152.467px;
+	overflow: visible;
+}
+.___Background_es {
+	position: absolute;
+	overflow: visible;
+	width: 122.685px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+}
+.Group_et_Class {
+	position: absolute;
+	width: 122.684px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_63_Class {
+	position: absolute;
+	width: 118px;
+	height: 15.001px;
+	left: 1421px;
+	top: 336.967px;
+	overflow: visible;
+}
+.___Icon_Color_2 {
+	overflow: visible;
+	position: absolute;
+	width: 15px;
+	height: 15.001px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID4__Icons___Twitter_Class {
+	position: absolute;
+	width: 15px;
+	height: 12.19px;
+	left: 69px;
+	top: 1.5px;
+	overflow: visible;
+}
+.___Icon_Color_ez {
+	overflow: visible;
+	position: absolute;
+	width: 15px;
+	height: 12.19px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.___Icon_Color_e {
+	overflow: visible;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 34px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.___Icon_Color_fa {
+	overflow: visible;
+	position: absolute;
+	width: 15px;
+	height: 11.25px;
+	left: 103px;
+	top: 2.25px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_140_Class {
+	position: absolute;
+	width: 344.087px;
+	height: 28.982px;
+	left: 777px;
+	top: 330.467px;
+	overflow: visible;
+}
+.Group_64_e_Class {
+	position: absolute;
+	width: 122px;
+	height: 24px;
+	left: 65.999px;
+	top: 2px;
+	overflow: visible;
+}
+.Cash_on_fi_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(67,72,77,1);
+}
+.Delivery_fj_Class {
+	position: absolute;
+	left: 58px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(194,209,217,1);
+}
+.Paypal_e_Class {
+	position: absolute;
+	width: 70.087px;
+	height: 18.975px;
+	left: 274px;
+	top: 5px;
+	overflow: visible;
+}
+.Pay_fl {
+	overflow: visible;
+	position: absolute;
+	width: 37.021px;
+	height: 18.975px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Pal_fm_Class {
+	opacity: 0.6;
+}
+.Pal_fm {
+	overflow: visible;
+	position: absolute;
+	width: 31.01px;
+	height: 14.04px;
+	left: 39.078px;
+	top: 0.856px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mastercard_e_Class {
+	position: absolute;
+	width: 47.973px;
+	height: 28.982px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_fa_Class {
+	opacity: 0.702;
+}
+.Ellipse_fa {
+	overflow: visible;
+	position: absolute;
+	width: 28.973px;
+	height: 28.982px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Ellipse_fp_Class {
+	opacity: 0.702;
+}
+.Ellipse_fp {
+	overflow: visible;
+	position: absolute;
+	width: 28.973px;
+	height: 28.982px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mastercard_fq {
+	overflow: visible;
+	position: absolute;
+	width: 44.998px;
+	height: 7.91px;
+	left: 1.134px;
+	top: 10.425px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Visa_fd_Class {
+	position: absolute;
+	width: 50.098px;
+	height: 15.975px;
+	left: 206px;
+	top: 6px;
+	overflow: visible;
+}
+.Visa_fs {
+	overflow: visible;
+	position: absolute;
+	width: 47.007px;
+	height: 15.975px;
+	left: 3.092px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_ft {
+	overflow: visible;
+	position: absolute;
+	width: 10.021px;
+	height: 8.035px;
+	left: 0px;
+	top: 0.675px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_141_Class {
+	position: absolute;
+	width: 344.087px;
+	height: 28.982px;
+	left: 777px;
+	top: 330.467px;
+	overflow: visible;
+}
+.Group_64_fh_Class {
+	position: absolute;
+	width: 122px;
+	height: 24px;
+	left: 65.999px;
+	top: 2px;
+	overflow: visible;
+}
+.Cash_on_fi_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(67,72,77,1);
+}
+.Delivery_fj_Class {
+	position: absolute;
+	left: 58px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -8.5px;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(194,209,217,1);
+}
+.Paypal_fk_Class {
+	position: absolute;
+	width: 70.087px;
+	height: 18.975px;
+	left: 274px;
+	top: 5px;
+	overflow: visible;
+}
+.Pay_fl {
+	overflow: visible;
+	position: absolute;
+	width: 37.021px;
+	height: 18.975px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Pal_fm_Class {
+	opacity: 0.6;
+}
+.Pal_fm {
+	overflow: visible;
+	position: absolute;
+	width: 31.01px;
+	height: 14.04px;
+	left: 39.078px;
+	top: 0.856px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mastercard_fn_Class {
+	position: absolute;
+	width: 47.973px;
+	height: 28.982px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Ellipse_fo_Class {
+	opacity: 0.702;
+}
+.Ellipse_fo {
+	overflow: visible;
+	position: absolute;
+	width: 28.973px;
+	height: 28.982px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Ellipse_fp_Class {
+	opacity: 0.702;
+}
+.Ellipse_fp {
+	overflow: visible;
+	position: absolute;
+	width: 28.973px;
+	height: 28.982px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mastercard_fq {
+	overflow: visible;
+	position: absolute;
+	width: 44.998px;
+	height: 7.91px;
+	left: 1.134px;
+	top: 10.425px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Visa_fr_Class {
+	position: absolute;
+	width: 50.098px;
+	height: 15.975px;
+	left: 206px;
+	top: 6px;
+	overflow: visible;
+}
+.Visa_fs {
+	overflow: visible;
+	position: absolute;
+	width: 47.007px;
+	height: 15.975px;
+	left: 3.092px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Shape_ft {
+	overflow: visible;
+	position: absolute;
+	width: 10.021px;
+	height: 8.035px;
+	left: 0px;
+	top: 0.675px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Subscribe_to_our_Newsletter_fu_Class {
+	opacity: 0.702;
+	position: absolute;
+	left: 371.273px;
+	top: 226.467px;
+	overflow: visible;
+	width: 165px;
+	white-space: nowrap;
+	line-height: 21px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+}
+.Group_336_Class {
+	position: absolute;
+	width: 155.073px;
+	height: 72px;
+	left: 369px;
+	top: 31.467px;
+	overflow: visible;
+}
+.Group_61_Class {
+	position: absolute;
+	width: 33.227px;
+	height: 21.5px;
+	left: 121.846px;
+	top: 9px;
+	overflow: visible;
+}
+.Logo_fx {
+	overflow: visible;
+	position: absolute;
+	width: 33.227px;
+	height: 21.5px;
+	transform: translate(-371.8px, -27px) matrix(1,0,0,1,371.8001,27) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.GLAMOUR_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 117px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Morganite;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 70px;
+	color: rgba(209,145,48,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Header_Main_Nav_Class {
+	position: absolute;
+	width: 1920px;
+	height: 147px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Background_f {
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+	position: absolute;
+	overflow: visible;
+	width: 1938px;
+	height: 165px;
+	left: 0px;
+	top: 0px;
+}
+.Group_90_Class {
+	position: absolute;
+	width: 90px;
+	height: 38px;
+	left: 1262px;
+	top: 48px;
+	overflow: visible;
+}
+.___Background_f {
+	overflow: visible;
+	position: absolute;
+	width: 90px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Mask_Group_2_f_Class {
+	position: absolute;
+	width: 90px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_f_Class {
+	position: absolute;
+	left: 27px;
+	top: 10px;
+	overflow: visible;
+	width: 37px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_2_f_Class {
+	position: absolute;
+	width: 90px;
+	height: 38px;
+	left: 1361px;
+	top: 48px;
+	overflow: visible;
+}
+.___Background_gb {
+	position: absolute;
+	overflow: visible;
+	width: 90px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_2_ga_Class {
+	position: absolute;
+	width: 90px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_ga_Class {
+	position: absolute;
+	left: 1381px;
+	top: 58px;
+	overflow: visible;
+	width: 51px;
+	white-space: nowrap;
+	line-height: 22px;
+	margin-top: -3.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(110,111,114,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Group_92_Class {
+	position: absolute;
+	width: 40.842px;
+	height: 29px;
+	left: 1501px;
+	top: 53px;
+	overflow: visible;
+}
+.___Icon_Class {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 22.842px;
+	top: 11px;
+	overflow: visible;
+}
+.___Icon_Color_gd_Class {
+	opacity: 0.6;
+}
+.___Icon_Color_gd {
+	position: absolute;
+	overflow: visible;
+	width: 18px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+.Group_2_ge_Class {
+	position: absolute;
+	width: 24px;
+	height: 22px;
+	left: 13.842px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_gf {
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 22px;
+	left: 2px;
+	top: 0px;
+}
+.Mask_Group_2_gg_Class {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Text_gi_Class {
+	position: absolute;
+	left: 23.001px;
+	top: 4px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -2.5px;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	color: rgba(255,255,255,1);
+}
+.Icon_gj {
+	overflow: visible;
+	position: absolute;
+	width: 15.842px;
+	height: 15.945px;
+	left: 0px;
+	top: 12.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Input_gk {
+	position: absolute;
+	overflow: visible;
+	width: 575px;
+	height: 39px;
+	left: 667px;
+	top: 48px;
+}
+.SHOP_______NEW_ARRIVALS________Class {
+	position: absolute;
+	left: 527px;
+	top: 121px;
+	overflow: visible;
+	width: 716px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -7.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(25,25,25,1);
+}
+.Medium_gm_Class {
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 1204px;
+	top: 48.5px;
+	overflow: visible;
+}
+.Group_4_gn_Class {
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Background_go {
+	position: absolute;
+	overflow: visible;
+	width: 38px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+}
+.Mask_Group_4_gp_Class {
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.___Icon_Color_gr {
+	overflow: visible;
+	position: absolute;
+	width: 13.117px;
+	height: 13.117px;
+	left: 12.25px;
+	top: 12.25px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.bxs_user {
+	overflow: visible;
+	position: absolute;
+	width: 20.885px;
+	height: 22.045px;
+	left: 1460px;
+	top: 53px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Group_335_Class {
+	position: absolute;
+	width: 155.073px;
+	height: 72px;
+	left: 370px;
+	top: 39px;
+	overflow: visible;
+}
+.Group_61_gu_Class {
+	position: absolute;
+	width: 33.227px;
+	height: 21.5px;
+	left: 121.846px;
+	top: 9px;
+	overflow: visible;
+}
+.Logo_gv {
+	overflow: visible;
+	position: absolute;
+	width: 33.227px;
+	height: 21.5px;
+	transform: translate(-371.8px, -27px) matrix(1,0,0,1,371.8001,27) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.GLAMOUR_gw_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 117px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Morganite;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 70px;
+	color: rgba(25,25,25,1);
+	letter-spacing: -0.06666666507720947px;
+}
+.Repeat_Grid_2_Class {
+	position: absolute;
+	width: 1168px;
+	height: 409px;
+	left: 372px;
+	top: 1306px;
+	overflow: hidden;
+}
+.Repeat_Grid_2_0_Class {
+	position: absolute;
+	width: 1166px;
+	height: 400px;
+	left: 0.5px;
+	top: 0.5px;
+	overflow: visible;
+}
+.Group_353_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_350_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_444_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Background_g {
+	position: absolute;
+	overflow: visible;
+	width: 276px;
+	height: 401px;
+	left: 0px;
+	top: 0px;
+}
+.Component_10___12_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 21.5px;
+	top: 338px;
+	overflow: visible;
+}
+.Button_g_Class {
+	position: absolute;
+	width: 162.678px;
+	height: 19px;
+	left: 12.131px;
+	top: 11px;
+	overflow: visible;
+}
+.Shop_now_Class {
+	position: absolute;
+	left: 91.678px;
+	top: 0px;
+	overflow: visible;
+	width: 72px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.QR_0_000_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.Component_9___1_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Stroke {
+	overflow: visible;
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_g {
+	overflow: visible;
+	position: absolute;
+	width: 15.985px;
+	height: 16px;
+	left: 188.677px;
+	top: 13px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_ha {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 41px;
+	left: 86px;
+	top: 1px;
+}
+.Brief_introduction_or_product__Class {
+	position: absolute;
+	left: 21.5px;
+	top: 293.362px;
+	overflow: visible;
+	width: 233px;
+	height: 38.798px;
+	line-height: 20.988622665405273px;
+	margin-top: -3.4981064796447754px;
+	text-align: center;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.992409706115723px;
+	color: rgba(59,59,59,1);
+}
+.Product_Name_hc_Class {
+	position: absolute;
+	left: 80.5px;
+	top: 259.985px;
+	overflow: visible;
+	width: 116px;
+	white-space: nowrap;
+	line-height: 25.985910415649414px;
+	margin-top: -3.992955207824707px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(25,25,25,1);
+}
+.Group_337_Class {
+	position: absolute;
+	width: 157.149px;
+	height: 16.044px;
+	left: 9.504px;
+	top: 20px;
+	overflow: visible;
+}
+.ID105_reviews_Class {
+	position: absolute;
+	left: 102.148px;
+	top: 2px;
+	overflow: visible;
+	width: 56px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -12.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	color: rgba(134,147,158,1);
+	letter-spacing: 0.2px;
+}
+.Raiting_Class {
+	position: absolute;
+	width: 92px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Icon_hg {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 76px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_hh {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 57px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_hi {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 38px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_hj {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_hk {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Joy_DIor_Class {
+	position: absolute;
+	width: 184px;
+	height: 184px;
+	left: 45.5px;
+	top: 62px;
+	overflow: visible;
+}
+.Group_353_hm_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 297px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_350_hn_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_445_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Background_hp {
+	position: absolute;
+	overflow: visible;
+	width: 276px;
+	height: 401px;
+	left: 0px;
+	top: 0px;
+}
+.Component_10___12_hq_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 21.5px;
+	top: 338px;
+	overflow: visible;
+}
+.Button_hr_Class {
+	position: absolute;
+	width: 162.678px;
+	height: 19px;
+	left: 12.131px;
+	top: 11px;
+	overflow: visible;
+}
+.Shop_now_hs_Class {
+	position: absolute;
+	left: 91.678px;
+	top: 0px;
+	overflow: visible;
+	width: 72px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.QR_0_000_ht_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.Component_9___1_hu_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Stroke_hv {
+	overflow: visible;
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_hw {
+	overflow: visible;
+	position: absolute;
+	width: 15.985px;
+	height: 16px;
+	left: 188.677px;
+	top: 13px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_hx {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 41px;
+	left: 86px;
+	top: 1px;
+}
+.Brief_introduction_or_product__hy_Class {
+	position: absolute;
+	left: 21.5px;
+	top: 293.362px;
+	overflow: visible;
+	width: 233px;
+	height: 38.798px;
+	line-height: 20.988622665405273px;
+	margin-top: -3.4981064796447754px;
+	text-align: center;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.992409706115723px;
+	color: rgba(59,59,59,1);
+}
+.Product_Name_hz_Class {
+	position: absolute;
+	left: 80.5px;
+	top: 259.985px;
+	overflow: visible;
+	width: 116px;
+	white-space: nowrap;
+	line-height: 25.985910415649414px;
+	margin-top: -3.992955207824707px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(25,25,25,1);
+}
+.Group_337_h_Class {
+	position: absolute;
+	width: 157.149px;
+	height: 16.044px;
+	left: 9.504px;
+	top: 20px;
+	overflow: visible;
+}
+.ID105_reviews_h_Class {
+	position: absolute;
+	left: 102.148px;
+	top: 2px;
+	overflow: visible;
+	width: 56px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -12.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	color: rgba(134,147,158,1);
+	letter-spacing: 0.2px;
+}
+.Raiting_h_Class {
+	position: absolute;
+	width: 92px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Icon_h {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 76px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_ia {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 57px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_ib {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 38px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_ic {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_id {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.hugo_boss_Class {
+	position: absolute;
+	width: 184px;
+	height: 184px;
+	left: 45.5px;
+	top: 62px;
+	overflow: visible;
+}
+.Group_353_h_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 594px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_350_ia_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_446_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Background_ic {
+	position: absolute;
+	overflow: visible;
+	width: 276px;
+	height: 401px;
+	left: 0px;
+	top: 0px;
+}
+.Component_10___12_id_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 21.5px;
+	top: 338px;
+	overflow: visible;
+}
+.Button_ie_Class {
+	position: absolute;
+	width: 162.678px;
+	height: 19px;
+	left: 12.131px;
+	top: 11px;
+	overflow: visible;
+}
+.Shop_now_if_Class {
+	position: absolute;
+	left: 91.678px;
+	top: 0px;
+	overflow: visible;
+	width: 72px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.QR_0_000_ig_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.Component_9___1_ih_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Stroke_ii {
+	overflow: visible;
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_ij {
+	overflow: visible;
+	position: absolute;
+	width: 15.985px;
+	height: 16px;
+	left: 188.677px;
+	top: 13px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_ik {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 41px;
+	left: 86px;
+	top: 1px;
+}
+.Brief_introduction_or_product__il_Class {
+	position: absolute;
+	left: 21.5px;
+	top: 293.362px;
+	overflow: visible;
+	width: 233px;
+	height: 38.798px;
+	line-height: 20.988622665405273px;
+	margin-top: -3.4981064796447754px;
+	text-align: center;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.992409706115723px;
+	color: rgba(59,59,59,1);
+}
+.Product_Name_im_Class {
+	position: absolute;
+	left: 80.5px;
+	top: 259.985px;
+	overflow: visible;
+	width: 116px;
+	white-space: nowrap;
+	line-height: 25.985910415649414px;
+	margin-top: -3.992955207824707px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(25,25,25,1);
+}
+.Group_337_in_Class {
+	position: absolute;
+	width: 157.149px;
+	height: 16.044px;
+	left: 9.504px;
+	top: 20px;
+	overflow: visible;
+}
+.ID105_reviews_io_Class {
+	position: absolute;
+	left: 102.148px;
+	top: 2px;
+	overflow: visible;
+	width: 56px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -12.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	color: rgba(134,147,158,1);
+	letter-spacing: 0.2px;
+}
+.Raiting_ip_Class {
+	position: absolute;
+	width: 92px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Icon_iq {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 76px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_ir {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 57px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_is {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 38px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_it {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_iu {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID031f2362562903_Class {
+	position: absolute;
+	width: 184px;
+	height: 184px;
+	left: 45.5px;
+	top: 62px;
+	overflow: visible;
+}
+.Group_353_iw_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 891px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_350_ix_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Group_447_Class {
+	position: absolute;
+	width: 275px;
+	height: 400px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Background_iz {
+	position: absolute;
+	overflow: visible;
+	width: 276px;
+	height: 401px;
+	left: 0px;
+	top: 0px;
+}
+.Component_10___12_i_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 21.5px;
+	top: 338px;
+	overflow: visible;
+}
+.Button_i_Class {
+	position: absolute;
+	width: 162.678px;
+	height: 19px;
+	left: 12.131px;
+	top: 11px;
+	overflow: visible;
+}
+.Shop_now_i_Class {
+	position: absolute;
+	left: 91.678px;
+	top: 0px;
+	overflow: visible;
+	width: 72px;
+	white-space: nowrap;
+	line-height: 19px;
+	margin-top: -1.5px;
+	text-align: left;
+	font-family: Roboto-Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.QR_0_000_i_Class {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 65px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(66,75,90,1);
+}
+.Component_9___1_i_Class {
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Stroke_i {
+	overflow: visible;
+	position: absolute;
+	width: 232px;
+	height: 42px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_i {
+	overflow: visible;
+	position: absolute;
+	width: 15.985px;
+	height: 16px;
+	left: 188.677px;
+	top: 13px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_i {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 41px;
+	left: 86px;
+	top: 1px;
+}
+.Brief_introduction_or_product__i_Class {
+	position: absolute;
+	left: 21.5px;
+	top: 293.362px;
+	overflow: visible;
+	width: 233px;
+	height: 38.798px;
+	line-height: 20.988622665405273px;
+	margin-top: -3.4981064796447754px;
+	text-align: center;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13.992409706115723px;
+	color: rgba(59,59,59,1);
+}
+.Product_Name_i_Class {
+	position: absolute;
+	left: 80.5px;
+	top: 259.985px;
+	overflow: visible;
+	width: 116px;
+	white-space: nowrap;
+	line-height: 25.985910415649414px;
+	margin-top: -3.992955207824707px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(25,25,25,1);
+}
+.Group_337_ja_Class {
+	position: absolute;
+	width: 157.149px;
+	height: 16.044px;
+	left: 9.504px;
+	top: 20px;
+	overflow: visible;
+}
+.ID105_reviews_jb_Class {
+	position: absolute;
+	left: 102.148px;
+	top: 2px;
+	overflow: visible;
+	width: 56px;
+	white-space: nowrap;
+	line-height: 35px;
+	margin-top: -12.5px;
+	text-align: left;
+	font-family: Roboto-Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	color: rgba(134,147,158,1);
+	letter-spacing: 0.2px;
+}
+.Raiting_jc_Class {
+	position: absolute;
+	width: 92px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Icon_jd {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 76px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_je {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 57px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_jf {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 38px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_jg {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 19px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Icon_jh {
+	overflow: visible;
+	position: absolute;
+	width: 16px;
+	height: 16.044px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID17815733180413_Class {
+	position: absolute;
+	width: 184px;
+	height: 184px;
+	left: 45.5px;
+	top: 62px;
+	overflow: visible;
+}
