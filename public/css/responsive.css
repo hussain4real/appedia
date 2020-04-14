@@ -393,3 +393,13 @@
 
 /* Custom, iPhone Retina */
 
+@media only screen and (min-width: 780px) {
+  .hamburger {
+    display: none;
+  }
+
+  #exit {
+    display: none;
+  }
+}
+
