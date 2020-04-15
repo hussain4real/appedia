@@ -77,7 +77,7 @@ use App\Category;
                 </div>
                 @else
                 <li>
-                <li>
+                <li id="account">
                     <a href="{{route('users.edit')}}">
                         My Account
                     </a>
@@ -116,44 +116,84 @@ use App\Category;
 
         </div>
     </div>
-    <nav class="top-nav container" id="lgMenu">
+
+    <div id="lgMenu">
         <span id="exit">&times;</span>
+        <div class="user-wrapper">
+            <ul class="user-name-and-logout">
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+                @endif
+                @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        Hi, {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
 
-        @if (! request()->is('checkout'))
-        <ul class="top-nav-links">
-            <li><a href="{{route('products.index')}}">Shop</a></li>
-            <li><a href="#">Arrivals</a></li>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
 
-            @php
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                @endguest
+            </ul>
+        </div>
 
-            $categories = Category::all();
 
-            @endphp
-            @foreach ($categories as $category)
-            @if ($category->slug == 'men')
-            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+
+        <nav class="top-nav container">
+
+
+
+            @if (! request()->is('checkout'))
+            <ul class="top-nav-links">
+                <li><a href="{{route('products.index')}}">Shop</a></li>
+                <li><a href="#">Arrivals</a></li>
+
+                @php
+
+                $categories = Category::all();
+
+                @endphp
+                @foreach ($categories as $category)
+                @if ($category->slug == 'men')
+                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+                @endif
+                @endforeach
+
+                @foreach ($categories as $category)
+                @if ($category->slug == 'women')
+                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+                @endif
+                @endforeach
+
+
+                @foreach ($categories as $category)
+                @if ($category->slug == 'kids')
+                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+                @endif
+                @endforeach
+
+
+                <li><a href="#">Furniture</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
             @endif
-            @endforeach
-
-            @foreach ($categories as $category)
-            @if ($category->slug == 'women')
-            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
-            @endif
-            @endforeach
-
-
-            @foreach ($categories as $category)
-            @if ($category->slug == 'kids')
-            <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
-            @endif
-            @endforeach
-
-
-            <li><a href="#">Furniture</a></li>
-            <li><a href="/">Home</a></li>
-        </ul>
-        @endif
-    </nav> <!-- end top-nav -->
+        </nav> <!-- end top-nav -->
+    </div>
 </header>
 
 

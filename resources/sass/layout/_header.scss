@@ -99,6 +99,10 @@ header {
                     }
                 }
 
+                #account {
+                    margin: 0 1rem !important;
+                }
+
                 li.user {
                     margin-left: 1rem;
                 }
@@ -106,7 +110,8 @@ header {
                 li.cart {
                     margin-left: 1rem;
 
-                    a {
+                    a.logout-now {
+                        margin: 0 1rem;
                         // height: 22px;
                         // width: 120px;
                         // padding: 5px;
@@ -151,6 +156,12 @@ header {
             }
 
             /*Resize the wrap to see the search bar change!*/
+        }
+    }
+
+    .user-wrapper {
+        @media only screen and (min-width: 780px) {
+            display: none;
         }
     }
 

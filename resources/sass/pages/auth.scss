@@ -1,7 +1,7 @@
 .auth-pages {
     margin: 100px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 100px;
     min-height: 60vh;
 

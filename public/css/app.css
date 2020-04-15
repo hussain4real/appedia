@@ -743,12 +743,20 @@ header .top-header-container .other-container ul .login:hover {
   background-color: #d19130;
 }
 
+header .top-header-container .other-container ul #account {
+  margin: 0 1rem !important;
+}
+
 header .top-header-container .other-container ul li.user {
   margin-left: 1rem;
 }
 
 header .top-header-container .other-container ul li.cart {
   margin-left: 1rem;
+}
+
+header .top-header-container .other-container ul li.cart a.logout-now {
+  margin: 0 1rem;
 }
 
 header .top-header-container .other-container ul li.cart .cart-count {
@@ -767,6 +775,12 @@ header .top-header-container .other-container ul li.cart .cart-count span {
   padding-bottom: 50%;
   margin-left: 6px;
   margin-right: 6px;
+}
+
+@media only screen and (min-width: 780px) {
+  header .user-wrapper {
+    display: none;
+  }
 }
 
 header .top-nav {
@@ -1825,7 +1839,7 @@ h1.checkout-heading {
 .auth-pages {
   margin: 100px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 100px;
   min-height: 60vh;
 }

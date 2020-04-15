@@ -82,8 +82,8 @@ use App\Category;
     <div class="footer-newsletter">
         <p>Subscribe to our Newsletter</p>
         <div class="search">
-            <input type="text" name="query" id="emailQuery" class="searchTerm" value="{{request()->input('query')}}"
-                placeholder="Your Email Address Here">
+            <input type="text" name="query" id="emailFooterQuery" class="searchTerm"
+                value="{{request()->input('query')}}" placeholder="Your Email Address Here">
             <button type="submit" class="searchButton">
                 <i class="fas fa-paper-plane"></i>
             </button>
