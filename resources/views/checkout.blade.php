@@ -129,12 +129,12 @@
                             <div class="checkout-table-item">{{$item->model->name}}</div>
                             <div class="checkout-table-description">{{$item->model->detail}}</div>
                             <div class="checkout-table-price">
-                                ${{Cart::session(auth()->id())->get($item->model->id)->getPriceSum()}}</div>
+                                ${{Cart::get($item->model->id)->getPriceSum()}}</div>
                         </div>
                     </div> <!-- end checkout-table -->
 
                     <div class="checkout-table-row-right">
-                        <div class="checkout-table-quantity">{{Cart::session(auth()->id())->getTotalQuantity()}}</div>
+                        <div class="checkout-table-quantity">{{Cart::getTotalQuantity()}}</div>
                     </div>
                 </div> <!-- end checkout-table-row -->
                 @endforeach

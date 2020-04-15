@@ -106,7 +106,13 @@ class CartController extends Controller
     //item romaval from cart logic
     public function destroy($itemId){
 
-        \Cart::session(auth()->id())->remove($itemId);
+        if (session()) {
+            \Cart::remove($itemId);
+        } else {
+            \Cart::remove($itemId);
+        }
+
+
         // session(auth()->id())->
 
         return back()->with('success_message', 'Item has been removed');
@@ -159,14 +165,27 @@ class CartController extends Controller
         //     return response()->json(['success' => false], 400);
         // }
         // session(auth()->id())->
-        \Cart::session(auth()->id())->update($itemId, [
-            'quantity' => array(
-                'relative' => false,
-                'value' => request('quantity'),
-                'attributes' => array(),
-                'associatedModel' => 'Product'
-            )
-        ]);
+        if (session()) {
+            \Cart::update($itemId, [
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => request('quantity'),
+                    'attributes' => array(),
+                    'associatedModel' => 'Product'
+                )
+            ]);
+        } else {
+            \Cart::update($itemId, [
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => request('quantity'),
+                    'attributes' => array(),
+                    'associatedModel' => 'Product'
+                )
+            ]);
+        }
+
+
 
         return back();
     }

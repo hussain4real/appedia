@@ -83,10 +83,10 @@
                                     <td class="product-remove"><a href="{{ route('cart.destroy', $item->id) }}"><i
                                                 class="pe-7s-close"></i></a></td>
 
-                                    <form action="{{route('cart.store', $item->id)}}" method="post">
-                                        @csrf
-                                        <button type="submit">Save for later</button>
-                                    </form>
+                                    {{-- <form action="{{route('cart.store', $item->id)}}" method="post">
+                                    @csrf
+                                    <button type="submit">Save for later</button>
+                                    </form> --}}
                                     <td class="product-thumbnail">
                                         <a href="#"><img src="{{ productImage($item->model->cover_img)}}" alt=""></a>
                                     </td>

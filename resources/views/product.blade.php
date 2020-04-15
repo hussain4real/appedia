@@ -39,18 +39,18 @@
 
 
 <!-- all css here -->
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+{{-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/css/magnific-popup.css">
 <link rel="stylesheet" href="/assets/css/animate.css">
 <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
 <link rel="stylesheet" href="/assets/css/themify-icons.css">
 <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css">
-{{-- <link rel="stylesheet" href="/assets/css/icofont.css"> --}}
+<link rel="stylesheet" href="/assets/css/icofont.css">
 <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 <link rel="stylesheet" href="/assets/css/bundle.css">
-{{-- <link rel="stylesheet" href="/assets/css/style.css"> --}}
-<link rel="stylesheet" href="/assets/css/responsive.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/responsive.css"> --}}
 <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 <div class="product-section container">
     <div>
@@ -86,14 +86,14 @@
         </p>
 
         <div class="select-option-part">
-            <label>Size*</label>
-            <select class="select">
-                <option value="">- Please Select -</option>
-                <option value="">xl</option>
-                <option value="">ml</option>
-                <option value="">m</option>
-                <option value="">sl</option>
-            </select>
+            <h5>Select Size</h5>
+            <form action="#" method="get" class="size">
+                <input type="button" name="size" id="size" value="36">
+                <input type="button" name="size" id="size" value="40">
+                <input type="button" name="size" id="size" value="42">
+                <input type="button" name="size" id="size" value="45">
+                <input type="button" name="size" id="size" value="45.5">
+            </form>
         </div>
         <div class="select-option-part">
             <label>Color*</label>
