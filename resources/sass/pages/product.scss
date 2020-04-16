@@ -92,3 +92,57 @@
         color: whitesmoke;
     }
 }
+
+#buy_wishlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    justify-content: center;
+
+    #add_to_cart {
+        width: 10rem;
+        height: 2.8rem;
+
+        @media only screen and (max-width: 480px) {
+            align-items: center;
+            justify-content: center;
+            margin-left: 3.8rem;
+        }
+    }
+
+    // justify-content: space-evenly;
+    // margin-top: 2rem;
+    #wish {
+        margin-left: 2rem;
+        width: 10rem;
+        height: 2.8rem;
+
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 480px) {
+            margin-top: 1rem;
+            margin-left: 4rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        i.fas.fa-heart::before {
+            font-size: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+#wishing {
+    i.fas.fa-heart::before {
+        font-size: 2rem;
+        // margin-left: 2rem;
+        // margin-bottom: 1rem;
+    }
+}
+
+.reviw-now {
+    max-width: 24rem;
+}

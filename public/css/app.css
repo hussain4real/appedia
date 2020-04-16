@@ -709,7 +709,7 @@ header .top-header-container .other-container .searchTerm:focus {
 }
 
 header .top-header-container .other-container .searchButton {
-  width: 40px;
+  width: 2.5rem;
   height: 36px;
   border: 1px solid #191919;
   background: #191919;
@@ -1193,6 +1193,13 @@ div.with-background .hero-copy .button {
   padding: 50px 0;
 }
 
+.featured-section #featured {
+  font-family: "Roboto-Light";
+  font-size: 3rem;
+  font-weight: 100 !important;
+  color: #191919;
+}
+
 .featured-section .container {
   padding: 20px;
 }
@@ -1275,13 +1282,13 @@ div.with-background .hero-copy .button {
 }
 
 .featured-section .container .products .product .product-details {
-  width: 232px;
+  width: 14.5rem;
   font-family: "Roboto-Regular";
   font-size: 0.9rem;
   margin-right: 0.5rem;
   color: #3b3b3b;
   text-align: center;
-  line-height: 21px;
+  line-height: 1.3rem;
 }
 
 .featured-section .container .products .product .price-shop {
@@ -1431,6 +1438,10 @@ div.with-background .hero-copy .button {
   justify-content: center;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #f5f5f5;
+  border-radius: 6px;
+  box-shadow: 0px 3px 3px 0px #000000;
   transition: box-shadow 0.4s ease-in-out;
 }
 
@@ -1442,93 +1453,85 @@ div.with-background .hero-copy .button {
 .products-section .products .product .rating-comment {
   display: flex;
   align-items: center;
-  margin-right: 5px;
+  padding: 1rem 0.5rem;
 }
 
 .products-section .products .product .rating-comment .fa-rating {
-  font-size: 10px;
+  font-size: 0.6rem;
 }
 
 .products-section .products .product .rating-comment .comment-count {
-  margin-left: 4px;
-  font-size: 13px;
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
 }
 
 .products-section .products .product .rating-comment .new {
   font-family: "Roboto-Medium";
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #ffffff;
   background-color: #d19130;
   border: 2px solid #d19130;
-  border-radius: 12px;
-  margin-left: 2px;
-  padding: 2px;
+  border-radius: 0.8rem;
+  margin-left: 1rem;
+  padding: 0.1rem;
+  text-transform: capitalize;
+  font-style: italic;
 }
 
 .products-section .products .product .product-name {
   font-family: "Roboto-Regular";
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #191919;
+  margin-top: 0.3rem;
 }
 
 .products-section .products .product img {
-  height: 12.5rem;
-  max-width: 14.5rem;
+  height: 11.5rem;
+  max-width: 11.5rem;
 }
 
 .products-section .products .product .product-details {
-  width: 232px;
+  width: 14.5rem;
   font-family: "Roboto-Regular";
-  font-size: 14px;
+  font-size: 0.9rem;
+  margin-right: 1rem !important;
   color: #3b3b3b;
-  text-align: center;
-  line-height: 21px;
+  text-align: center !important;
+  line-height: 1.3rem;
 }
 
 .products-section .products .product .price-shop {
   display: flex;
-  width: 200px;
-  margin-left: 2rem;
+  width: 12.5rem;
+  margin: 0.3rem 0 0.3rem 1.5rem;
+  margin-top: 0.3rem;
   background-color: rgba(34, 34, 34, 0);
   border: 2px solid #d19130;
   border-radius: 6px;
   align-items: center;
   align-self: center;
-}
-
-.products-section .products .product .price-shop:hover {
-  background-color: #d19130;
+  justify-self: center;
 }
 
 .products-section .products .product .price-shop .shop-now {
   font-family: "Roboto-Medium";
-  font-size: 16px !important;
+  font-size: 1rem;
+  color: #424b5a;
   border-left: 2px solid #d19130;
-  padding: 4px 6px !important;
-  margin-left: 6px !important;
-}
-
-.products-section .products .product .price-shop .shop-now:hover {
-  color: white !important;
+  padding: 4px 6px;
+  margin-left: 6px;
 }
 
 .products-section .products .product .price-shop .product-price {
-  color: #919191 !important;
+  color: #919191;
   font-family: "Roboto-Regular";
-  font-size: 16px !important;
-  padding: 4px 6px !important;
-}
-
-.products-section .products .product .price-shop .product-price:hover {
-  color: white;
+  font-size: 1rem;
+  color: #424b5a;
+  padding: 4px 6px;
 }
 
 .products-section .products .product .price-shop #time-3-icon {
   fill: #d19130;
-}
-
-.products-section .products .product .price-shop #time-3-icon:hover {
-  fill: white;
 }
 
 .products-section .products .product .seller {
@@ -1629,6 +1632,57 @@ div.with-background .hero-copy .button {
 .size input.checked {
   background-color: black;
   color: whitesmoke;
+}
+
+#buy_wishlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+  justify-content: center;
+}
+
+#buy_wishlist #add_to_cart {
+  width: 10rem;
+  height: 2.8rem;
+}
+
+@media only screen and (max-width: 480px) {
+  #buy_wishlist #add_to_cart {
+    align-items: center;
+    justify-content: center;
+    margin-left: 3.8rem;
+  }
+}
+
+#buy_wishlist #wish {
+  margin-left: 2rem;
+  width: 10rem;
+  height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+  #buy_wishlist #wish {
+    margin-top: 1rem;
+    margin-left: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#buy_wishlist #wish i.fas.fa-heart::before {
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+#wishing i.fas.fa-heart::before {
+  font-size: 2rem;
+}
+
+.reviw-now {
+  max-width: 24rem;
 }
 
 .cart-section {
@@ -1759,6 +1813,52 @@ div.with-background .hero-copy .button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+}
+
+.cart-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-content {
+  display: flex;
+}
+
+.product-content img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.form {
+  display: flex;
+}
+
+.form p.minus {
+  height: 2.6rem;
+  width: 2.4rem;
+  color: #e4e4e4;
+  background-color: #191919;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px 0px 0px 6px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.form p.plus {
+  height: 2.6rem;
+  width: 2.4rem;
+  color: #e4e4e4;
+  background-color: #191919;
+  border: 1px solid #e4e4e4;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.form input {
+  height: 2.6rem;
+  width: 2.4rem;
+  background-color: #ffffff;
+  border: 1px solid #191919;
+  border-radius: 0px;
 }
 
 h1.checkout-heading {
@@ -1975,5 +2075,131 @@ h1.checkout-heading {
 .my-orders .order-product-item img {
   max-width: 140px;
   margin-right: 24px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px 30px;
+  align-content: center;
+  margin-top: 65px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+.products .product {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #f5f5f5;
+  border-radius: 6px;
+  box-shadow: 0px 3px 3px 0px #000000;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.products .product:hover {
+  box-shadow: 5px 5px 5px 5px rgba(209, 145, 48, 0.4);
+  border-radius: 6px;
+}
+
+.products .product .rating-comment {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+
+.products .product .rating-comment .fa-rating {
+  font-size: 0.6rem;
+}
+
+.products .product .rating-comment .comment-count {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.products .product .rating-comment .new {
+  font-family: "Roboto-Medium";
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #d19130;
+  border: 2px solid #d19130;
+  border-radius: 0.8rem;
+  margin-left: 1rem;
+  padding: 0.1rem;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.products .product .product-name {
+  font-family: "Roboto-Regular";
+  font-size: 1.1rem;
+  color: #191919;
+  margin-top: 0.3rem;
+}
+
+.products .product img {
+  height: 11.5rem;
+  max-width: 11.5rem;
+}
+
+.products .product .product-details {
+  width: 14.5rem;
+  font-family: "Roboto-Regular";
+  font-size: 0.9rem;
+  margin-right: 1rem !important;
+  color: #3b3b3b;
+  text-align: center !important;
+  line-height: 1.3rem;
+}
+
+.products .product .price-shop {
+  display: flex;
+  width: 12.5rem;
+  margin: 0.3rem 0 0.3rem 1.5rem;
+  margin-top: 0.3rem;
+  background-color: rgba(34, 34, 34, 0);
+  border: 2px solid #d19130;
+  border-radius: 6px;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.products .product .price-shop .shop-now {
+  font-family: "Roboto-Medium";
+  font-size: 1rem;
+  color: #424b5a;
+  border-left: 2px solid #d19130;
+  padding: 4px 6px;
+  margin-left: 6px;
+}
+
+.products .product .price-shop .product-price {
+  color: #919191;
+  font-family: "Roboto-Regular";
+  font-size: 1rem;
+  color: #424b5a;
+  padding: 4px 6px;
+}
+
+.products .product .price-shop #time-3-icon {
+  fill: #d19130;
+}
+
+.products .product .seller {
+  font-weight: 300;
+}
+
+.products .product .seller em {
+  font-style: italic;
+  font-weight: 600;
 }
 

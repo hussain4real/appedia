@@ -71,7 +71,7 @@
     <div class="featured-section">
 
         <div class="container">
-            <h1 class="text-center">Featured Products</h1>
+            <div class="text-center" id="featured">Featured Products</div>
 
 
             {{-- <div class="tabs">
@@ -88,13 +88,35 @@
 
                 <div class="product">
                     <div class="rating-comment">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <p class="comment-count">68 reviews</p>
+                        @forelse($product->reviews as $review)
+                        @php $rating =$review->rating ; @endphp
 
+                        @foreach(range(1,5) as $i)
+                        <span class="fa-stack" style="width:1em">
+                            <i class="far fa-star fa-stack-1x"></i>
+
+                            @if($rating >0)
+                            @if($rating >0.5)
+                            <i class="fas fa-star fa-stack-1x"></i>
+                            @else
+                            <i class="fas fa-star-half fa-stack-1x"></i>
+                            @endif
+                            @endif
+                            @php $rating--; @endphp
+                        </span>
+                        @endforeach
+
+
+
+                        {{-- <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star-half-alt"></i> --}}
+                        <p class="comment-count">{{$review->count()}} reviews</p>
+
+                        @empty
+                        <p class="comment-count">no rating & reviews</p>
+                        @endforelse
 
                         <p class="new"><em> {{$product->status}} </em></p>
 
@@ -201,14 +223,37 @@
 
                     <div class="product">
                         <div class="rating-comment">
+                            @forelse($product->reviews as $review)
+                            @php $rating =$review->rating ; @endphp
+
+                            @foreach(range(1,5) as $i)
+                            <span class="fa-stack" style="width:1em">
+                                <i class="far fa-star fa-stack-1x"></i>
+
+                                @if($rating >0)
+                                @if($rating >0.5)
+                                <i class="fas fa-star fa-stack-1x"></i>
+                                @else
+                                <i class="fas fa-star-half fa-stack-1x"></i>
+                                @endif
+                                @endif
+                                @php $rating--; @endphp
+                            </span>
+                            @endforeach
+
+
+
+                            {{-- <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <p class="comment-count">105 reviews</p>
-                            {{-- <em class="new"><em> {{$product->status}} </em></em> --}}
-                            <p class="new"><em> New </em></p>
+                            <i class="fas fa-star-half-alt"></i> --}}
+                            <p class="comment-count">{{$review->count()}} reviews</p>
+
+                            @empty
+                            <p class="comment-count">no rating & reviews</p>
+                            @endforelse
+
+                            <p class="new"><em> {{$product->status}} </em></p>
                         </div>
                         <a href="{{route('product.show', $cat->id)}}"><img src="{{ productImage($cat->cover_img)}}"
                                 alt="product"></a>
@@ -246,241 +291,15 @@
                 </div>
             </div> <!-- end category-container-->
 
-            {{-- <div class="all-products-area pt-115 pb-50">
-                <div class="pl-100 pr-100">
-                    <div class="container-fluid">
-                        <div class="section-title text-center mb-60">
-                            <h2>All Products</h2>
-                        </div>
-                        <div class="product-style">
-                            <div class="product-tab-list text-center mb-95 nav product-menu-mrg" role="tablist">
-                                <a class="active" href="#home1" data-toggle="tab" role="tab" aria-selected="true"
-                                    aria-controls="home1">
-                                    <h4>all </h4>
-                                </a>
-                                <a href="#home2" data-toggle="tab" role="tab" aria-selected="false"
-                                    aria-controls="home2">
-                                    <h4>woman </h4>
-                                </a>
-                                <a href="#home3" data-toggle="tab" role="tab" aria-selected="false"
-                                    aria-controls="home3">
-                                    <h4>man</h4>
-                                </a>
-                                <a href="#home4" data-toggle="tab" role="tab" aria-selected="false"
-                                    aria-controls="home4">
-                                    <h4>ACCESSORIES</h4>
-                                </a>
-                                <a href="#home5" data-toggle="tab" role="tab" aria-selected="false"
-                                    aria-controls="home5">
-                                    <h4>kids</h4>
-                                </a>
-                            </div>
-                            <div class="tab-content">
-                                <div class="tab-pane active show fade" id="home1" role="tabpanel">
-                                    <div class="custom-row">
-                                        <div class="custom-col-5 custom-col-style mb-65">
-                                            <div class="product-wrapper">
-                                                <div class="product-img">
-                                                    <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/1.jpg" alt="">
-                                                    </a>
-                                                    <span>hot</span>
-                                                    <div class="product-action">
-                                                        <a class="animate-left" title="Wishlist" href="#">
-                                                            <i class="pe-7s-like"></i>
-                                                        </a>
-                                                        <a class="animate-top" title="Add To Cart" href="#">
-                                                            <i class="pe-7s-cart"></i>
-                                                        </a>
-                                                        <a class="animate-right" title="Quick View" data-toggle="modal"
-                                                            data-target="#exampleModal" href="#">
-                                                            <i class="pe-7s-look"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Black Faux Suede</a></h4>
-                                                    <span>$115.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="home2" role="tabpanel">
-                                    <div class="custom-row">
-                                        <div class="custom-col-5 custom-col-style mb-65">
-                                            <div class="product-wrapper">
-                                                <div class="product-img">
-                                                    <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/5.jpg" alt="">
-                                                    </a>
-                                                    <span>hot</span>
-                                                    <div class="product-action">
-                                                        <a class="animate-left" title="Wishlist" href="#">
-                                                            <i class="pe-7s-like"></i>
-                                                        </a>
-                                                        <a class="animate-top" title="Add To Cart" href="#">
-                                                            <i class="pe-7s-cart"></i>
-                                                        </a>
-                                                        <a class="animate-right" title="Quick View" data-toggle="modal"
-                                                            data-target="#exampleModal" href="#">
-                                                            <i class="pe-7s-look"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Black Faux Suede</a></h4>
-                                                    <span>$115.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="home3" role="tabpanel">
-                                    <div class="custom-row">
-                                        <div class="custom-col-5 custom-col-style mb-65">
-                                            <div class="product-wrapper">
-                                                <div class="product-img">
-                                                    <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/3.jpg" alt="">
-                                                    </a>
-                                                    <span>hot</span>
-                                                    <div class="product-action">
-                                                        <a class="animate-left" title="Wishlist" href="#">
-                                                            <i class="pe-7s-like"></i>
-                                                        </a>
-                                                        <a class="animate-top" title="Add To Cart" href="#">
-                                                            <i class="pe-7s-cart"></i>
-                                                        </a>
-                                                        <a class="animate-right" title="Quick View" data-toggle="modal"
-                                                            data-target="#exampleModal" href="#">
-                                                            <i class="pe-7s-look"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Black Faux Suede</a></h4>
-                                                    <span>$115.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="home4" role="tabpanel">
-                                    <div class="custom-row">
-                                        <div class="custom-col-5 custom-col-style mb-65">
-                                            <div class="product-wrapper">
-                                                <div class="product-img">
-                                                    <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/5.jpg" alt="">
-                                                    </a>
-                                                    <span>hot</span>
-                                                    <div class="product-action">
-                                                        <a class="animate-left" title="Wishlist" href="#">
-                                                            <i class="pe-7s-like"></i>
-                                                        </a>
-                                                        <a class="animate-top" title="Add To Cart" href="#">
-                                                            <i class="pe-7s-cart"></i>
-                                                        </a>
-                                                        <a class="animate-right" title="Quick View" data-toggle="modal"
-                                                            data-target="#exampleModal" href="#">
-                                                            <i class="pe-7s-look"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Navy Bird Print</a></h4>
-                                                    <span>$115.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="home5" role="tabpanel">
-                                    <div class="custom-row">
-                                        <div class="custom-col-5 custom-col-style mb-65">
-                                            <div class="product-wrapper">
-                                                <div class="product-img">
-                                                    <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/5.jpg" alt="">
-                                                    </a>
-                                                    <span>hot</span>
-                                                    <div class="product-action">
-                                                        <a class="animate-left" title="Wishlist" href="#">
-                                                            <i class="pe-7s-like"></i>
-                                                        </a>
-                                                        <a class="animate-top" title="Add To Cart" href="#">
-                                                            <i class="pe-7s-cart"></i>
-                                                        </a>
-                                                        <a class="animate-right" title="Quick View" data-toggle="modal"
-                                                            data-target="#exampleModal" href="#">
-                                                            <i class="pe-7s-look"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Black Faux Suede</a></h4>
-                                                    <span>$115.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
         </div> <!-- end container -->
 
     </div> <!-- end featured-section -->
 
-    {{-- <div class="blog-section">
-        <div class="container">
-            <h1 class="text-center">From Our Blog</h1>
 
-            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vitae nisi,
-                consequuntur illum dolores cumque pariatur quis provident deleniti nesciunt officia est reprehenderit
-                sunt aliquid possimus temporibus enim eum hic.</p>
-
-            <div class="blog-posts">
-                <div class="blog-post" id="blog1">
-                    <a href="#"><img src="/img/blog1.png" alt="Blog Image"></a>
-                    <a href="#">
-                        <h2 class="blog-title">Blog Post Title 1</h2>
-                    </a>
-                    <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
-                        tenetur numquam ipsam reiciendis.</div>
-                </div>
-                <div class="blog-post" id="blog2">
-                    <a href="#"><img src="/img/blog2.png" alt="Blog Image"></a>
-                    <a href="#">
-                        <h2 class="blog-title">Blog Post Title 2</h2>
-                    </a>
-                    <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
-                        tenetur numquam ipsam reiciendis.</div>
-                </div>
-                <div class="blog-post" id="blog3">
-                    <a href="#"><img src="/img/blog3.png" alt="Blog Image"></a>
-                    <a href="#">
-                        <h2 class="blog-title">Blog Post Title 3</h2>
-                    </a>
-                    <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
-                        tenetur numquam ipsam reiciendis.</div>
-                </div>
-            </div>
-        </div> <!-- end container -->
-    </div> <!-- end blog-section --> --}}
 
     @include('partials.footer')
-
-
 </body>
 
 </html>

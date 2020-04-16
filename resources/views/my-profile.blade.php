@@ -37,6 +37,7 @@
       <ul>
          <li class="active"><a href="{{ route('users.edit') }}">My Profile</a></li>
          <li><a href="{{ route('orders.index') }}">My Orders</a></li>
+         <li><a href="{{route('wishlist.store')}}">My Wishlist</a></li>
       </ul>
    </div> <!-- end sidebar -->
    <div class="my-profile">

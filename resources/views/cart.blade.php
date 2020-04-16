@@ -158,12 +158,15 @@
     </div>
 </div>
 
+
 <!-- shopping-cart-area end -->
 
 @include('partials.might-like')
 
 
 @endsection
+
+
 
 <!-- all js here -->
 {{-- <script src="assets/js/vendor/jquery-1.12.0.min.js"></script> --}}

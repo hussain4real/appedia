@@ -74,26 +74,62 @@
                <div class="sidebar-widget mb-40">
                   <h3 class="sidebar-title">Filter by Price</h3>
                   <div class="price_filter">
-                     <div id="slider-range"></div>
+                     <div id="slider-range">
+
+
+                     </div>
                      <div class="price_slider_amount">
                         <div class="label-input">
                            <label>price : </label>
                            <input type="text" id="amount" name="price" placeholder="Add Your Price" />
                         </div>
-                        <button type="button">Filter</button>
+                        @foreach ($products as $product)
+
+                        @if ($product->price<50) <button type="button">
+                           <a
+                              href="{{route('products.index', ['category' => request()->category, 'sort' => 'low_high'])}}">
+                              Filter
+                           </a>
+                           </button>
+                           @endif
+
+                           @if ($product->price>50)
+
+                           <button type="button">
+                              <a
+                                 href="{{route('products.index', ['category' => request()->category, 'sort' => 'high_low'])}}">
+                                 Filter
+                              </a>
+                           </button>
+                           @endif
+                           @endforeach
                      </div>
                   </div>
                </div>
                <div class="sidebar-widget mb-45">
                   <h3 class="sidebar-title">Categories</h3>
                   <div class="sidebar-categories">
+
                      <ul>
+                        @foreach ($categories as $category)
+                        <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}}
+
+
+
+
+                           </a>
+                        </li>
+                        @endforeach
+
+
+                     </ul>
+                     {{-- <ul>
                         <li><a href="#">Accessories <span>4</span></a></li>
                         <li><a href="#">Book <span>9</span></a></li>
                         <li><a href="#">Clothing <span>5</span> </a></li>
                         <li><a href="#">Homelife <span>3</span></a></li>
                         <li><a href="#">Kids & Baby <span>4</span></a></li>
-                     </ul>
+                     </ul> --}}
                   </div>
                </div>
                <div class="sidebar-widget sidebar-overflow mb-45">
@@ -158,13 +194,37 @@
                                  @forelse ($products as $product)
                                  <div class="product">
                                     <div class="rating-comment">
+                                       @forelse($product->reviews as $review)
+                                       @php $rating =$review->rating ; @endphp
+
+                                       @foreach(range(1,5) as $i)
+                                       <span class="fa-stack" style="width:1em">
+                                          <i class="far fa-star fa-stack-1x"></i>
+
+                                          @if($rating >0)
+                                          @if($rating >0.5)
+                                          <i class="fas fa-star fa-stack-1x"></i>
+                                          @else
+                                          <i class="fas fa-star-half fa-stack-1x"></i>
+                                          @endif
+                                          @endif
+                                          @php $rating--; @endphp
+                                       </span>
+                                       @endforeach
+
+
+
+                                       {{-- <i class="fa fa-star" aria-hidden="true"></i>
                                        <i class="fa fa-star" aria-hidden="true"></i>
                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                       <p class="comment-count">105 reviews</p>
-                                       <p class="new">New</p>
+                                       <i class="fas fa-star-half-alt"></i> --}}
+                                       <p class="comment-count">{{$review->count()}} reviews</p>
+
+                                       @empty
+                                       <p class="comment-count">no rating & reviews</p>
+                                       @endforelse
+
+                                       <p class="new"><em> {{$product->status}} </em></p>
                                     </div>
                                     <a href="{{route('product.show', $product->id)}}"><img
                                           src="{{ productImage($product->cover_img)}}" alt="product"></a>

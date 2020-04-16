@@ -83,7 +83,7 @@
                      </tr>
                      {{-- <tr>
                         <td>Subtotal</td>
-                        <td> ${{Cart::session(auth()->id())->get($order->model->id)->getPriceSum()}}</td>
+                        <td> ${{Cart::get($order->id)->getPriceSum()}}</td>
                      </tr>
                      <tr>
                         <td>Tax</td>
@@ -92,6 +92,14 @@
                      <tr>
                         <td>Total</td>
                         <td>$ {{ $order->grand_total }}</td>
+                     </tr>
+                     <tr>
+                        <td>Live Status:</td>
+                        <td>{{ $order->tracking }}</td>
+                     </tr>
+                     <tr>
+                        <td>Status:</td>
+                        <td>{{ $order->status }}</td>
                      </tr>
                   </tbody>
                </table>

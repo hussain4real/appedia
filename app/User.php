@@ -4,6 +4,7 @@ namespace App;
 
 use App\Shop;
 use App\Order;
+use App\ProductReview;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,4 +49,13 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasMany(Order::class);
     }
+
+    public function review()
+    {
+        return $this->hasOne(ProductReview::class);
+    }
+
+    public function wishlist(){
+        return $this->hasMany(Wishlist::class);
+     }
 }

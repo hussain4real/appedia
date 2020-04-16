@@ -5,6 +5,7 @@ namespace App;
 use App\Shop;
 use App\Category;
 use NumberFormatter;
+use App\ProductReview;
 use App\ProductCategory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -43,4 +44,26 @@ class Product extends Model
     {
         return $query->inRandomOrder()->take(4);
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(ProductReview::class);
+    }
+
+    public function getStarRating()
+    {
+        $count = $this->reviews()->count();
+        if(empty($count)){
+            return 0;
+        }
+        $starCountSum=$this->reviews()->sum('rating');
+        $average=$starCountSum/ $count;
+
+       return $average;
+
+    }
+
+    public function wishlist(){
+        return $this->hasMany(Wishlist::class);
+     }
 }

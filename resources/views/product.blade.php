@@ -8,6 +8,9 @@
 
 @section('content')
 
+
+
+
 <div class="breadcrumbs">
     <div class="container">
         <a href="/">Home</a>
@@ -39,7 +42,7 @@
 
 
 <!-- all css here -->
-{{-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/css/magnific-popup.css">
 <link rel="stylesheet" href="/assets/css/animate.css">
 <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
@@ -50,7 +53,7 @@
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 <link rel="stylesheet" href="/assets/css/bundle.css">
 <link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/responsive.css"> --}}
+<link rel="stylesheet" href="/assets/css/responsive.css">
 <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 <div class="product-section container">
     <div>
@@ -86,14 +89,13 @@
         </p>
 
         <div class="select-option-part">
-            <h5>Select Size</h5>
-            <form action="#" method="get" class="size">
-                <input type="button" name="size" id="size" value="36">
-                <input type="button" name="size" id="size" value="40">
-                <input type="button" name="size" id="size" value="42">
-                <input type="button" name="size" id="size" value="45">
-                <input type="button" name="size" id="size" value="45.5">
-            </form>
+            <label>Color*</label>
+            <select class="select">
+                <option value="">- Please Select -</option>
+                <option value="">orange</option>
+                <option value="">pink</option>
+                <option value="">yellow</option>
+            </select>
         </div>
         <div class="select-option-part">
             <label>Color*</label>
@@ -109,8 +111,25 @@
 
         @if ($product->quantity > 0)
 
-        <a href="{{route('cart.add', $product->id)}}" class="button">Add to Cart</a>
-        @endif
+        <div id="buy_wishlist">
+            <a href="{{route('cart.add', $product->id)}}" id="add_to_cart" class="button">Add to Cart</a>
+            @endif
+            @if(auth()->check())
+            <form action="{{route('wishlist.store')}}" id="contact_form" method="post">
+                {{csrf_field()}}
+                <input name="user_id" type="text" value="{{Auth::user()->id}}" hidden />
+                <input name="product_id" type="text" value="{{$product->id}}" hidden />
+                <button id="wishing" class="button" type="submit"><i class="fas fa-heart"></i></button>
+            </form>
+            @else
+            <a href="/login" id="wish" class="button" type="submit"><i class="fas fa-heart"></i></a>
+
+            @endif
+        </div>
+
+
+
+
 
         {{-- <form action="{{route('cart.store')}}" method="GET">
         @csrf
@@ -121,6 +140,20 @@
         </form> --}}
     </div>
 </div> <!-- end product-section -->
+
+
+<div id="app">
+    @if(auth()->check())
+
+
+    @include('partials.review_form')
+    @else
+    <a href="/login" class="button">Write a review</a>
+
+    @endif
+</div>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/app.js"></script>
 
 
 

@@ -29,10 +29,12 @@ use App\Category;
 
 
 <header>
+
+
     <div class="hamburger">|||
         {{-- <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div> --}}
+            <div class="line"></div>
+            <div class="line"></div> --}}
     </div>
     <div class="top-header-container">
         <div class="logo">
@@ -84,7 +86,7 @@ use App\Category;
                 </li>
                 {{-- remove the 'dropdown-item' from this 'a' tag --}}
                 <a class="logout-now " href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
+                    document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
                 </li>
@@ -139,7 +141,7 @@ use App\Category;
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
@@ -170,20 +172,23 @@ use App\Category;
                 @endphp
                 @foreach ($categories as $category)
                 @if ($category->slug == 'men')
-                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a>
+                </li>
                 @endif
                 @endforeach
 
                 @foreach ($categories as $category)
                 @if ($category->slug == 'women')
-                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a>
+                </li>
                 @endif
                 @endforeach
 
 
                 @foreach ($categories as $category)
                 @if ($category->slug == 'kids')
-                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a></li>
+                <li><a href="{{route('products.index', ['category' => $category->slug])}}">{{$category->name}} </a>
+                </li>
                 @endif
                 @endforeach
 
@@ -194,6 +199,9 @@ use App\Category;
             @endif
         </nav> <!-- end top-nav -->
     </div>
+
+
+    {{-- <script src="/js/app.js"></script> --}}
 </header>
 
 
@@ -201,52 +209,53 @@ use App\Category;
 
 <Script>
     // (function () {
-    //         const hamburger = document.querySelector('.hamburger');
-    //         const navLinks = document.querySelector('.top-nav-links');
-    //         const links =document.querySelectorAll('.top-nav-links li');
+        //         const hamburger = document.querySelector('.hamburger');
+        //         const navLinks = document.querySelector('.top-nav-links');
+        //         const links =document.querySelectorAll('.top-nav-links li');
 
-    //         hamburger.addEventListener('click', () => {
-    //             navLinks.classList.toggle('open');
-    //             links.forEach(link =>{
-    //                 link.classList.toggle('fade');
-    //             });
-    //         });
-    //     })();
+        //         hamburger.addEventListener('click', () => {
+        //             navLinks.classList.toggle('open');
+        //             links.forEach(link =>{
+        //                 link.classList.toggle('fade');
+        //             });
+        //         });
+        //     })();
 
-    (function () {
-            const hamburger = document.querySelector('.hamburger');
-            const lgMenu = document.querySelector('#lgMenu')
-            const close = document.querySelector('#exit');
-            const navLinks = document.querySelector('.top-nav-links');
-            const links =document.querySelectorAll('.top-nav-links li');
+        (function () {
+                const hamburger = document.querySelector('.hamburger');
+                const lgMenu = document.querySelector('#lgMenu')
+                const close = document.querySelector('#exit');
+                const navLinks = document.querySelector('.top-nav-links');
+                const links =document.querySelectorAll('.top-nav-links li');
 
-            hamburger.addEventListener('click', () => {
-                // navLinks.classList.toggle('open');
-                hamburger.style.opacity= '0';
-                lgMenu.classList.add('enter');
+                hamburger.addEventListener('click', () => {
+                    // navLinks.classList.toggle('open');
+                    hamburger.style.opacity= '0';
+                    lgMenu.classList.add('enter');
 
-                close.addEventListener('click', () => {
-                    lgMenu.classList.remove('enter');
-                    hamburger.style.opacity = '1';
-                })
-                console.log('clicked alot');
-                // links.forEach(link =>{
-                //     link.classList.toggle('fade');
-                // });
-            });
-        })();
+                    close.addEventListener('click', () => {
+                        lgMenu.classList.remove('enter');
+                        hamburger.style.opacity = '1';
+                    })
+                    console.log('clicked alot');
+                    // links.forEach(link =>{
+                    //     link.classList.toggle('fade');
+                    // });
+                });
+            })();
 
-//     $(document).ready(function(){
-// $("#menu").on("click", function(){
-//    $("#menu").css("opacity", "0");
-//     $("#lgMenu").addClass("enter");
-// });
-//     $("#exit").on("click", function(){
-//        $("#lgMenu").removeClass("enter");
-//         $("#menu").css("opacity", "1");
-//     });
-// });
+    //     $(document).ready(function(){
+    // $("#menu").on("click", function(){
+    //    $("#menu").css("opacity", "0");
+    //     $("#lgMenu").addClass("enter");
+    // });
+    //     $("#exit").on("click", function(){
+    //        $("#lgMenu").removeClass("enter");
+    //         $("#menu").css("opacity", "1");
+    //     });
+    // });
 </Script>
+
 
 
 </html>

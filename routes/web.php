@@ -84,4 +84,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/my-orders', 'OrderController@index')->name('orders.index');
     Route::get('/my-orders/{order}', 'OrderController@show')->name('orders.show');
+    Route::resource('review','ProductReviewController');
 });
+
+Route::resource('/wishlist', 'WishlistController' );
