@@ -27,7 +27,7 @@
 
                     <div class="product-price">${{$product->price}}</div>
 
-                    <div class="shop-now"><a href="#">Shop now</a></div>
+                    <div class="shop-now"><a href="{{route('cart.add', $product->id)}}">Shop now</a></div>
                     <div class="cart">
                         {{-- <img src="/img/shopping-cart.svg" alt="shopping-cart" class="filter-yellow"> --}}
                         <svg height="16px" viewBox="0 -13 456.75885 456" width="16px"
