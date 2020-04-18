@@ -8,13 +8,32 @@
             @foreach ($mightAlsoLike as $product)
             <div class="product">
                 <div class="rating-comment">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <p class="comment-count">105 reviews</p>
-                    <p class="new">New</p>
+                    @php $rating =$product->getStarRating() ; @endphp
+
+                    @foreach(range(1,5) as $i)
+                    <span class="fa-stack" style="width:1em">
+                        <i class="far fa-star fa-stack-1x"></i>
+
+                        @if($rating >0)
+                        @if($rating >0.5)
+                        <i class="fas fa-star fa-stack-1x"></i>
+                        @else
+                        <i class="fas fa-star-half fa-stack-1x"></i>
+                        @endif
+                        @endif
+                        @php $rating--; @endphp
+                    </span>
+                    @endforeach
+
+
+
+                    {{-- <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star-half-alt"></i> --}}
+                    <p class="comment-count">{{$product->reviews->count()}} reviews</p>
+
+                    <p class="new"><em> {{$product->status}} </em></p>
                 </div>
                 <a href="{{route('product.show', $product->id)}}"><img src="{{ productImage($product->cover_img)}}"
                         alt="product"></a>
