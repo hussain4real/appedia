@@ -1685,21 +1685,16 @@ div.with-background .hero-copy .button {
   max-width: 24rem;
 }
 
-table {
-  border-collapse: separate;
-  border-spacing: 1em;
-}
-
 figcaption.info {
   margin-left: 0.5rem;
 }
 
 input#number.form-control {
-  width: 2.8rem;
+  width: 2.8rem !important;
 }
 
 a#purchase {
-  background-color: #bdc6cf;
+  background-color: #bdc6cf !important;
 }
 
 @media only screen and (max-width: 480px) {
