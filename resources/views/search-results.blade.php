@@ -194,8 +194,7 @@
                                  @forelse ($products as $product)
                                  <div class="product">
                                     <div class="rating-comment">
-                                       @forelse($product->reviews as $review)
-                                       @php $rating =$review->rating ; @endphp
+                                       @php $rating =$product->getStarRating() ; @endphp
 
                                        @foreach(range(1,5) as $i)
                                        <span class="fa-stack" style="width:1em">
@@ -215,15 +214,10 @@
 
 
                                        {{-- <i class="fa fa-star" aria-hidden="true"></i>
-                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                       <i class="fa fa-star" aria-hidden="true"></i>
-                                       <i class="fas fa-star-half-alt"></i> --}}
-                                       <p class="comment-count">{{$review->count()}} reviews</p>
-
-                                       @empty
-                                       <p class="comment-count">no rating & reviews</p>
-                                       @endforelse
-
+                                           <i class="fa fa-star" aria-hidden="true"></i>
+                                           <i class="fa fa-star" aria-hidden="true"></i>
+                                           <i class="fas fa-star-half-alt"></i> --}}
+                                       <p class="comment-count">{{$product->reviews->count()}} reviews</p>
                                        <p class="new"><em> {{$product->status}} </em></p>
                                     </div>
                                     <a href="{{route('product.show', $product->id)}}"><img
