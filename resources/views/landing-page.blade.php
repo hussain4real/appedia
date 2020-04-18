@@ -218,7 +218,7 @@
 
                     <div class="product">
                         <div class="rating-comment">
-                            @php $rating =$product->getStarRating() ; @endphp
+                            @php $rating =$cat->getStarRating() ; @endphp
 
                             @foreach(range(1,5) as $i)
                             <span class="fa-stack" style="width:1em">
@@ -241,9 +241,9 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star-half-alt"></i> --}}
-                            <p class="comment-count">{{$product->reviews->count()}} reviews</p>
+                            <p class="comment-count">{{$cat->reviews->count()}} reviews</p>
 
-                            <p class="new"><em> {{$product->status}} </em></p>
+                            <p class="new"><em> {{$cat->status}} </em></p>
                         </div>
                         <a href="{{route('product.show', $cat->id)}}"><img src="{{ productImage($cat->cover_img)}}"
                                 alt="product"></a>
