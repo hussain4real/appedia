@@ -56,7 +56,7 @@ $status=Wishlist::where('user_id',Auth::user()->id)
 
 if(isset($status->user_id) and isset($request->product_id))
    {
-       return redirect()->back()->with('flash_messaged', 'This item is already in your
+       return redirect()->back()->with('error_message', 'This item is already in your
        wishlist!');
    }
    else

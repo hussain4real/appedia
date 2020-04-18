@@ -300,8 +300,9 @@
                                         {{csrf_field()}}
                                         <input name="user_id" type="text" value="{{Auth::user()->id}}" hidden />
                                         <input name="product_id" type="text" value="{{$item->model->id}}" hidden />
-                                        <a data-original-title="Save to Wishlist" title="" type="submit" href=""
-                                            class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
+                                        <button data-original-title="Save to Wishlist" title="" type="submit"
+                                            class="btn btn-light" data-toggle="tooltip"> <i
+                                                class="fa fa-heart"></i></button>
                                     </form>
                                     @else
                                     <a data-original-title="Save to Wishlist" title="" href="/login"
