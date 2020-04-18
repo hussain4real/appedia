@@ -122,7 +122,7 @@ class ProductController extends Controller
 
         $stockLevel = getStockLevel($product->quantity);
 
-        $avgReview = getStarRating()->get();
+        // $avgReview = getStarRating()->get();
 
 
 
@@ -131,7 +131,7 @@ class ProductController extends Controller
             'product' => $product,
             'stockLevel' => $stockLevel,
             'mightAlsoLike' => $mightAlsoLike,
-            'avgReview' => $avgReview,
+
             ]);
     }
 
