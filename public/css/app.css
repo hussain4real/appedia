@@ -1689,10 +1689,6 @@ figcaption.info {
   margin-left: 0.5rem;
 }
 
-input#number.form-control {
-  width: 2.8rem !important;
-}
-
 a#purchase {
   background-color: #bdc6cf !important;
 }
@@ -1701,18 +1697,6 @@ a#purchase {
   input#number.form-control {
     width: 2.8rem;
   }
-}
-
-input#button-minus.btn {
-  margin-left: -1rem;
-}
-
-input#button-plus.btn {
-  margin-right: 1rem;
-}
-
-th.price {
-  margin-left: 1rem;
 }
 
 h1.checkout-heading {

@@ -244,7 +244,7 @@
                         <thead class="text-muted">
                             <tr class=" text-uppercase">
                                 <th scope="col">Product</th>
-                                <th scope="col">Quantity</th>
+                                <th scope="col" width="130">Quantity</th>
                                 <th scope="col" class="price">Price</th>
                                 <th scope="col" class="text-right  d-md-block"> </th>
                             </tr>
@@ -308,8 +308,8 @@
                                         class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
 
                                     @endif
-                                    <a href="{{ route('cart.destroy', $item->id) }}" class="btn btn-dark btn-round"><i
-                                            class="fas fa-trash"></i>
+                                    <a href="{{ route('cart.destroy', $item->id) }}"
+                                        class="btn btn-dark btn-round text-white"><i class="fas fa-trash"></i>
                                         Remove</a>
                                 </td>
                             </tr>
@@ -363,7 +363,7 @@
                         <img src="bootstrap-ecommerce-html/images/misc/payments.png" height="26">
                     </p>
                     @if ($item->quantity <= $item->model->quantity)
-                        <a href="{{route('cart.checkout')}}" class="btn btn-light btn-block text-white" id="purchase">
+                        <a href="{{route('cart.checkout')}}" class="btn btn-light btn-block " id="purchase">
                             Make Purchase
                         </a>
                         @else
