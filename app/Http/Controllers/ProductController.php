@@ -29,6 +29,8 @@ class ProductController extends Controller
         // }
 
         // return view('product.index', compact('products', 'categoryName'));
+
+
         $pagination = 8;
         $categories = Category::all();
         if (request()->category) {
@@ -55,11 +57,17 @@ class ProductController extends Controller
         }
 
 
-        return view('products')->with([
+        // return view('products')->with([
+        //     'products' => $products,
+        //     'categories' => $categories,
+        //     'categoryName' => $categoryName,
+        //     ]);
+
+        return response()->json([
             'products' => $products,
             'categories' => $categories,
             'categoryName' => $categoryName,
-            ]);
+        ],201);
 
     }
 
@@ -81,10 +89,16 @@ class ProductController extends Controller
         // return view('product.catalog', compact('products'));
         $categories = Category::all();
 
-        return view('search-results')->with([
+        // return view('search-results')->with([
+        //     'products' => $products,
+        //     'categories' => $categories,
+        //     ]);
+
+        return response()->json([
             'products' => $products,
             'categories' => $categories,
-            ]);
+
+        ],201);
     }
 
     /**
@@ -127,12 +141,20 @@ class ProductController extends Controller
 
 
 
-        return view('product')->with([
+        // return view('product')->with([
+        //     'product' => $product,
+        //     'stockLevel' => $stockLevel,
+        //     'mightAlsoLike' => $mightAlsoLike,
+
+        //     ]);
+
+        return response()->json([
             'product' => $product,
             'stockLevel' => $stockLevel,
             'mightAlsoLike' => $mightAlsoLike,
 
-            ]);
+
+        ],201);
     }
 
     /**

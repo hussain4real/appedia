@@ -89,12 +89,12 @@
         </p>
 
         <div class="select-option-part">
-            <label>Color*</label>
+            <label>Size*</label>
             <select class="select">
                 <option value="">- Please Select -</option>
-                <option value="">orange</option>
-                <option value="">pink</option>
-                <option value="">yellow</option>
+                <option value="">small</option>
+                <option value="">medium</option>
+                <option value="">large</option>
             </select>
         </div>
         <div class="select-option-part">
