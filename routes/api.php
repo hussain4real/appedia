@@ -21,8 +21,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //routes for all products
 Route::get('/products', 'ProductController@index');
 
-// product details page
+// product details
 Route::get('/products/{id}', 'ProductController@show');
 
 //routes for all search queries
 Route::get('/search', 'ProductController@search');
+
+//route for viewing shops
+Route::get('/shops', 'ShopController@index');
+
+//route for shop details
+
+Route::get('/shops/{id}', 'ShopController@show');

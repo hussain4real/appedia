@@ -17,7 +17,12 @@ class ShopController extends Controller
      */
     public function index()
     {
-        //
+        $shops = Shop::all();
+
+        return response()->json([
+            'shops' => $shops,
+
+        ],201);
     }
 
     /**
@@ -67,9 +72,18 @@ class ShopController extends Controller
      * @param  \App\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function show(Shop $shop)
+    public function show($id)
     {
-        dd($shop->owner->name. ' welcome to your shop named ', $shop->name);
+        // dd($shop->owner->name. ' welcome to your shop named ', $shop->name);
+
+        $shop = Shop::where('id', $id)->firstOrFail();
+
+        return response()->json([
+            'shop' => $shop,
+
+
+
+        ],201);
     }
 
     /**
