@@ -81,8 +81,6 @@ class ShopController extends Controller
         return response()->json([
             'shop' => $shop,
 
-
-
         ],201);
     }
 

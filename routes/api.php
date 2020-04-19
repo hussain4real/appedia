@@ -18,6 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//routes for all users
+Route::get('/users', 'UsersController@index');
+
+//routes for a user
+Route::get('/users/{id}', 'UsersController@show');
+
 //routes for all products
 Route::get('/products', 'ProductController@index');
 
