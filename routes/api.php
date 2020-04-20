@@ -19,10 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //routes for all users
-Route::get('/users', 'UsersController@index');
+Route::resource('/users', 'UsersController');
 
-//routes for a user
-Route::get('/users/{id}', 'UsersController@show');
 
 //routes for all products
 Route::get('/products', 'ProductController@index');
@@ -34,8 +32,8 @@ Route::get('/products/{id}', 'ProductController@show');
 Route::get('/search', 'ProductController@search');
 
 //route for viewing shops
-Route::get('/shops', 'ShopController@index');
+Route::resource('/shops', 'ShopController');
 
-//route for shop details
+//route for viewing malls
+Route::resource('/malls', 'MallController');
 
-Route::get('/shops/{id}', 'ShopController@show');

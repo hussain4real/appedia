@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModelsAttributesTable extends Migration
+class AddMallIdToShopsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateModelsAttributesTable extends Migration
      */
     public function up()
     {
-        Schema::create('models_attributes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('shops', function (Blueprint $table) {
+            $table->unsignedBigInteger('mall_id')->nullable();
+            $table->foreign('mall_id')->references('id')->on('malls')->onDelete('cascade');
         });
     }
 
@@ -26,6 +26,8 @@ class CreateModelsAttributesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('models_attributes');
+        Schema::table('shops', function (Blueprint $table) {
+            //
+        });
     }
 }

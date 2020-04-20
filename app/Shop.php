@@ -17,6 +17,11 @@ class Shop extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function mall()
+    {
+        return $this->belongsTo(Mall::class, 'mall_id');
+    }
+
     public function products()
     {
         return $this->hasMany(Product::class, 'shop_id');
