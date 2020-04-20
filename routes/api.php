@@ -18,22 +18,31 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//routes for all users
-Route::resource('/users', 'UsersController');
+Route::prefix('v1')->group(function(){
+    Route::post('login', 'UsersController@login');
+    Route::post('register', 'UsersController@store');
+    // Route::group(['middleware' => 'auth:api'], function(){
+    Route::get('users', 'UsersController@index');
+    Route::get('users/{id}', 'UsersController@show');
+    // });
+
+    //routes for all users
+    // Route::resource('/users', 'UsersController');
 
 
-//routes for all products
-Route::get('/products', 'ProductController@index');
+    //routes for all products
+    Route::get('/products', 'ProductController@index');
 
-// product details
-Route::get('/products/{id}', 'ProductController@show');
+    // product details
+    Route::get('/products/{id}', 'ProductController@show');
 
-//routes for all search queries
-Route::get('/search', 'ProductController@search');
+    //routes for all search queries
+    Route::get('/search', 'ProductController@search');
 
-//route for viewing shops
-Route::resource('/shops', 'ShopController');
+    //route for viewing shops
+    Route::resource('/shops', 'ShopController');
 
-//route for viewing malls
-Route::resource('/malls', 'MallController');
+    //route for viewing malls
+    Route::resource('/malls', 'MallController');
+});
 
