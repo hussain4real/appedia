@@ -40,6 +40,12 @@ class User extends \TCG\Voyager\Models\User
         'email_verified_at' => 'datetime',
     ];
 
+    public function mall()
+    {
+        return $this->hasOne(Mall::class, 'user_id');
+    }
+
+
     public function shop()
     {
         return $this->hasOne(Shop::class, 'user_id');
