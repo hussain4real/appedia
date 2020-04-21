@@ -5,13 +5,15 @@ namespace App;
 use App\Shop;
 use App\Order;
 use App\ProductReview;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Notifications\PasswordResetNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends \TCG\Voyager\Models\User
 {
-    use Notifiable;
+    use Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -64,4 +66,11 @@ class User extends \TCG\Voyager\Models\User
     public function wishlist(){
         return $this->hasMany(Wishlist::class);
      }
+
+
+
+public function sendPasswordResetNotification($token)
+{
+    $this->notify(new PasswordResetNotification($token));
+}
 }
