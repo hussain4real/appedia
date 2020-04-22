@@ -40,7 +40,7 @@ Route::prefix('v1')->group(function(){
     // Route::get('users/{id}', 'UsersController@show');
 
     //routes for all products
-    Route::get('/products', 'Api\ProductController@index');
+    Route::resource('/products', 'Api\ProductController');
 
 
 
