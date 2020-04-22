@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Mall;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\MallResource;
 
 class MallController extends Controller
 {
@@ -15,12 +16,14 @@ class MallController extends Controller
      */
     public function index()
     {
-        $malls = Mall::all();
+        // $malls = Mall::all();
 
-        return response()->json([
-            'malls' => $malls,
+        // return response()->json([
+        //     'malls' => $malls,
 
-        ],201);
+        // ],201);
+
+        return MallResource::collection(Mall::paginate(4));
     }
 
     /**
@@ -50,14 +53,16 @@ class MallController extends Controller
      * @param  \App\Mall  $mall
      * @return \Illuminate\Http\Response
      */
-    public function show( $id)
+    public function show(Mall $mall)
     {
-        $mall = Mall::where('id', $id)->firstOrFail();
+        // $mall = Mall::where('id', $id)->firstOrFail();
 
-        return response()->json([
-            'mall' => $mall,
+        // return response()->json([
+        //     'mall' => $mall,
 
-        ],201);
+        // ],201);
+
+        return new MallResource($mall->load('shops'));
     }
 
     /**

@@ -48,9 +48,9 @@ Route::prefix('v1')->group(function(){
     Route::get('/search', 'ProductController@search');
 
     //route for viewing shops
-    Route::resource('/shops', 'Api\ShopController');
+    Route::apiResource('/shops', 'Api\ShopController');
 
     //route for viewing malls
-    Route::resource('/malls', 'Api\MallController');
+    Route::apiResource('/malls', 'Api\MallController');
 });
 

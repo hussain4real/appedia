@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Shop;
 use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Mail\ShopActivationRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\ShopResource;
 use Illuminate\Support\Facades\Mail;
 
 class ShopController extends Controller
@@ -18,12 +19,14 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $shops = Shop::all();
+        // $shops = Shop::all();
 
-        return response()->json([
-            'shops' => $shops,
+        // return response()->json([
+        //     'shops' => $shops,
 
-        ],201);
+        // ],201);
+
+        return ShopResource::collection(Shop::paginate(4));
     }
 
     /**
@@ -64,7 +67,8 @@ class ShopController extends Controller
 
         Mail::to($admins)->send(new ShopActivationRequest($shop));
 
-        return redirect()->route('home')->withMessage('Create shop request sent');
+        return response()->json(['message' => 'Shop request has been sent for approval']);
+        // return redirect()->route('home')->withMessage('Create shop request sent');
     }
 
     /**
@@ -73,16 +77,18 @@ class ShopController extends Controller
      * @param  \App\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Shop $shop)
     {
         // dd($shop->owner->name. ' welcome to your shop named ', $shop->name);
 
-        $shop = Shop::where('id', $id)->firstOrFail();
+        // $shop = Shop::where('id', $id)->firstOrFail();
 
-        return response()->json([
-            'shop' => $shop,
+        // return response()->json([
+        //     'shop' => $shop,
 
-        ],201);
+        // ],201);
+
+        return new ShopResource($shop->load('products'));
     }
 
     /**

@@ -132,7 +132,17 @@ class ProductController extends Controller
     {
         $product = Product::where('id', $id)->firstOrFail();
 
-        $mightAlsoLike = Product::where('id', '!=', $id)->mightAlsoLike()->get();
+        $categories = Category::all();
+
+        // $project = Product::with('categories')->findOrFail(1);
+
+
+        $similarProducts = Product::where('name', '==', $id)
+        ->get();
+
+
+
+        // $mightAlsoLike = Product::where('id', '!=', $id)->mightAlsoLike()->get();
 
         $stockLevel = getStockLevel($product->quantity);
 
@@ -144,7 +154,9 @@ class ProductController extends Controller
         return view('product')->with([
             'product' => $product,
             'stockLevel' => $stockLevel,
-            'mightAlsoLike' => $mightAlsoLike,
+            // 'mightAlsoLike' => $mightAlsoLike,
+            // 'project' => $project,
+            'similarProducts' => $similarProducts,
 
             ]);
 

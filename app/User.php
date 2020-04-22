@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Mall;
 use App\Shop;
 use App\Order;
 use App\ProductReview;
@@ -44,13 +45,13 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 
     public function mall()
     {
-        return $this->hasOne(Mall::class, 'user_id');
+        return $this->hasMany(Mall::class, 'user_id');
     }
 
 
     public function shop()
     {
-        return $this->hasOne(Shop::class, 'user_id');
+        return $this->hasMany(Shop::class, 'user_id');
     }
 
     public function orders()
