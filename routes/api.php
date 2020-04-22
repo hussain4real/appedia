@@ -21,31 +21,36 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('v1')->group(function(){
     Route::post('/register', 'Api\AuthController@register');
     Route::post('/login', 'Api\AuthController@login');
+
     Route::post('/password/email', 'Api\ForgotPasswordController@sendResetLinkEmail');
     Route::post('/password/reset', 'Api\ResetPasswordController@reset');
+
+    Route::get('/email/reseend', 'Api\VerificationController@resend')->name('verification.resend');
+    Route::get('/email/verify/{id}/{hash}', 'Api\VerificationController@verify')->name('verification.verify');
+
     Route::group(['middleware' => 'auth:api'], function(){
-    Route::post('getUser', 'Api\AuthController@getUser');
-    Route::get('users', 'UsersController@index');
-    // Route::get('users/{id}', 'UsersController@show');
+    Route::get('getUser', 'Api\AuthController@getUser');
+
     });
 
     //routes for all users
     // Route::resource('/users', 'UsersController');
 
+    // Route::get('users', 'UsersController@index');
+    // Route::get('users/{id}', 'UsersController@show');
 
     //routes for all products
-    Route::get('/products', 'ProductController@index');
+    Route::get('/products', 'Api\ProductController@index');
 
-    // product details
-    Route::get('/products/{id}', 'ProductController@show');
+
 
     //routes for all search queries
     Route::get('/search', 'ProductController@search');
 
     //route for viewing shops
-    Route::resource('/shops', 'ShopController');
+    Route::resource('/shops', 'Api\ShopController');
 
     //route for viewing malls
-    Route::resource('/malls', 'MallController');
+    Route::resource('/malls', 'Api\MallController');
 });
 

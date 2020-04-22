@@ -15,24 +15,24 @@ class UsersController extends Controller
     public function index()
     {
 
-        $users = User::all();
+        // $users = User::all();
 
-        return response()->json([
-            'users' => $users,
+        // return response()->json([
+        //     'users' => $users,
 
-        ],201);
+        // ],201);
     }
 
 
-    public function login(){
-        if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-           $user = Auth::user();
-           $success =  $user->createToken('AppName')-> accessToken;
-            return response()->json(['success' => $success], $this-> successStatus);
-          } else{
-           return response()->json(['error'=>'Unauthorised'], 401);
-           }
-        }
+    // public function login(){
+    //     if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+    //        $user = Auth::user();
+    //        $success =  $user->createToken('AppName')-> accessToken;
+    //         return response()->json(['success' => $success], $this-> successStatus);
+    //       } else{
+    //        return response()->json(['error'=>'Unauthorised'], 401);
+    //        }
+    //     }
 
     /**
      * Show the form for creating a new resource.
@@ -69,9 +69,9 @@ class UsersController extends Controller
     {
         $user = User::where('id', $id)->firstOrFail();
 
-        return \response()->json([
-            'user' => $user,
-        ], 201);
+        // return \response()->json([
+        //     'user' => $user,
+        // ], 201);
     }
 
     /**

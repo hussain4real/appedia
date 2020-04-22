@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Category as voyagerCat;
 
 class ProductController extends Controller
@@ -57,17 +58,17 @@ class ProductController extends Controller
         }
 
 
-        return view('products')->with([
-            'products' => $products,
-            'categories' => $categories,
-            'categoryName' => $categoryName,
-            ]);
-
-        // return response()->json([
+        // return view('products')->with([
         //     'products' => $products,
         //     'categories' => $categories,
         //     'categoryName' => $categoryName,
-        // ],201);
+        //     ]);
+
+        return response()->json([
+            'products' => $products,
+            'categories' => $categories,
+            'categoryName' => $categoryName,
+        ],201);
 
     }
 
@@ -89,16 +90,16 @@ class ProductController extends Controller
         // return view('product.catalog', compact('products'));
         $categories = Category::all();
 
-        return view('search-results')->with([
-            'products' => $products,
-            'categories' => $categories,
-            ]);
-
-        // return response()->json([
+        // return view('search-results')->with([
         //     'products' => $products,
         //     'categories' => $categories,
+        //     ]);
 
-        // ],201);
+        return response()->json([
+            'products' => $products,
+            'categories' => $categories,
+
+        ],201);
     }
 
     /**
@@ -141,20 +142,20 @@ class ProductController extends Controller
 
 
 
-        return view('product')->with([
-            'product' => $product,
-            'stockLevel' => $stockLevel,
-            'mightAlsoLike' => $mightAlsoLike,
-
-            ]);
-
-        // return response()->json([
+        // return view('product')->with([
         //     'product' => $product,
         //     'stockLevel' => $stockLevel,
         //     'mightAlsoLike' => $mightAlsoLike,
 
+        //     ]);
 
-        // ],201);
+        return response()->json([
+            'product' => $product,
+            'stockLevel' => $stockLevel,
+            'mightAlsoLike' => $mightAlsoLike,
+
+
+        ],201);
     }
 
     /**

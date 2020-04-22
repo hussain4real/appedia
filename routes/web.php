@@ -45,7 +45,7 @@ Route::post('/cart/switchToSaveForLater/{product}', 'CartController@store')->nam
 Route::get('/cart', 'CartController@index')->name('cart.index');
 
 // add item to cart route
-// Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::post('/cart', 'CartController@store')->name('cart.store');
 
 //remove item from cart route
 Route::get('/cart/destroy/{itemId}', 'CartController@destroy')->name('cart.destroy');

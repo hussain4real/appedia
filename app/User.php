@@ -11,7 +11,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Notifications\PasswordResetNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends \TCG\Voyager\Models\User
+class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {
     use Notifiable, HasApiTokens;
 

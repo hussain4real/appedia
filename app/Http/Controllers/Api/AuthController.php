@@ -49,7 +49,7 @@ public function login(Request $request)
 public function getUser()
 {
     $user = Auth::user();
-    return response()->json(['success' => $user], $this->successStatus);
+    return response()->json(['message' => 'You are verified', 'success' => $user], $this->successStatus);
 }
 
 }
