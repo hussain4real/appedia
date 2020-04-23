@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/landing-page');
 
-
+\Mpociot\ApiDoc\ApiDoc::routes("/apidoc");
 Auth::routes();
 
 Route::get('/landing-page', 'HomeController@index')->name('landing-page');
@@ -71,9 +71,9 @@ Route::resource('orders', 'OrderController')->middleware('auth');
 Route::resource('shops', 'ShopController')->middleware('auth');
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+// Route::group(['prefix' => 'admin'], function () {
+//     Voyager::routes();
+// });
 
 Route::middleware('auth')->group(function () {
 

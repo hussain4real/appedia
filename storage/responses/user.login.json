@@ -1,0 +1,16 @@
+{
+    "success": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTA5NTc4ZWFhYjMyMjIyOWNlYWYxOGFkOWYyN2RhNTNiNDBkNzI3YjYwMjM3NDk1ODU4N2MzN2ZlOTMzMGZiMTcwMzRjOTY1YWM1YThkNTUiLCJpYXQiOjE1ODc2Mjk2NTYsIm5iZiI6MTU4NzYyOTY1NiwiZXhwIjoxNjE5MTY1NjU2LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.u5vtWJI61cdfObDyjYdcIvXDXVjO6och3WDlbVQ_qMvFbQN0SVwTqq1MGAGnUfosmVlNcTE1okj33VzINuDEI_-zpGQVhEaYpVA48k4fM8ZBTwRnOotHYl6RpPfPVBpr7jv8qtu3XCqUZ0pF9rTTxp2VGtpDGhc9hk9pQDiakK410xdjqFlcmf2KgDnQp0stVZKAy8jA5fgzs7xmS3UmqLIm5GPRfRDCEusK2GL3DyY0N7juCVKW6ACnbpUgGEgbQJ5PnK4nJnnhYaVEFC3Yp1rmIvfAPXTS_20sPCktR6dt_nKz0VVIYiLgWpVnfvxFH3yhtpKaybTZk32TrKtqTKTh4fEjtN4ebsA_OqXqKGZOXdFj4wO3pHkCVhoXl7vFzE4wnDe637ptmsbQY-i2Hjnk3D4F1TyDMieAX4L0HQS3fBAp7EYXVRbR_ly2On9FfqNrWNE1CHCNAhJNDuP4OKr9jHd0ByLb0FJfBAdXPwYQFeHFaD0FbBwWhUNuSIk8XbDd7olCkTU-d2wOABU1PVSMhLjWYJb3twp8vm5G11q9UTh8ZeLmtTfCKbCwvV6zTJgS1lzhCR0FCynY14DDKO7qu_RLlrJd3mvVJgKFdPNMXCUUKWXjxWYlqK6Jgvm1zX56BeSOkvIeBmVX3bJGAGxTJ4iZfMi55zeRHUc1uRU"
+    },
+    "user": {
+        "id": 6,
+        "role_id": 2,
+        "name": "Aminu Hussain",
+        "email": "aminu@gmail.com",
+        "avatar": "users/default.png",
+        "email_verified_at": "2020-04-22T06:29:20.000000Z",
+        "settings": [],
+        "created_at": "2020-04-22T05:57:07.000000Z",
+        "updated_at": "2020-04-22T06:29:20.000000Z"
+    }
+}

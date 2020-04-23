@@ -17,6 +17,7 @@
         "laravel/passport": "^8.4",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "mpociot/laravel-apidoc-generator": "^4.7",
         "nicolaslopezj/searchable": "^1.13",
         "orangehill/iseed": "^2.6",
         "tcg/voyager": "^1.3"
