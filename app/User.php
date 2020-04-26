@@ -6,6 +6,7 @@ use App\Mall;
 use App\Shop;
 use App\Order;
 use App\ProductReview;
+
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -14,7 +15,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {
-    use Notifiable, HasApiTokens;
+    use HasApiTokens, Notifiable;
 
     /**
      * The attributes that are mass assignable.
