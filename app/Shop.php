@@ -5,7 +5,7 @@ namespace App;
 use App\User;
 use App\Order;
 use App\Product;
-use App\OrderItem;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model

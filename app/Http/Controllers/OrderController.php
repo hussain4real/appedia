@@ -86,8 +86,8 @@ class OrderController extends Controller
 
 
 
-        $order->grand_total = \Cart::session(auth()->id())->getTotal();
-        $order->item_count = \Cart::session(auth()->id())->getContent()->count();
+        $order->grand_total = \Cart::getTotal();
+        $order->item_count = \Cart::getContent()->count();
 
         $order->user_id = auth()->id();
 
@@ -95,7 +95,7 @@ class OrderController extends Controller
         $order->save();
 
         //save order item
-        $cartItems = \Cart::session(auth()->id())->getContent();
+        $cartItems = \Cart::getContent();
 
         foreach ($cartItems as  $item) {
             $order->items()->attach($item->id, ['price' => $item->price, 'quantity' =>$item->quantity]);
@@ -105,7 +105,7 @@ class OrderController extends Controller
         $this->decreaseQuantities();
 
        //empty the cart after completion of order
-       \Cart::session(auth()->id())->clear();
+       \Cart::clear();
 
        //send email to customer
 

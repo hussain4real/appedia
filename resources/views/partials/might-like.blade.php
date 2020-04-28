@@ -5,7 +5,7 @@
 
         <div class="products text-center">
 
-            @foreach ($similarProducts as $product)
+            @foreach ($mightAlsoLike as $product)
             <div class="product">
                 <div class="rating-comment">
                     @php $rating =$product->getStarRating() ; @endphp
