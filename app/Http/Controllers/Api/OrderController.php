@@ -6,19 +6,27 @@ use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\OrderResource;
 
 class OrderController extends Controller
 {
+    public $successStatus = 200;
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $orders = auth()->user()->orders()->with('items')->get(); // fix n + 1 issues
+        $user = Auth::user();
+        // $orders = auth()->user()->orders()->with('items')->get(); // fix n + 1 issues
 
-        return view('my-orders')->with('orders', $orders);
+        // return view('my-orders')->with('orders', $orders);
+
+        return OrderResource::collection($user->orders()->with('items')->get());
+        // return OrderResource::collection(Order::paginate(4));
     }
 
     /**
@@ -124,16 +132,20 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        if (auth()->id() !== $order->user_id) {
-            return back()->withErrors('You do not have access to this!');
-        }
+        // if (auth()->id() !== $order->user_id) {
+        //     // return back()->withErrors('You do not have access to this!');
+        //     return response()->json(['error'=>'You do not have access to this!'], 403);
+        // }
 
-        $products = $order->products;
+        // $products = $order->products;
 
-        return view('my-order')->with([
-            'order' => $order,
-            'products' => $products,
-        ]);
+        // // return view('my-order')->with([
+        // //     'order' => $order,
+        // //     'products' => $products,
+        // // ]);
+
+        // return response()->json(['order' => $order, 'products' => $products], $this->successStatus);
+        return new OrderResource($order->load('items'));
     }
 
     /**

@@ -71,9 +71,9 @@ Route::resource('orders', 'OrderController')->middleware('auth');
 Route::resource('shops', 'ShopController')->middleware('auth');
 
 
-// Route::group(['prefix' => 'admin'], function () {
-//     Voyager::routes();
-// });
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 Route::middleware('auth')->group(function () {
 

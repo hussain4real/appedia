@@ -3,12 +3,14 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+import Vuetify from 'vuetify';
 import StarRating  from 'vue-star-rating'
 
 require('./bootstrap');
 
 window.Vue = require('vue');
+
+Vue.use(Vuetify);
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,4 +36,5 @@ Vue.component('star-rating', StarRating);
 
 const app = new Vue({
     el: '#app',
+    vuetify: new Vuetify(),
 });

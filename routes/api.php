@@ -29,8 +29,12 @@ Route::group( ['prefix' => 'v1'], function(){
     Route::get('/email/verify/{id}/{hash}', 'Api\VerificationController@verify')->name('verification.verify');
 
     Route::group(['middleware' => 'auth:api'], function(){
+    //route to get a specific users details
     Route::get('getUser', 'Api\AuthController@getUser');
 
+    //route for all orders resource
+
+    Route::apiResource('/orders', 'Api\OrderController');
     });
 
     //routes for all users
@@ -47,10 +51,11 @@ Route::group( ['prefix' => 'v1'], function(){
     //routes for all search queries
     Route::get('/search', 'ProductController@search');
 
-    //route for viewing shops
+    //route for all shops resource
     Route::apiResource('/shops', 'Api\ShopController');
 
-    //route for viewing malls
+    //route for all malls resource
     Route::apiResource('/malls', 'Api\MallController');
+
 });
 
