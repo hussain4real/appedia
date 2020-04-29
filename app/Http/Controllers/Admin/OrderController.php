@@ -66,11 +66,13 @@ class OrderController extends VoyagerBaseController
                 $query = $model::select('*');
             }
 
-            //query to display sellers products only
+            //query to display sellers orders only
             if (!auth()->user()->hasRole('admin')) {
-                $query->where('shop_id', auth()->user()->shop->id);
+                $query->where('shop_id', auth()->id());
             }
 
+            //was remove from above
+            // auth()->user()->shop->id
 
             // Use withTrashed() if model uses SoftDeletes and if toggle is selected
             if ($model && in_array(SoftDeletes::class, class_uses_recursive($model)) && Auth::user()->can('delete', app($dataType->model_name))) {

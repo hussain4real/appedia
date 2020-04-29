@@ -39,6 +39,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
 
+        $product = Product::all();
         //check if products has already been purchased 'as in fastest finger first'
         if ($this->productsAreNoLongerAvailable()) {
             return back()->withErrors('Sorry! One of the items in your cart is no longer available.');
@@ -90,6 +91,7 @@ class OrderController extends Controller
         $order->item_count = \Cart::getContent()->count();
 
         $order->user_id = auth()->id();
+        $order->shop_id = auth()->id();
 
 
         $order->save();

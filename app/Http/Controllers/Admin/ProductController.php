@@ -68,7 +68,7 @@ class ProductController extends VoyagerBaseController
 
             //query to display sellers products only
             if (!auth()->user()->hasRole('admin')) {
-                $query->where('shop_id', auth()->user()->shop->id);
+                $query->where('shop_id', auth()->id());
             }
 
 
