@@ -88,11 +88,13 @@
                @endforeach
 
             </div>
+
          </div> <!-- end order-container -->
          @endforeach
       </div>
 
       <div class="spacer"></div>
+
    </div>
 </div>
 

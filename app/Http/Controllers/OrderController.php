@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\Product;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -19,6 +20,20 @@ class OrderController extends Controller
 
         return view('my-orders')->with('orders', $orders);
     }
+
+    public function downloadPDF($id) {
+        $order = Order::find($id);
+        $products = $order->products;
+        $pdf = PDF::loadView('invoice', compact('order', 'products'));
+
+        return $pdf->download('invoice.pdf');
+}
+
+    // public function invoice()
+    // {
+    //     $pdf = PDF::loadView('pdf', compact('invoice'));
+    //     return $pdf->download('invoice.pdf');
+    // }
 
     /**
      * Show the form for creating a new resource.

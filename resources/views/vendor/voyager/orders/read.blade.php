@@ -32,6 +32,9 @@
       <span class="glyphicon glyphicon-list"></span>&nbsp;
       {{ __('voyager::generic.return_to_list') }}
    </a>
+   <a href="{{action('OrderController@downloadPDF', $dataTypeContent->id)}}" class="btn btn-success"><i
+         class="voyager-download"></i><span class="p-4">Invoice</span>
+   </a>
 </h1>
 @include('voyager::multilingual.language-selector')
 @stop
@@ -144,6 +147,7 @@
 
          </div>
       </div>
+
 
       <div class="col-md-6">
 

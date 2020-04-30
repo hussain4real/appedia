@@ -1,5 +1,6 @@
 <?php
 
+use App\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,16 @@ Route::redirect('/', '/landing-page');
 
 \Mpociot\ApiDoc\ApiDoc::routes("/apidoc");
 Auth::routes();
+
+// Route::get('/invoice', function () {
+//     // return view('invoice');
+
+//     $orders = Order::all();
+//     $pdf = PDF::loadView('invoice')->with('orders', $orders);
+//     return $pdf->download('invoice.pdf');
+// });
+
+Route::get('/downloadPDF/{id}', 'OrderController@downloadPDF');
 
 Route::get('/landing-page', 'HomeController@index')->name('landing-page');
 

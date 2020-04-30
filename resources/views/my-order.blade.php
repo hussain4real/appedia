@@ -62,7 +62,7 @@
                </div>
                <div>
                   <div class="order-header-items">
-                     <div><a href="#">Invoice</a></div>
+                     <div><a href="{{action('OrderController@downloadPDF', $order->id)}}">Invoice</a></div>
                   </div>
                </div>
             </div>
