@@ -20,7 +20,7 @@ class CreateProductsAttributesTable extends Migration
             $table->string('size');
             $table->string('color');
             $table->float('price');
-            $table->int('stock');
+            $table->integer('stock');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
