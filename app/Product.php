@@ -7,6 +7,7 @@ use App\Category;
 use NumberFormatter;
 use App\ProductReview;
 use App\ProductCategory;
+use App\ProductsAttribute;
 use Illuminate\Database\Eloquent\Model;
 
 
@@ -21,6 +22,12 @@ class Product extends Model
 // {
 //     return $this->quantity > 0;
 // }
+
+    public function productsAttribute()
+    {
+        return $this->hasMany(ProductsAttribute::class);
+    }
+
 
     public function categories()
     {
