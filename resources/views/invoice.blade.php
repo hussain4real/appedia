@@ -76,13 +76,19 @@
             <td>$ {{ $order->grand_total }}</td>
          </tr>
          <tr>
-            <td>Live Status:</td>
+            <td>Live Status</td>
             <td>{{ $order->tracking }}</td>
          </tr>
          <tr>
-            <td>Status:</td>
+            <td>Status</td>
             <td>{{ $order->status }}</td>
          </tr>
+         @if ($order->shop)
+         <tr>
+            <td>Sold By (shop)</td>
+            <td>{{$order->shop->name}}</td>
+         </tr>
+         @endif
       </tbody>
       </tbody>
 
