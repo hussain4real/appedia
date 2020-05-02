@@ -12,7 +12,7 @@ class OrderPolicy
 
     public function before($user, $ability)
     {
-        if ($user->hasRole('admin')) {
+        if ($user->hasRole('admin','owner')) {
             return true;
         }
     }

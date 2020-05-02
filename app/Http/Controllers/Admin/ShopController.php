@@ -67,7 +67,7 @@ class ShopController extends VoyagerBaseController
             }
 
             //query to display sellers shop only
-            if (!auth()->user()->hasRole('admin')) {
+            if (!auth()->user()->hasRole('admin','owner')) {
                 $query->where('user_id', auth()->id());
             }
 

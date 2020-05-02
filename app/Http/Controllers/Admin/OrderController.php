@@ -67,7 +67,7 @@ class OrderController extends VoyagerBaseController
             }
 
             //query to display sellers orders only
-            if (!auth()->user()->hasRole('admin')) {
+            if (!auth()->user()->hasRole('admin','owner')) {
                 $query->where('shop_id', auth()->id());
             }
 
