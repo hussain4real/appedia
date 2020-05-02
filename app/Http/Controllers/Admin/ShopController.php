@@ -66,9 +66,17 @@ class ShopController extends VoyagerBaseController
                 $query = $model::select('*');
             }
 
-            //query to display sellers shop only
-            if (!auth()->user()->hasRole('admin','owner')) {
-                $query->where('user_id', auth()->id());
+            // //query to display sellers shop only
+            // if (!auth()->user()->hasRole('admin','owner')) {
+            //     $query->where('user_id', auth()->id());
+            // }
+
+             //query to display sellers products only
+             if(auth()->user()->hasRole('seller')) {
+                if(empty(auth()->user()->shop)){
+                      abort(404);
+                }
+                $query->where('shop_id', auth()->id());
             }
 
 
