@@ -76,7 +76,7 @@ class ShopController extends VoyagerBaseController
                 if(empty(auth()->user()->shop)){
                       abort(404);
                 }
-                $query->where('shop_id', auth()->id());
+                $query->where('user_id', auth()->id());
             }
 
 
