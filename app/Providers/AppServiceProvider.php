@@ -27,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Shop::observe(ShopObserver::class);
+
     }
 }

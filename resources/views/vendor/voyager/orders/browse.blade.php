@@ -15,6 +15,14 @@
    @can('delete', app($dataType->model_name))
    @include('voyager::partials.bulk-delete')
    @endcan
+
+   @if (auth()->user()->hasRole('admin'))
+
+   <a href="{{action('OrderController@stats')}}" class="btn btn-success"><i class="voyager-pie-graph"></i>
+      <span>{{ __('Monthly Report') }}</span>
+   </a>
+   @endif
+
    @can('edit', app($dataType->model_name))
    @if(isset($dataType->order_column) && isset($dataType->order_display_column))
    <a href="{{ route('voyager.'.$dataType->slug.'.order') }}" class="btn btn-primary btn-add-new">

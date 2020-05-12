@@ -33,6 +33,8 @@ Auth::routes();
 
 Route::get('/downloadPDF/{id}', 'OrderController@downloadPDF');
 
+Route::get('/pdfReport', 'OrderController@pdfReport');
+
 Route::get('/landing-page', 'HomeController@index')->name('landing-page');
 
 //product details page
@@ -74,8 +76,11 @@ Route::get('/cart/guestCheckout', 'CartController@checkout')->name('guestCheckou
 //thank you page route
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
 
+
 // routes for all orders
 Route::resource('orders', 'OrderController')->middleware('auth');
+
+Route::get('/stats', 'OrderController@stats');
 
 
 //route for creating a shop

@@ -3,6 +3,7 @@
 @section('title', 'My Orders')
 
 @section('content')
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 <div class="breadcrumbs">
    <div class="container">
@@ -92,6 +93,49 @@
          </div> <!-- end order-container -->
          @endforeach
       </div>
+
+
+
+
+
+
+      {{-- <table class="table table-striped">
+      <thead>
+         <tr>
+            <td><b>Month</b></td>
+            <td><b>Total Orders</b></td>
+            <td><b>Total Income</b></td>
+            <td><b>Average Order</b></td>
+
+         </tr>
+      </thead>
+      <tbody>
+         @foreach ($months as $month)
+
+
+
+         <tr>
+            <td>
+               {{ $month->months }}
+
+      </td>
+      <td>
+         {{$month->total}}
+      </td>
+      <td>
+         QAR {{ $month->sums }}
+
+      </td>
+      <td>
+         QAR {{$month->average}}
+      </td>
+
+      </tr>
+
+      @endforeach
+      </tbody>
+      </table> --}}
+
 
       <div class="spacer"></div>
 
