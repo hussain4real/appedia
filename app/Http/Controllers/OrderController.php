@@ -98,7 +98,7 @@ class OrderController extends Controller
                     )
                     // ->where("created_at", ">", \Carbon\Carbon::now()->subMonths(6))
                     ->where("status", "completed")
-                    ->orderBy('createdAt', 'desc')
+                    ->orderBy('months','desc')
                     ->groupBy('shop_id', 'months');
 
 
