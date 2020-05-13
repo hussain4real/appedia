@@ -30,7 +30,7 @@ class ProductDimmer extends BaseDimmer
             'title'  => "{$count} {$string}",
             'text'   =>"There are {$count} {$string} in the database. Click on button below to view your products",
             'button' => [
-                'text' => 'View all products',
+                'text' => 'View your products',
                 'link' => route('voyager.products.index'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),

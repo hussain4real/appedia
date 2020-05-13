@@ -16,7 +16,7 @@
    @include('voyager::partials.bulk-delete')
    @endcan
 
-   @if (auth()->user()->hasRole('admin'))
+   @if (auth()->user()->hasRole('admin') || auth()->user()->hasRole('owner'))
 
    <a href="{{action('OrderController@stats')}}" class="btn btn-success"><i class="voyager-pie-graph"></i>
       <span>{{ __('Monthly Report') }}</span>
