@@ -27,6 +27,6 @@
     },
     "dependencies": {
         "vue-star-rating": "^1.6.1",
-        "vuetify": "^2.2.25"
+        "vuetify": "^2.6.10"
     }
 }
