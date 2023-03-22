@@ -80,16 +80,14 @@
                 <tbody>
                     @foreach ($cartItems as $item)
                     <tr>
-                        <td class="product-remove"><a href="{{ route('cart.destroy', $item->id) }}"><i
-                                    class="pe-7s-close"></i></a></td> --}}
+                        <td class="product-remove"><a href="{{ route('cart.destroy', $item->id) }}"><i class="pe-7s-close"></i></a></td> --}}
 
 
                         {{-- <td class="product-thumbnail">
                                         <a href="#"><img src="{{ productImage($item->model->cover_img)}}" alt=""></a>
                         </td>
                         <td class="product-name"><a href="#">{{ $item->model->name }} </a></td>
-                        <td class="product-price-cart"><span
-                                class="amount">${{Cart::get($item->model->id)->getPriceSum()}}</span>
+                        <td class="product-price-cart"><span class="amount">${{Cart::get($item->model->id)->getPriceSum()}}</span>
                         </td>
                         <td class="product-quantity">
                             <form action="{{route('cart.update', $item->id)}}" method="get">
@@ -114,8 +112,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="coupon-all">
                     <div class="coupon">
-                        <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Coupon code"
-                            type="text">
+                        <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Coupon code" type="text">
                         <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
                     </div>
 
@@ -193,12 +190,12 @@
 <script type="text/javascript">
     /// some script
 
-        // jquery ready start
-        $(document).ready(function() {
-            // jQuery code
+    // jquery ready start
+    $(document).ready(function() {
+        // jQuery code
 
-        });
-        // jquery end
+    });
+    // jquery end
 </script>
 
 <div class="container">
@@ -255,8 +252,7 @@
                             <tr>
                                 <td>
                                     <figure class="itemside align-items-center">
-                                        <div class="aside"><img src="{{ productImage($item->model->cover_img)}}"
-                                                class="img-sm"></div>
+                                        <div class="aside"><img src="{{ productImage($item->model->cover_img)}}" class="img-sm"></div>
                                         <div class="spacer"></div>
                                         <figcaption class="info">
                                             <a href="#" class="title text-dark">{{ $item->model->name }}</a>
@@ -269,15 +265,12 @@
                                         <div class="input-group input-spinner mr-10">
                                             <div class="input-group-prepend">
 
-                                                <input class="btn btn-dark" type="submit" onclick="decrementValue()"
-                                                    id="button-minus" value="-">
+                                                <input class="btn btn-dark" type="submit" onclick="decrementValue()" id="button-minus" value="-">
 
 
-                                                <input name="quantity" type="text" id="number"
-                                                    class="form-control text-bold" value="{{ $item->quantity }}">
+                                                <input name="quantity" type="text" id="number" class="form-control text-bold" value="{{ $item->quantity }}">
                                                 <div class="input-group-append">
-                                                    <input class="btn btn-dark" type="submit" onclick="incrementValue()"
-                                                        id="button-plus" value="+">
+                                                    <input class="btn btn-dark" type="submit" onclick="incrementValue()" id="button-plus" value="+">
 
 
                                                 </div>
@@ -300,17 +293,13 @@
                                         {{csrf_field()}}
                                         <input name="user_id" type="text" value="{{Auth::user()->id}}" hidden />
                                         <input name="product_id" type="text" value="{{$item->model->id}}" hidden />
-                                        <button data-original-title="Save to Wishlist" title="" type="submit"
-                                            class="btn btn-light" data-toggle="tooltip"> <i
-                                                class="fa fa-heart"></i></button>
+                                        <button data-original-title="Save to Wishlist" title="" type="submit" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></button>
                                     </form>
                                     @else
-                                    <a data-original-title="Save to Wishlist" title="" href="/login"
-                                        class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
+                                    <a data-original-title="Save to Wishlist" title="" href="/login" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
 
                                     @endif
-                                    <a href="{{ route('cart.destroy', $item->id) }}"
-                                        class="btn btn-dark btn-round text-white"><i class="fas fa-trash"></i>
+                                    <a href="{{ route('cart.destroy', $item->id) }}" class="btn btn-dark btn-round text-white"><i class="fas fa-trash"></i>
                                         Remove</a>
                                 </td>
                             </tr>
@@ -401,45 +390,43 @@
 @section('extra-js')
 
 <script>
-    function incrementValue()
-{
-    var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number').value = value;
+    function incrementValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById('number').value = value;
 
-    console.log(value);
-}
+        console.log(value);
+    }
 
-function decrementValue()
-{
-    var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 10 : value;
-    value--;
-    document.getElementById('number').value = value;
+    function decrementValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 10 : value;
+        value--;
+        document.getElementById('number').value = value;
 
-    console.log(value);
-}
+        console.log(value);
+    }
 
-//     var i = 1;
+    //     var i = 1;
 
-// function incrementValue() {
-//     if (i < 10) {
-//         i++;
-//     } else if (i = 10) {
-//         i = 1;
-//     }
-//     document.getElementById("number").value = i;
-// }
+    // function incrementValue() {
+    //     if (i < 10) {
+    //         i++;
+    //     } else if (i = 10) {
+    //         i = 1;
+    //     }
+    //     document.getElementById("number").value = i;
+    // }
 
-// function decrementValue() {
-//     if (i > 1) {
-//         i--;
-//     } else if (i = 1) {
-//         i = 10;
-//     }
-//     document.getElementById("number").value = i;
-// }
+    // function decrementValue() {
+    //     if (i > 1) {
+    //         i--;
+    //     } else if (i = 1) {
+    //         i = 10;
+    //     }
+    //     document.getElementById("number").value = i;
+    // }
 </script>
 
 @endsection
@@ -461,28 +448,28 @@ function decrementValue()
 @section('extra-js')
 
 <script src="{{asset('js/app.js')}}"></script>
-<script>
-    (function(){
-        const classname = document.querySelectorAll('.quantity')
-        Array.from(classname).forEach(function(element) {
-            element.addEventListener('change', function() {
-                const id = element.getAttribute('action')
-                const productQuantity = element.getAttribute('data-productQuantity')
-                axios.patch(`/cart/${id}`, {
-                    quantity: this.value,
-                    productQuantity: productQuantity
-                })
-                .then(function (response) {
-                    // console.log(response);
-                    window.location.href = '{{ route('cart.index') }}'
-                })
-                .catch(function (error) {
-                    // console.log(error);
-                    window.location.href = '{{ route('cart.index') }}'
-                });
-            })
-        })
-    })();
+
+(function(){
+const classname = document.querySelectorAll('.quantity')
+Array.from(classname).forEach(function(element) {
+element.addEventListener('change', function() {
+const id = element.getAttribute('action')
+const productQuantity = element.getAttribute('data-productQuantity')
+axios.patch(`/cart/${id}`, {
+quantity: this.value,
+productQuantity: productQuantity
+})
+.then(function (response) {
+// console.log(response);
+window.location.href = '{{ route('cart.index') }}'
+})
+.catch(function (error) {
+// console.log(error);
+window.location.href = '{{ route('cart.index') }}'
+});
+})
+})
+})();
 </script>
 
 

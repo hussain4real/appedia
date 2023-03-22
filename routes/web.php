@@ -2,6 +2,7 @@
 
 use App\Order;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/landing-page');
 
-\Mpociot\ApiDoc\ApiDoc::routes("/apidoc");
 Auth::routes();
 
 // Route::get('/invoice', function () {
@@ -88,7 +88,7 @@ Route::resource('shops', 'ShopController')->middleware('auth');
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+    //admin dashboard route
 });
 
 Route::middleware('auth')->group(function () {
@@ -100,7 +100,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/my-orders', 'OrderController@index')->name('orders.index');
     Route::get('/my-orders/{order}', 'OrderController@show')->name('orders.show');
-    Route::resource('review','ProductReviewController');
+    Route::resource('review', 'ProductReviewController');
 });
 
-Route::resource('/wishlist', 'WishlistController' );
+Route::resource('/wishlist', 'WishlistController');

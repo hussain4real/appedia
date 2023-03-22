@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\ProductCategory;
 use Illuminate\Http\Request;
-use TCG\Voyager\Models\Category;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -44,6 +44,6 @@ class HomeController extends Controller
             'productCat' => $productCat,
 
 
-            ]);
+        ]);
     }
 }

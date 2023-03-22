@@ -35,9 +35,7 @@ class ProductReviewController extends Controller
      */
     public function store(Request $request)
     {
-        auth()->user()->review()->create($request->all());
-
-        return back();
+        //
     }
 
     /**

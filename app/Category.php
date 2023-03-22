@@ -4,12 +4,11 @@ namespace App;
 
 use App\Product;
 
-use App\Category;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Models\Category as ModelsCategory;
 
-class Category extends ModelsCategory
+class Category extends Model
 {
 
     public function children()
@@ -19,7 +18,7 @@ class Category extends ModelsCategory
 
     public function products()
     {
-        return $this->hasMany(Product::class,'product_categories');
+        return $this->hasMany(Product::class, 'product_categories');
     }
 
     public function allProducts()
@@ -30,17 +29,13 @@ class Category extends ModelsCategory
 
         $allProducts = $allProducts->concat($mainCategoryProducts);
 
-        if($this->children->isNotEmpty()) {
+        if ($this->children->isNotEmpty()) {
 
-            foreach($this->children as $child) {
+            foreach ($this->children as $child) {
                 $allProducts = $allProducts->concat($child->products);
-
             }
-
         }
 
         return $allProducts;
-
-
     }
 }
