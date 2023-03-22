@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Auth;
 
 Route::redirect('/', '/landing-page');
 
-Auth::routes();
 
 // Route::get('/invoice', function () {
 //     // return view('invoice');
